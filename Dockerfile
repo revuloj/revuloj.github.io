@@ -59,62 +59,12 @@ RUN sed -i -e "s/^gem \"jekyll\"/#gem \"jekyll\"/" Gemfile \
 
 #RUN bundle update github-pages
 RUN bundle update rouge && bundle install 
-  #\
-  #; cat /usr/local/bundle/extensions/x86_64-linux-musl/2.7.0/eventmachine-1.2.7/mkmf.log
-# RUN bundle install 
-##
-## Running bundle install in /usr/src/app/revuloj.github.io... 
-##  Bundler: /usr/local/lib/ruby/2.7.0/bundler/resolver.rb:290:in `block in verify_gemfile_dependencies_are_found!': 
-## Could not find gem 'minima (~> 2.0)' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/resolver.rb:258:in `each'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/resolver.rb:258:in `verify_gemfile_dependencies_are_found!'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/resolver.rb:49:in `start'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/resolver.rb:22:in `resolve'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/definition.rb:258:in `resolve'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/definition.rb:170:in `specs'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/definition.rb:237:in `specs_for'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/definition.rb:226:in `requested_specs'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/runtime.rb:101:in `block in definition_method'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/runtime.rb:20:in `setup'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler.rb:149:in `setup'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/setup.rb:20:in `block in <top (required)>'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/ui/shell.rb:136:in `with_level'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/ui/shell.rb:88:in `silence'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/bundler/setup.rb:20:in `<top (required)>'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
-##  Bundler: from /usr/local/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+
 
 RUN apk del .build-deps
 
 #COPY Gemfile Gemfile.lock ./
-
-
-### gem "jekyll", "~> 4.0.0"
-### # This is the default theme for new Jekyll sites. You may change this to anything you like.
-### gem "minima", "~> 2.5"
-### # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-### # uncomment the line below. To upgrade, run `bundle update github-pages`.
-### # gem "github-pages", group: :jekyll_plugins
-### # If you have any plugins, put them here!
-### group :jekyll_plugins do
-###   gem "jekyll-feed", "~> 0.12"
-### end
-### 
-### # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-### # and associated library.
-### install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-###   gem "tzinfo", "~> 1.2"
-###   gem "tzinfo-data"
-### end
-### 
-### # Performance-booster for watching directories on Windows
-### gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
-
-
-##gem "github-pages", "~> $GITHUB_PAGES_VERSION", group: :jekyll_plugins
-
-
 #COPY . .
 
 EXPOSE 4000
-CMD ["bundle exec jekyll serve"]
+CMD ["bundle","exec","jekyll","serve"]

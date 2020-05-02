@@ -3,6 +3,9 @@ FROM alpine:latest
 LABEL maintainer="Wolfram Diestel <diestel@steloj.de>"
 # adaptita de: https://github.com/madduci/docker-github-pages/blob/master/Dockerfile
 
+# tamen ĝi ial ne funkcias plendanta mankanta
+# "public_suffix", kvankam tiu gemo ŝajnas instalita!
+
 # https://pages.github.com/versions/
 ARG GITHUB_PAGES_VERSION=204
 
@@ -30,6 +33,7 @@ RUN apk update && \
     libc-dev && \
     echo 'gem: --no-document' > /etc/gemrc && \
     gem install bundler && \
+    gem install jekyll --version 3.8.5 && \
     gem install github-pages --version $GITHUB_PAGES_VERSION && \
     gem install jekyll-watch && \
     gem install jekyll-admin && \
