@@ -430,11 +430,11 @@ la&#365; sia takso pri ilia kombinita influo.
 
 ### Citiloj
 
-- Ne skribu <em>"ajno"</em>.
-- Ne skribu <em>&amp;quot;ajno&amp;quot;</em>.
-- Skribu <em>&lt;ctl&gt;ajno&lt;/ctl&gt;</em> kie tio eblas
+- Ne skribu `"ajno"`.
+- Ne skribu `&quot;ajno&quot;`.
+- Skribu `<ctl>ajno</ctl>` kie tio eblas
     (se tio ne rompas la XML-strukturon).
-- Skribu <em>&amp;leftquot;ajno&amp;rightquot;</em> aliloke.
+- Skribu `&leftquot;ajno&rightquot;` aliloke.
 
 
 ### Homnomoj
