@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Manlibro por vindozuloj inter la revuloj
+title: Manlibro vindoza
 date: 2003-10-27
 ---
+
+# por vindozuloj inter la revuloj
+{:.no_toc}
 
 * Enhavo
 {:toc}

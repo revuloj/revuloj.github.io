@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Teĥnika manlibro
+title: Manlibro teĥnika
 ---
 
 # pri strukturado de la XML-fontodosieroj laŭ la dokumenttipdifino

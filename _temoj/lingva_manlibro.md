@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lingva manlibro
+title: Manlibro lingva
 ---
 
 # pri verkado de Revo-artikoloj
