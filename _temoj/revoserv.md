@@ -21,8 +21,10 @@ vi povas ŝanĝi la tekston de la artikolo. Se vi premas
 "Sendu", via TTT-legilo sendas la artikolon al
 la servo.
 
+Por ampleksaj redaktoj cetere ni havas pli [komfortan redaktilon](https://revaj.steloj.de).
+
 Ankaŭ eblas elŝuti la XML-tekston de la artikolo, redakti
-ĝin kaj sendi mesagon al &lt;revo(ĉe)retavortaro.de&gt; kun la sekva enhavo:
+ĝin kaj sendi mesaĝon al &lt;revo(ĉe)retavortaro.de&gt; kun la sekva enhavo:
 
 ```
 redakto: jen koncize kaj precize priskribu, kion vi ŝanĝis en la artikolo

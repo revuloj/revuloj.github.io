@@ -3,7 +3,7 @@ layout: page
 title: Informpaĝoj
 ---
 
-# por redaktantoj
+# por redaktantoj kaj uzantoj
 
 
 {% assign temoj = site.temoj | sort: "title" %}
