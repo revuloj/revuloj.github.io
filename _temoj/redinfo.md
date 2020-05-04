@@ -97,8 +97,6 @@ Vi trovas regulojn kaj rekomendojn pri redaktado de la
 artikoloj en la [lingva manlibro](lingva_manlibro).
 
 Ni havas unu centran regulon, kiu certigu la karakteron de Revo kiel vortaro, kiu prefere registras la uzatan lingvon.
-Tial ni interkonsentis, ke por aldono de vortoj, redaktantoj provizu almenaŭ du fontojn, el kiu almenaŭ unu ne estu vortaro.
+Tial ni interkonsentis, ke *por aldono de vortoj, redaktantoj provizu almenaŭ du fontojn, el kiu almenaŭ unu ne estu vortaro*.
 
-Multajn pliaj informojn vi trovas en la alineo "por redaktantoj" en la paĝo
- "ktp."
 
