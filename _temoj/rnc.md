@@ -8,8 +8,8 @@ title: Dokumentstrukturo (RelaxNG)
 
 # Enhavo
 
-[⮊ Strukturo de artikolo](#strukturo-de-artikolo)  
-[⮊ Strukturoj de detalaj elementoj](#strukturoj-de-detalaj-elementoj)
+[► Strukturo de artikolo](#strukturo-de-artikolo)  
+[► Strukturoj de detalaj elementoj](#strukturoj-de-detalaj-elementoj)
 
 **Strukturelementoj (rekte uzeblaj en XML):**  
 [adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
@@ -17,7 +17,7 @@ title: Dokumentstrukturo (RelaxNG)
 **Helpdifinoj (uzataj por difini la aranĝon de elementoj):**  
 [indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| 
 
-### vortaro <a href="#enhavo">⮉</a>
+### vortaro <a href="#enhavo">▲</a>
 
 Radiko de la strukturarbo de vortaro. La elemento ampleksas
 la tutan vortaron.<br/>
@@ -36,7 +36,7 @@ vortaro =
 attlist-vortaro &= empty
 ```
 
-### prologo <a href="#enhavo">⮉</a>
+### prologo <a href="#enhavo">▲</a>
 
 Prologo de la vortaro. Ĝi povas enteni la titolo(j)n 
 kaj aŭtoro(j)n de la vortaro kaj aliajn tekstojn.
@@ -50,7 +50,7 @@ prologo =
 attlist-prologo &= empty
 ```
 
-### epilogo <a href="#enhavo">⮉</a>
+### epilogo <a href="#enhavo">▲</a>
 
 Epilogo de la vortaro. 
 Ĝi povas enhavi iun tekston aŭ plurajn alineojn.
@@ -61,7 +61,7 @@ epilogo = element epilogo { attlist-epilogo, (text | alineo)* }
 attlist-epilogo &= empty
 ```
 
-### titolo <a href="#enhavo">⮉</a>
+### titolo <a href="#enhavo">▲</a>
 
 Titolo de la vortaro. Ĝi estas entenata en la 
 prologo. Pluraj titoloj estas permesitaj.
@@ -72,7 +72,7 @@ titolo = element titolo { attlist-titolo, text }
 attlist-titolo &= empty
 ```
 
-### autoro <a href="#enhavo">⮉</a>
+### autoro <a href="#enhavo">▲</a>
 
 Indiko de aŭtoro(j) de la vortaro. 
 Ĝi estas enhavata en la prologo kaj povas okazi tie plurfoje.
@@ -83,7 +83,7 @@ autoro = element autoro { attlist-autoro, text }
 attlist-autoro &= empty
 ```
 
-### alineo <a href="#enhavo">⮉</a>
+### alineo <a href="#enhavo">▲</a>
 
 Unuopa alineo en la prologo- aŭ epilogo-teksto.
 
@@ -93,7 +93,7 @@ alineo = element alineo { attlist-alineo, (text | url)* }
 attlist-alineo &= empty
 ```
 
-### precipa-parto <a href="#enhavo">⮉</a>
+### precipa-parto <a href="#enhavo">▲</a>
 
 Precipa parto de la vortaro. Ĝi enhavas rekte ĉiujn
 artikolojn aŭ sekciojn aŭ partojn. 
@@ -109,7 +109,7 @@ precipa-parto =
 attlist-precipa-parto &= empty
 ```
 
-### parto <a href="#enhavo">⮉</a>
+### parto <a href="#enhavo">▲</a>
 
 Vortaroparto. Ĝi estas entenata en la precipa parto. Parto normale
 prezentas unu lingvon en plurlingva vortaro aŭ lingvodirekton en
@@ -122,7 +122,7 @@ parto = element parto { attlist-parto, (sekcio+ | art+) }
 attlist-parto &= attribute lng { text }?
 ```
 
-### sekcio <a href="#enhavo">⮉</a>
+### sekcio <a href="#enhavo">▲</a>
 
 Sekcio en vortaro. Ĝi estas entenata en la precipa parto aŭ en
 parto de ĝi kaj normale entenas ĉiujn artikolojn, kies kapvorto
@@ -140,7 +140,7 @@ attlist-sekcio &= attribute lit { text }?
 
 ## *STRUKTURO DE ARTIKOLO*{: style="color: brown"}
 ***
-### _indikiloj_ <a href="#enhavo">⮉</a>
+### _indikiloj_ <a href="#enhavo">▲</a>
 
 Tuj post la kapvorto venas ordinare unue kelkaj indikiloj pri la gramatiko, uzo k.a.
 
@@ -154,7 +154,7 @@ indikiloj =
   | tezrad
 ```
 
-### _dif-ref-parto_ <a href="#enhavo">⮉</a>
+### _dif-ref-parto_ <a href="#enhavo">▲</a>
 
 
 Ĉe sinonimoj oni povas uzi referencon al alia vorto aŭ senco, kiu difinas ĝin.
@@ -171,7 +171,7 @@ dif-ref-parto =
   adm*
 ```
 
-### _dif-ref_ <a href="#enhavo">⮉</a>
+### _dif-ref_ <a href="#enhavo">▲</a>
 
 Foje la difino anstataŭiĝas per difina referenco.
 
@@ -183,7 +183,7 @@ dif-ref =
       (text | tld | klr | sncref)* }
 ```
 
-### _difiniloj-supl_ <a href="#enhavo">⮉</a>
+### _difiniloj-supl_ <a href="#enhavo">▲</a>
 
 
 Post difino povas veni diversaj suplementoj kiel ekzemploj, referencoj, bildoj, rimarkoj...
@@ -198,7 +198,7 @@ difiniloj-supl =
   | adm
 ```
 
-### _referenciloj_ <a href="#enhavo">⮉</a>
+### _referenciloj_ <a href="#enhavo">▲</a>
 
 La referenciloj montras al rilataj vortoj kaj sencoj, vortlistoj aŭ al interreta paĝo.
 
@@ -211,7 +211,7 @@ referenciloj =
   | url
 ```
 
-### _tradukiloj_ <a href="#enhavo">⮉</a>
+### _tradukiloj_ <a href="#enhavo">▲</a>
 
 La nacilingvaj tradukoj de la senco aŭ derivaĵo - unuopa aŭ pluraj grupigite.
 
@@ -222,7 +222,7 @@ tradukiloj =
   | trd
 ```
 
-### _unua-parto_ <a href="#enhavo">⮉</a>
+### _unua-parto_ <a href="#enhavo">▲</a>
 
 Unua parto de teksto en artikolo, derivaĵo aŭ senco, 
 kiu venas antaŭ subdividoj, t.e. ekz. en derivaĵo tio, kio venas antaŭ sencoj.
@@ -235,7 +235,7 @@ unua-parto =
   dif?
 ```
 
-### _sekva-parto_ <a href="#enhavo">⮉</a>
+### _sekva-parto_ <a href="#enhavo">▲</a>
 
 Sekva parto de teksto en artikolo, derivaĵo aŭ senco venante post subdividoj,
 kiu ekz. en derivaĵo venas post la sencoj.
@@ -248,7 +248,7 @@ sekva-parto =
   adm*
 ```
 
-### _tekst-stiloj_ <a href="#enhavo">⮉</a>
+### _tekst-stiloj_ <a href="#enhavo">▲</a>
 
 La unuo <dfn>tekst-stiloj</dfn> 
 listigas ĉiujn strukturilojn, kiuj donas stilon al tekstoparto,
@@ -261,7 +261,7 @@ same povas esti multloke, do ankaŭ ili estas listigitaj tie ĉi.
 tekst-stiloj = tld | sncref | klr | em | sup | sub | ctl | frm | nom | nac
 ```
 
-### art <a href="#enhavo">⮉</a>
+### art <a href="#enhavo">▲</a>
 
 Unuopa artikolo de la vortaro. Ĝi povas okazi en
 [vortaro](#vortaro-) (se ne ekzistas precipa-parto),
@@ -283,7 +283,7 @@ art =
 attlist-art &= attribute mrk { art-marko }
 ```
 
-### subart <a href="#enhavo">⮉</a>
+### subart <a href="#enhavo">▲</a>
 
 Subartikolo. Ĝi povas okazi en <dfn>art</dfn>,
 se la signifoj de vorto (ofte ĉe prepozicioj kaj afiksoj) estas
@@ -301,7 +301,7 @@ subart =
 attlist-subart &= attribute mrk { drv-marko }?
 ```
 
-### drv <a href="#enhavo">⮉</a>
+### drv <a href="#enhavo">▲</a>
 
 Derivaĵo ene de artikolo. Unu artikolo povas priskribi plurajn
 derivaĵojn de la kapvorto. Derivaĵo komenciĝas je kapvorto kaj
@@ -325,7 +325,7 @@ drv =
 attlist-drv &= attribute mrk { drv-marko }
 ```
 
-### var <a href="#enhavo">⮉</a>
+### var <a href="#enhavo">▲</a>
 
 Variaĵo de la vorto, ekz. meĥaniko - mekaniko, pomarbo -
 pomujo. Ĝi povas enhavi fontindikon k.s., sed ankaŭ rimarkojn 
@@ -339,7 +339,7 @@ drv-var = element var { attlist-var, drv-kap, (uzo | klr | ekz | rim)* }
 attlist-var &= empty
 ```
 
-### subdrv <a href="#enhavo">⮉</a>
+### subdrv <a href="#enhavo">▲</a>
 
 Subderivaĵo. Ĝi grupigas plurajn proksimajn sencojn, se la
 priskribita vorto havas tre multajn sencojn. Tio povas
@@ -362,7 +362,7 @@ subdrv =
 attlist-subdrv &= attribute mrk { snc-marko }?
 ```
 
-### snc <a href="#enhavo">⮉</a>
+### snc <a href="#enhavo">▲</a>
 
 Senco de unuopa vorto en artikolo. Komparu la latinajn ciferojn en
 la artikoloj de PIV. Per mrk oni povas referenci sencon de alie. Per <em>ref</em> oni
@@ -390,7 +390,7 @@ attlist-snc &=
   attribute ref { text }?
 ```
 
-### subsnc <a href="#enhavo">⮉</a>
+### subsnc <a href="#enhavo">▲</a>
 
 Subsenco ene de senco. Ĝi redonas subtilaĵojn ene de unu senco.
 Ili estas nombrataj per a), b), ...
@@ -412,7 +412,7 @@ attlist-subsnc &=
   attribute ref { text }?
 ```
 
-### sncref <a href="#enhavo">⮉</a>
+### sncref <a href="#enhavo">▲</a>
 
 Referenco al alia senco. Tiu elemento estas anstataŭigata
 per la numero de la referencita senco. Vi povas forlasi la atributon 
@@ -430,7 +430,7 @@ attlist-sncref &= attribute ref { text }?
 
 ## *STRUKTUROJ DE DETALAJ ELEMENTOJ*{: style="color: brown"}
 ***
-### _fako_ <a href="#enhavo">⮉</a>
+### _fako_ <a href="#enhavo">▲</a>
 
 Fakoj estas tri- aŭ kvarlingvaj majusklaj etikedoj difinitaj en la
 <a href="fakoj.html">listo de fakoj</a>
@@ -440,7 +440,7 @@ Fakoj estas tri- aŭ kvarlingvaj majusklaj etikedoj difinitaj en la
 fako = xsd:string { pattern = "[A-Z]{3,4}" }
 ```
 
-### _art-marko_ <a href="#enhavo">⮉</a>
+### _art-marko_ <a href="#enhavo">▲</a>
 
 La marko identigas la artikolon unike. Ĝi estu identa kun la dosiernomo sen la '.xml'.
 Por uzo de versiokontrolo CVS en Revo uziĝas por novaj artikoloj 
@@ -451,7 +451,7 @@ anstataŭe $Id$ kiun CVS etendas al kompleta versioindiko.
 art-marko = xsd:string { pattern = "$Id$|($Id: )?([a-z0-9_]+)(.xml)?.*" }
 ```
 
-### _drv-marko_ <a href="#enhavo">⮉</a>
+### _drv-marko_ <a href="#enhavo">▲</a>
 
 La marko de derivaĵo konsistas el dosiernomo, punkto kaj aldono, donanta la
 kapvorton, kie la radikon anstataŭ tildon oni montras per '0', ekz.
@@ -462,7 +462,7 @@ kapvorton, kie la radikon anstataŭ tildon oni montras per '0', ekz.
 drv-marko = xsd:ID { pattern = "([a-z0-9_]+)\.[A-Za-z_]*0[A-Za-z_0]*(\.[A-Za-z_0-9]+)?" }
 ```
 
-### _snc-marko_ <a href="#enhavo">⮉</a>
+### _snc-marko_ <a href="#enhavo">▲</a>
 
 La marko de senco konsistas el la marko de la derivaĵo, punkto kaj
 identigilo de la senco, ekz. 'ord.0o.BIO', 'azen.0o.figure'.
@@ -472,7 +472,7 @@ identigilo de la senco, ekz. 'ord.0o.BIO', 'azen.0o.figure'.
 snc-marko = xsd:ID { pattern = "([a-z0-9_]+)\.[A-Za-z_]*0[A-Za-z_0]*\.[A-Za-z_0-9]+" }
 ```
 
-### _marko_ <a href="#enhavo">⮉</a>
+### _marko_ <a href="#enhavo">▲</a>
 
 La marko identigas 'nodon' de la vortaro, ekz. artikolon, derivaĵon, sencon aŭ rimarkon,
 kiun oni povas referenci de alia loko en la vortaro per la sama marko.
@@ -482,7 +482,7 @@ kiun oni povas referenci de alia loko en la vortaro per la sama marko.
 marko = xsd:ID { pattern = "([a-z0-9_]+)\.[A-Za-z0-9\._]+" }
 ```
 
-### kap <a href="#enhavo">⮉</a>
+### kap <a href="#enhavo">▲</a>
 
 Kapvorto okazas en du kuntekstoj -- komence de artikolo
 kaj komence de derivaĵo, en la unua kazo ĝi signas radikon
@@ -497,7 +497,7 @@ drv-kap = element kap { attlist-kap, (text | ofc | fnt | tld | drv-var)* }
 attlist-kap &= empty
 ```
 
-### rad <a href="#enhavo">⮉</a>
+### rad <a href="#enhavo">▲</a>
 
 Radiko de kapvorto. Ĝi estas bezonata por anstaŭigo
 de tildoj. Sekve la "radiko" de afiksoj kaj finaĵoj estu
@@ -509,7 +509,7 @@ rad = element rad { attlist-rad, text }
 attlist-rad &= empty
 ```
 
-### ofc <a href="#enhavo">⮉</a>
+### ofc <a href="#enhavo">▲</a>
 
 Oficialeco de la kapvorto/derivaĵo, 
 povas esti *, 1, ..., 9 kiel en PV, PIV
@@ -524,7 +524,7 @@ ofc =
 attlist-ofc &= empty
 ```
 
-### fnt <a href="#enhavo">⮉</a>
+### fnt <a href="#enhavo">▲</a>
 
 Fonto enhavas informojn pri aŭtoro, verko, trovloko
 aŭ aliajn informojn.
@@ -535,7 +535,7 @@ fnt = element fnt { attlist-fnt, (text | bib | aut | vrk | lok | url)* }
 attlist-fnt &= empty
 ```
 
-### gra <a href="#enhavo">⮉</a>
+### gra <a href="#enhavo">▲</a>
 
 Kiel grammatikaj informoj momente estas permesataj
 nur indiko de la vortspeco aŭ simpla teksto
@@ -546,7 +546,7 @@ gra = element gra { attlist-gra, (text | vspec)* }
 attlist-gra &= empty
 ```
 
-### vspec <a href="#enhavo">⮉</a>
+### vspec <a href="#enhavo">▲</a>
 
 Vortspeco. Ekz. subst. por substantivo; tr/ntr
 por transitivaj kaj netransitivaj verboj ktp.
@@ -572,7 +572,7 @@ vspec = element vspec {
 attlist-vspec &= empty
 ```
 
-### uzo <a href="#enhavo">⮉</a>
+### uzo <a href="#enhavo">▲</a>
 
 La uzo povas esti stilo, fako, regiono aŭ alia klarigo,
 kiel estas uzata la vorto aŭ termino. Por la fakoj kaj stiloj uzu
@@ -584,7 +584,7 @@ uzo = element uzo { attlist-uzo, (text | tld)* }
 attlist-uzo &= attribute tip { "fak" | "reg" | "klr" | "stl" }?
 ```
 
-### dif <a href="#enhavo">⮉</a>
+### dif <a href="#enhavo">▲</a>
 
 Difino estas la frazo difinanta la vorton, sencon aŭ
 subsencon. Ĝi povas esti ankaŭ en alia(j) lingvo(j) ol la vorto
@@ -600,7 +600,7 @@ dif =
 attlist-dif &= attribute lng { text }?
 ```
 
-### ekz <a href="#enhavo">⮉</a>
+### ekz <a href="#enhavo">▲</a>
 
 Ekzemplo konsistas el ekzemplofrazo,
 klarigoj kaj fonto.
@@ -625,7 +625,7 @@ ekz =
 attlist-ekz &= attribute mrk { marko }?
 ```
 
-### rim <a href="#enhavo">⮉</a>
+### rim <a href="#enhavo">▲</a>
 
 Rimarko povas enhavi iujn indikojn pri la vorto aŭ
 senco, krome referencojn, ekzemplojn, emfazitajn partojn.
@@ -641,7 +641,7 @@ attlist-rim &=
   attribute mrk { marko }?
 ```
 
-### refgrp <a href="#enhavo">⮉</a>
+### refgrp <a href="#enhavo">▲</a>
 
 Referencgrupo grupigas plurajn samtipajn
 referencojn. La tipon indikas la atributo <em>tip</em>.
@@ -667,7 +667,7 @@ attlist-refgrp &=
   }?
 ```
 
-### ref <a href="#enhavo">⮉</a>
+### ref <a href="#enhavo">▲</a>
 
 Referenco montras al alia, simil- aŭ alisignifa vorto,
 oni povas distingi diversajn rilattipon al la
@@ -703,7 +703,7 @@ attlist-ref &=
   attribute val { text }?
 ```
 
-### lstref <a href="#enhavo">⮉</a>
+### lstref <a href="#enhavo">▲</a>
 
 Referenco al vortlisto el artikolo.
 
@@ -713,7 +713,7 @@ lstref = element lstref { attlist-lstref, (text | tld | klr)* }
 attlist-lstref &= attribute lst { text }
 ```
 
-### tezrad <a href="#enhavo">⮉</a>
+### tezrad <a href="#enhavo">▲</a>
 
 Tezaŭraradiko. La kapvorto aperas en la enirlisto
 de la tezaŭro. Se vi uzas la atributon <em>fak</em>, 
@@ -725,7 +725,7 @@ tezrad = element tezrad { attlist-tezrad, empty }
 attlist-tezrad &= attribute fak { fako }?
 ```
 
-### trdgrp <a href="#enhavo">⮉</a>
+### trdgrp <a href="#enhavo">▲</a>
 
 Tradukgrupo kunigas diversajn tradukojn de
 sama lingvo.
@@ -736,7 +736,7 @@ trdgrp = element trdgrp { attlist-trdgrp, (text | trd)* }
 attlist-trdgrp &= attribute lng { text }
 ```
 
-### trd <a href="#enhavo">⮉</a>
+### trd <a href="#enhavo">▲</a>
 
 Traduko kosistas el traduka vorto aŭ frazo
 kaj klarigoj, poste povos sekvi aliaj elementoj.
@@ -749,7 +749,7 @@ attlist-trd &=
   attribute fnt { text }?
 ```
 
-### ind <a href="#enhavo">⮉</a>
+### ind <a href="#enhavo">▲</a>
 
 Parto de traduko, kiu liveras la kapvorton en la
 indekso, do &lt;trd&gt;sich &lt;ind&gt;bem&uuml;hen&lt;/ind&gt;&lt;/trd&gt;
@@ -762,7 +762,7 @@ ind = element ind { attlist-ind, (text | tld | klr | mll)* }
 attlist-ind &= empty
 ```
 
-### mll <a href="#enhavo">⮉</a>
+### mll <a href="#enhavo">▲</a>
 
 Mallongigita traduko, por ekz. ne montri tutan frazon en la indekso oni
 povas aperigi tie nur komencon, finon aŭ mezon.
@@ -773,7 +773,7 @@ mll = element mll { attlist-mll, (text | tld | klr | ind)* }
 attlist-mll &= attribute tip { "kom" | "mez" | "fin" }?
 ```
 
-### baz <a href="#enhavo">⮉</a>
+### baz <a href="#enhavo">▲</a>
 
 Baza formo de traduko, sub kiu la vorto subordiĝos en la indekso.
 
@@ -783,7 +783,7 @@ baz = element baz { attlist-baz, text* }
 attlist-baz &= empty
 ```
 
-### bld <a href="#enhavo">⮉</a>
+### bld <a href="#enhavo">▲</a>
 
 Bildo povas ilustri iun vorton aŭ sencon. Per la
 atributo <em>lok</em> ĝi
@@ -809,7 +809,7 @@ attlist-bld &=
   attribute prm { text }?
 ```
 
-### adm <a href="#enhavo">⮉</a>
+### adm <a href="#enhavo">▲</a>
 
 Administraj informoj estu por redaktado. Ili povus
 enhavi informojn pri kreodato, ŝanĝdato, aŭtoro, eraroj kaj
@@ -822,7 +822,7 @@ adm = element adm { attlist-adm, (text | aut)* }
 attlist-adm &= empty
 ```
 
-### tld <a href="#enhavo">⮉</a>
+### tld <a href="#enhavo">▲</a>
 
 Tildo rilatas al la radiko, donita en la kapvorto
 ĝi ne bezonas enhavon. La atributo <em>lit</em> indikas alian
@@ -835,7 +835,7 @@ tld = element tld { attlist-tld, empty }
 attlist-tld &= attribute lit { text }?
 ```
 
-### klr <a href="#enhavo">⮉</a>
+### klr <a href="#enhavo">▲</a>
 
 Klarigo pri vorto, difino, ekzemplo ktp.
 
@@ -849,7 +849,7 @@ klr =
 attlist-klr &= attribute tip { "ind" | "amb" }?
 ```
 
-### bib <a href="#enhavo">⮉</a>
+### bib <a href="#enhavo">▲</a>
 
 Bibliografia indiko por fonto, estas mallongigo el
 listo de difinitaj bibliografieroj kaj anstataŭas verko- kaj aŭtoroindikon
@@ -861,7 +861,7 @@ bib = element bib { attlist-bib, text* }
 attlist-bib &= empty
 ```
 
-### vrk <a href="#enhavo">⮉</a>
+### vrk <a href="#enhavo">▲</a>
 
 Verko, en kiu troviĝas citita frazo aŭ vorto
 
@@ -871,7 +871,7 @@ vrk = element vrk { attlist-vrk, (text | url)* }
 attlist-vrk &= empty
 ```
 
-### lok <a href="#enhavo">⮉</a>
+### lok <a href="#enhavo">▲</a>
 
 Loko, kie troviĝas citita frazo aŭ vorto en verko
 
@@ -881,7 +881,7 @@ lok = element lok { attlist-lok, (text | url)* }
 attlist-lok &= empty
 ```
 
-### aut <a href="#enhavo">⮉</a>
+### aut <a href="#enhavo">▲</a>
 
 Aŭtoro de citita frazo aŭ verko
 
@@ -891,7 +891,7 @@ aut = element aut { attlist-aut, text }
 attlist-aut &= empty
 ```
 
-### frm <a href="#enhavo">⮉</a>
+### frm <a href="#enhavo">▲</a>
 
 Matematika aŭ kemia formulo, por matematikaj formuloj oni povas
 ankaŭ doni esprimon laŭ sintakso de AsciiMath por pli bela kompostado
@@ -902,7 +902,7 @@ frm = element frm { attlist-frm, (text | sup | sub | g | k)* }
 attlist-frm &= attribute am { text }?
 ```
 
-### g <a href="#enhavo">⮉</a>
+### g <a href="#enhavo">▲</a>
 
 Grasa parto de formulo, ekz. vektoro, matrico k.s.,
 bv. uzi nur en frm
@@ -913,7 +913,7 @@ g = element g { attlist-g, text* }
 attlist-g &= empty
 ```
 
-### k <a href="#enhavo">⮉</a>
+### k <a href="#enhavo">▲</a>
 
 Kursiva parto de formulo, ekz. variablo k.s.,
 bv. uzi nur en frm
@@ -924,7 +924,7 @@ k = element k { attlist-k, text* }
 attlist-k &= empty
 ```
 
-### em <a href="#enhavo">⮉</a>
+### em <a href="#enhavo">▲</a>
 
 Emfazo. Normale grase skribata vortoj.
 
@@ -934,7 +934,7 @@ em = element em { attlist-em, (text | tld)* }
 attlist-em &= empty
 ```
 
-### sup <a href="#enhavo">⮉</a>
+### sup <a href="#enhavo">▲</a>
 
 altigita teksto, ekz. en ĥemiaj formuloj
 
@@ -944,7 +944,7 @@ sup = element sup { attlist-sup, (text | g | k)* }
 attlist-sup &= empty
 ```
 
-### sub <a href="#enhavo">⮉</a>
+### sub <a href="#enhavo">▲</a>
 
 malaltigita teksto, ekz. en ĥemiaj formuloj
 
@@ -954,7 +954,7 @@ sub = element sub { attlist-sub, (text | g | k)* }
 attlist-sub &= empty
 ```
 
-### ctl <a href="#enhavo">⮉</a>
+### ctl <a href="#enhavo">▲</a>
 
 citilita teksto, ekz. memindika uzo de vorto
 
@@ -964,7 +964,7 @@ ctl = element ctl { attlist-ctl, (text | tld | em | frm)* }
 attlist-ctl &= empty
 ```
 
-### nom <a href="#enhavo">⮉</a>
+### nom <a href="#enhavo">▲</a>
 
 nomo ne-esperantigita, ignorata dum vortkontrolo
 ekz. "Karl Bein"
@@ -975,7 +975,7 @@ nom = element nom { attlist-nom, text* }
 attlist-nom &= empty
 ```
 
-### nac <a href="#enhavo">⮉</a>
+### nac <a href="#enhavo">▲</a>
 
 nacilingva vorto aŭ esprimo, ignorata dum vortkontrolo
 ekz. "powerful"
@@ -986,7 +986,7 @@ nac = element nac { attlist-nac, text* }
 attlist-nac &= empty
 ```
 
-### esc <a href="#enhavo">⮉</a>
+### esc <a href="#enhavo">▲</a>
 
 escepta vorto aŭ esprimo laŭ vortanaliza gramatiko, 
 ekz. "vivipova" (anst. "pova vivi" aŭ "vivopova"), "ĵusfarita" (anst. "ĵus farita")
@@ -997,7 +997,7 @@ esc = element esc { attlist-esc, text* }
 attlist-esc &= empty
 ```
 
-### url <a href="#enhavo">⮉</a>
+### url <a href="#enhavo">▲</a>
 
 Referenco al iu ekstera dosiero. En la HTML-versio de vortaro
 tio fariĝas &lt;a href=...&gt; Anstataŭ la TTT-ejo prefere uzu
@@ -1010,7 +1010,7 @@ url = element url { attlist-url, text }
 attlist-url &= attribute ref { xsd:anyURI }?
 ```
 
-### mlg <a href="#enhavo">⮉</a>
+### mlg <a href="#enhavo">▲</a>
 
 mallongigo de la kapvorto, ekz. ĉe nomoj de organizaĵoj. 
 Per <em>kod</em> vi povas indiki devenon de la mallongigo, ekz. ISO-3166 ĉe landokodoj
