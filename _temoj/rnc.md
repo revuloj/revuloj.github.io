@@ -4,7 +4,7 @@ title: Dokumentstrukturo (RelaxNG)
 ---
 # RelaxNG-difino de strukturo de Voko-vortaro uzata en Reta Vortaro
 
-![ulmobranĉo](../assets/img/ulmo.jpg){: style="float: right; margin-left: 2em; border: solid gray 1px"}
+![ulmobranĉo](../assets/img/ulmo.jpg){: style="float: right; margin-left: 2em; max-width: 20%; border: solid gray 1px"}
 
 # Enhavo
 
