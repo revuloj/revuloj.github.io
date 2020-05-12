@@ -9,6 +9,8 @@ title: Manlibro teĥnika
 * Enhavo
 {:toc}
 
+Pri la ekzakta specifo de la strukturelementoj informas la [Dokumentstrukturo (RelaxNG)](rnc).
+
 ## vortaro
 
 Ekzistas du eblecoj por realigi vortaron laŭ la Voko-DTD.

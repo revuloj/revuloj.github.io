@@ -17,6 +17,8 @@ title: Dokumentstrukturo (RelaxNG)
 **Helpdifinoj (uzataj por difini la aranĝon de elementoj):**  
 [indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| 
 
+La [teĥnika manlibro](manlibro) montras al vi kiel en artikoloj kombini tiujn strukturelementojn pri la plej oftaj okazoj.
+
 ### vortaro <a href="#enhavo">▲</a>
 
 Radiko de la strukturarbo de vortaro. La elemento ampleksas
@@ -259,8 +261,10 @@ sekva-parto =
 
 La unuo <dfn>tekst-stiloj</dfn> 
 listigas ĉiujn strukturilojn, kiuj donas stilon al tekstoparto,
-ekz. emfazita, citilita, altigita aŭ malaltigita teksto.
-Aliaj elementoj klarigo, tildo, sencreferenco, nomo aŭ nacilingva esprimo
+ekz. [em](#em-)fazita, citilita ([ctl](#ctl-)), altigita ([sup](#sup-))
+aŭ malaltigita ([sub](#sub-)) teksto kaj formulo ([frm](#frm-)).
+Aliaj elementoj klarigo ([klr](#klr-)), tildo ([tld](#tld-)), 
+sencreferenco ([sncref](#sncref-)), [nom](#nom-)o aŭ [nac](#nac-)ilingva esprimo
 same povas esti multloke, do ankaŭ ili estas listigitaj tie ĉi.
 
 
@@ -292,7 +296,8 @@ attlist-art &= attribute mrk { art-marko }
 
 ### subart <a href="#enhavo">▲</a>
 
-Subartikolo. Ĝi povas okazi en <dfn>art</dfn>,
+
+Subartikolo. Ĝi povas okazi en [art](#art-),
 se la signifoj de vorto (ofte ĉe prepozicioj kaj afiksoj) estas
 tre diversaj.
 
