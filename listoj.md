@@ -1,20 +1,20 @@
 ---
 layout: page
-title: Indekso
+title: Listoj
 ---
 
-# por redaktantoj kaj uzantoj
+# Listoj de etikedoj kc.
 
+* [Mallongigoj de fakoj](temoj/fakoj)
+* [Mallongigoj de lingvoj](temoj/lingvoj)
+* [Mallongigoj de stiloj](temoj/stiloj)
+* [Klasoj (vortlistoj)](temoj/klasoj)
+* [Literoj kaj ordigado](temoj/ordigo)
 
-{% assign temoj = site.temoj | sort: "title" %}
-{% for t in temoj %}
-{% if t.title %}
-* [{{ t.title | escape }}]({{ t.url | relative_url }})
-{% endif %}  
-{% endfor %}  
 
 ### listoj por redaktantoj ĉe Revo
 
+(ne integritaj tie ĉi)
 *  [Novaj artikoloj](http://www.reta-vortaro.de/revo/inx/novaj.html)  
 *  [Ŝanĝitaj artikoloj](http://www.reta-vortaro.de/revo/inx/shanghoj.html)  
 *  [Strukturaj eraroj](http://www.reta-vortaro.de/revo/inx/eraroj.html)  
