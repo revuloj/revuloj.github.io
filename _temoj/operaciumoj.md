@@ -3,10 +3,12 @@ layout: page
 title: Uzi Revon en diversaj sistemoj
 ---
 
+![shtonoj](../assets/img/shtonoj.jpg){: style="float: left; margin-right: 2em; max-width: 50%; border: solid gray 1px"}
 
 * Enhavo
 {:toc}
 
+<br clear="all"/>
 
 ## Interrete
 

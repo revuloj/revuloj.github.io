@@ -3,6 +3,8 @@ layout: page
 title: Helpo pri Revo-Servo
 ---
 
+![shtupoj](../assets/img/shtupoj.jpg){: style="float: right; margin-left: 2em; max-width: 50%; border: solid gray 1px"}
+
 * Enhavo
 {:toc}
 
@@ -12,6 +14,8 @@ vortaron.
 Por uzi la servon vi devas esti inter la redaktantaro de
 Reta Vortaro. Por aliĝi kiel redaktanto, petu ĉe la 
 administranto (vd. malsupre).
+
+<br clear="all"/>
 
 ## Kiel uzi la servon por redakti artikolon
 
