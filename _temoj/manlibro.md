@@ -6,8 +6,13 @@ title: Manlibro teĥnika
 # pri strukturado de la XML-fontodosieroj laŭ la dokumenttipdifino
 {:.no_toc}
 
+![manoj](../assets/img/manoj.jpg){: style="float: left; margin-right: 2em; max-width: 50%; border: solid gray 1px"}
+
+
 * Enhavo
 {:toc}
+
+<br clear="all"/>
 
 Pri la ekzakta specifo de la strukturelementoj informas la [Dokumentstrukturo (RelaxNG)](rnc).
 
