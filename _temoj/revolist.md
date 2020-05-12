@@ -3,6 +3,9 @@ layout: page
 title: Dissendolisto <revuloj@groups.io>
 ---
 
+![ursajlo](../assets/img/ursajlo.jpg){: style="float: right; margin-left: 2em; max-width: 50%; border: solid gray 1px"}
+
+
 * Enhavo
 {:toc}
 
