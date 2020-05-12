@@ -142,7 +142,8 @@ attlist-sekcio &= attribute lit { text }?
 ***
 ### _indikiloj_ <a href="#enhavo">▲</a>
 
-Tuj post la kapvorto venas ordinare unue kelkaj indikiloj pri la gramatiko, uzo k.a.
+Tuj post la kapvorto venas ordinare unue kelkaj indikiloj pri la 
+[gra](#gra-)matiko, [uzo](#uzo-) k.a.
 
 
 ```
@@ -157,8 +158,9 @@ indikiloj =
 ### _dif-ref-parto_ <a href="#enhavo">▲</a>
 
 
-Ĉe sinonimoj oni povas uzi referencon al alia vorto aŭ senco, kiu difinas ĝin.
-Ĝin povas suplementi indikiloj, aliaj referencoj, rimarko, tradukoj kaj administra noto.
+Ĉe sinonimoj oni povas uzi referencon al alia vorto aŭ senco ([dif-ref](#dif-ref-)), kiu difinas ĝin.
+Ĝin povas suplementi [indikiloj](#indikiloj-), aliaj [referenciloj](#referenciloj-), [rim](#rim-)arko, 
+[tradukiloj](#tradukiloj-) kaj [adm](#adm-)inistra noto.
 
 
 ```
@@ -173,7 +175,8 @@ dif-ref-parto =
 
 ### _dif-ref_ <a href="#enhavo">▲</a>
 
-Foje la difino anstataŭiĝas per difina referenco.
+Foje la difino anstataŭiĝas per difina <dfn>ref</dfn>erenco
+aŭ grupo da ili ([refgrp](#refgrp-)). Oni uzas tiam la tipon <em>dif</em>.
 
 
 ```
@@ -186,7 +189,8 @@ dif-ref =
 ### _difiniloj-supl_ <a href="#enhavo">▲</a>
 
 
-Post difino povas veni diversaj suplementoj kiel ekzemploj, referencoj, bildoj, rimarkoj...
+Post difino povas veni diversaj suplementoj kiel [ekz](#ekz-)emploj, [referenciloj](#referenciloj-), 
+bildoj ([bld](#bld-)), [rim](#rim-)arkoj...
 
 
 ```
@@ -200,7 +204,8 @@ difiniloj-supl =
 
 ### _referenciloj_ <a href="#enhavo">▲</a>
 
-La referenciloj montras al rilataj vortoj kaj sencoj, vortlistoj aŭ al interreta paĝo.
+La referenciloj montras al rilataj vortoj kaj sencoj (<dfn>refgrp</dfn>, <dfn>ref</dfn>), 
+vortlistoj ([lstref](#lstref-)) aŭ al interreta paĝo ([url](#url-)).
 
 
 ```
@@ -213,7 +218,8 @@ referenciloj =
 
 ### _tradukiloj_ <a href="#enhavo">▲</a>
 
-La nacilingvaj tradukoj de la senco aŭ derivaĵo - unuopa aŭ pluraj grupigite.
+La nacilingvaj tradukoj de la senco aŭ derivaĵo - unuopa (<dfn>trd</dfn>) 
+aŭ pluraj grupigite ([trdgrp](#trdgrp-)).
 
 
 ```
@@ -226,7 +232,7 @@ tradukiloj =
 
 Unua parto de teksto en artikolo, derivaĵo aŭ senco, 
 kiu venas antaŭ subdividoj, t.e. ekz. en derivaĵo tio, kio venas antaŭ sencoj.
-Tio povas esti indikiloj kaj eble difino.
+Tio povas esti [indikiloj](#indikiloj-) kaj eble [dif](#dif-)ino.
 
 
 ```
@@ -238,7 +244,8 @@ unua-parto =
 ### _sekva-parto_ <a href="#enhavo">▲</a>
 
 Sekva parto de teksto en artikolo, derivaĵo aŭ senco venante post subdividoj,
-kiu ekz. en derivaĵo venas post la sencoj.
+kiu ekz. en derivaĵo venas post la sencoj. Ĝi konsistas el [difiniloj-supl](#difiniloj-supl-) kaj
+[tradukiloj](#tradukiloj-), sekvata de [adm](#adm-)inistra noto. Ĉiuj partoj povas esti forlasitaj.
 
 
 ```
@@ -308,6 +315,12 @@ derivaĵojn de la kapvorto. Derivaĵo komenciĝas je kapvorto kaj
 priskribaj elementoj pri ĝi aŭ el unu aŭ pluraj sencoj aŭ el unu aŭ
 pluraj subdividoj [subdrv](#subdrv-).
 
+La enhavo de derivaĵo povas obei al unu el du modeloj:
+1. Ordinare komence estas [unua-parto](#unua-parto-) sekvata de sencoj aŭ subderivaĵoj
+kaj poste [sekva-parto](#sekva-parto-). 
+2. En kelkaj okazoj ni difinas per referenco
+al alia vorto kaj aldonas nur indikilojn, vd. [dif-ref-parto](#dif-ref-parto-).
+
 
 ```
 drv =
@@ -346,6 +359,12 @@ priskribita vorto havas tre multajn sencojn. Tio povas
 rezulti en pli klara strukturo de la artikolo. La subdividaĵoj
 estas nombrataj per A), B), ...
 
+La enhavo de subderivaĵo povas obei al unu el du modeloj:
+1. Ordinare komence estas [unua-parto](#unua-parto-) sekvata de sencoj 
+kaj poste [sekva-parto](#sekva-parto-). 
+2. En kelkaj okazoj ni difinas per referenco
+al alia vorto kaj aldonas nur indikilojn, vd. [dif-ref-parto](#dif-ref-parto-).
+
 
 ```
 subdrv =
@@ -365,11 +384,19 @@ attlist-subdrv &= attribute mrk { snc-marko }?
 ### snc <a href="#enhavo">▲</a>
 
 Senco de unuopa vorto en artikolo. Komparu la latinajn ciferojn en
-la artikoloj de PIV. Per mrk oni povas referenci sencon de alie. Per <em>ref</em> oni
+la artikoloj de PIV. 
+
+Per <em>mrk</em> (vd [snc-marko](#snc-marko-)) 
+oni povas referenci sencon de alie. Per <em>ref</em> oni
 referencas al alia senco samartikola (uzata en malmultaj longaj artikoloj, ekz.
-"al". Per <em>num</em> la senco ricevas numeron. Atentu, ke future simbolaj nomoj por
-la sencoj estos perferataj kaj do numerado okazas aŭtomate ignorante la atributon
-<em>num</em>.
+"al". Per <em>num</em> oni povus atribui al la senco fiksitan numeron, 
+sed tion ni normale ne uzas, ni lasas tion al la aŭtomata numerado.
+
+La enhavo de senco povas obei al unu el du modeloj:
+1. Ordinare komence estas [unua-parto](#unua-parto-) eble sekvata de subsencoj 
+kaj poste [sekva-parto](#sekva-parto-). 
+2. En kelkaj okazoj ni difinas per referenco
+al alia vorto kaj aldonas nur indikilojn, vd. [dif-ref-parto](#dif-ref-parto-).
 
 
 ```
@@ -394,6 +421,12 @@ attlist-snc &=
 
 Subsenco ene de senco. Ĝi redonas subtilaĵojn ene de unu senco.
 Ili estas nombrataj per a), b), ...
+
+La enhavo de subsenco povas obei al unu el du modeloj:
+1. Ordinare komence estas [unua-parto](#unua-parto-)  
+kaj poste [sekva-parto](#sekva-parto-). 
+2. En kelkaj okazoj ni difinas per referenco
+al alia vorto kaj aldonas nur indikilojn, vd. [dif-ref-parto](#dif-ref-parto-).
 
 
 ```
@@ -519,7 +552,7 @@ povas esti *, 1, ..., 9 kiel en PV, PIV
 ofc = 
   element ofc { 
     attlist-ofc, 
-    xsd:string { pattern="\*|[1-9]|19[0-9]{2}" } 
+    xsd:string { pattern="\*|\(?[1-9]\)?|19[0-9]{2}" } 
   }
 attlist-ofc &= empty
 ```
