@@ -7,8 +7,13 @@ date: 2003-10-27
 # por vindozuloj inter la revuloj
 {:.no_toc}
 
+![fenestro](../assets/img/fenestro.jpg){: style="float: left; margin-right: 2em; max-width: 50%; border: solid gray 1px"}
+
+
 * Enhavo
 {:toc}
+
+<br clear="all"/>
 
 Tiu &#265;i dokumento klarigas, kiel redakti por Revo per vindoza
 komputilo. &#264;io prezentata funkcias per Vindozo-2000.
