@@ -3,8 +3,12 @@ layout: page
 title: Informoj por redaktantoj kaj redaktontoj
 ---
 
+![potoj](../assets/img/potoj.jpg){: style="float: right; margin-left: 2em; max-width: 50%; border: solid gray 1px"}
+
 * Enhavo
 {:toc}
+
+<br clear="all"/>
 
 ## Kiel fariĝi kunredaktanto?
 
