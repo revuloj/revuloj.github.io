@@ -4,9 +4,9 @@ title: Pri...
 permalink: /about/
 ---
 
-![reto](../assets/img/reto.gif){: style="float: right; margin-left: 2em; max-width: 50%"}
+![reto](../assets/img/reto.gif){: style="float: right; margin-left: 2em"}
 <br clear="all"/>
-![araneo](../assets/img/araneo.gif){: style="float: right; margin-left: 2em; max-width: 50%; position: relative; right: -12px"}
+![araneo](../assets/img/araneo.gif){: style="float: right; margin-left: 2em; position: relative; right: 0px"}
 
 
 Sur tiu ĉi retpaĝo kolektiĝas informoj por la redaktantoj kaj uzantoj de Reta Vortaro.
