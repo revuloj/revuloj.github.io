@@ -10,5 +10,5 @@ layout: home
 ... nu, estas longa kaj iom ŝtona vojo al kompleta ĝenerala vortaro de la lingvo Esperanto.
 Kiel kolekto de laboriloj, kolektiĝas tie ĉi informoj, kiuj helpu pri uzado kaj
 redaktado de [Reta Vortaro](http://retavortaro.de).
-La dokumentoj estas listigitaj sub [Informpaĝoj](temoj).
+La dokumentoj troviĝas laŭ la supra menuo kaj listigitaj ĉiuj en la  [Indekso](temoj).
 

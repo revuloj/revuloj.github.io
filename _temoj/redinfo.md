@@ -84,15 +84,16 @@ Jen kelkaj aferoj, kiujn vi povus fari:
   <a href="http://h1838790.stratoserver.net/revokontrolo/">vortokontrolo</a> helpas trovi tiujn.
   (vidu ankaŭ la <a href="http://h1838790.stratoserver.net/revokontrolo/klarigoj.html">klarigojn</a>)
 - Aldoni tradukojn en via gepatra lingvo. Jen
-  <a href="http://www.reta-vortaro.de/revo/">kelkaj mankantaj tradukoj</a>
-- Aldoni indikojn pri oficialeco de vortoj 
-  (la steloj kaj ciferetoj ĉe la radikoj en PIV).
+  <a href="http://www.reta-vortaro.de/revo/inx/mankantaj.html">kelkaj mankantaj tradukoj</a>
+- ~~Aldoni indikojn pri oficialeco de vortoj 
+  (la steloj kaj ciferetoj ĉe la radikoj en PIV).~~
 - Kontroli vortojn de iu fako, aldoni fakindikon ĉe
   mankantaj vortoj. Ĝustigi la difinojn.
 - Trovi la fontojn de cititaj frazoj kaj aldoni pliajn ekzemplojn de vortuzo.
   Vi povas uzi la komfortan serĉilon ĉe <a href="https://revaj.steloj.de/">revaj.steloj.de</a> tiucele.
-- Desegni aŭ foti bildetojn rilate al iu fako
-  kaj aldoni la bildojn en la artikoloj.
+- Aldoni bildojn de plantoj, bestoj, muzikinstrumentoj ks. en la artikoloj. 
+  Per la serĉilo ĉe <a href="https://revaj.steloj.de/">revaj.steloj.de</a> vi povas ankaŭ serĉi kaj
+  enmeti bildojn de Vikimedio.
 
 
 ## Ĉu ekzistas reguloj pri redaktado de artikoloj?
