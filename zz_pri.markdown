@@ -6,7 +6,7 @@ permalink: /about/
 
 ![reto](../assets/img/reto.gif){: style="float: right; margin-left: 2em"}
 <br clear="all"/>
-![araneo](../assets/img/araneo.gif){: style="float: right; margin-left: 2em; position: relative; right: 0px"}
+![araneo](../assets/img/araneo.gif){: style="float: right; margin-left: 2em; position: relative; top: -6px; right: 0px"}
 
 
 Sur tiu ĉi retpaĝo kolektiĝas informoj por la redaktantoj kaj uzantoj de Reta Vortaro.

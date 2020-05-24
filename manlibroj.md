@@ -14,3 +14,4 @@ title: Manlibroj
 # Instrukcioj por uzado
 
 - [Uzi Revon en diversaj sistemoj](temoj/operaciumoj)
+- [Elŝuti pakaĵojn](temoj/elshuto)
