@@ -52,6 +52,7 @@ exclude:
    - Dockerfile
    - run-revuloj.sh
    - provo-2
+   - provo-3
    - .sass-cache/
    - .jekyll-cache/
    - gemfiles/

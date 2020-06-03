@@ -7,7 +7,7 @@ layout: home
 ![La longa kaj ŝtona vojo al Reta Vortaro](revo.jpg)
 
 
-... nu, estas longa kaj iom ŝtona vojo al kompleta ĝenerala vortaro de la lingvo Esperanto.
+... nu, estas [longa kaj iom ŝtona vojo](temoj/historio.html) al kompleta ĝenerala vortaro de la lingvo Esperanto.
 Kiel kolekto de laboriloj, kolektiĝas tie ĉi informoj, kiuj helpu pri uzado kaj
 redaktado de [Reta Vortaro](http://retavortaro.de).
 La dokumentoj troviĝas laŭ la supra menuo kaj listigitaj ĉiuj en la [indekso](temoj).
