@@ -1,0 +1,39 @@
+FROM jekyll/jekyll:3.8.5
+
+# vidu:
+# https://hub.docker.com/layers/jekyll/jekyll/3.8.5/images/sha256-266d5974688c8d1ccd921fa1f2eac44684b6b515ab54915c25a28f2fff73d222?context=explore
+# https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll
+# https://github.com/docker/docker.github.io/blob/master/Dockerfile
+# https://github.com/madduci/docker-github-pages/blob/master/Dockerfile
+
+# https://pages.github.com/versions/
+ARG GITHUB_PAGES_VERSION=204
+ARG MINIMA_VERSION=2.5.1
+
+#WORKDIR /usr/src/app/revuloj.github.io
+#
+## https://jekyllrb.com/tutorials/using-jekyll-with-bundler/
+#
+#RUN  bundle init && gem install commonmarker -v $COMMONMAKER_VERSION --source 'https://rubygems.org/' \
+#  && bundle add jekyll --version $JEKYLL_VERSION && bundle exec jekyll new --force . 
+#
+## sed -i -e "s/daemon:x:2/daemon:x:${DAEMON_UID}/" /etc/passwd
+#
+#RUN sed -i -e "s/^gem \"jekyll\"/#gem \"jekyll\"/" Gemfile \
+# && sed -i -e "s/gem \"minima\".*/gem \"minima\", \"~> $MINIMA_VERSION\"/" Gemfile \
+# && sed -i -e "s/gem \"jekyll-feed\".*/gem \"jekyll-feed\", \"~> $JEKYLL_FEED_VERSION\"/" Gemfile \
+# && sed -i -e "s/gem \"github-pages\".*/gem \"github-pages\", \"~> $GITHUB_PAGES_VERSION\", group: :jekyll_plugins/" Gemfile \
+# && sed "$ a gem \"rouge\", \"~> $ROUGE_VERSION\"" Gemfile \
+# && sed "$ a gem \"public_suffix\", \"~> $PUBLIC_SUFFIX_VERSION\"" Gemfile
+#
+##RUN bundle update github-pages
+#RUN bundle update rouge && bundle install 
+
+
+#RUN apk del .build-deps
+
+#COPY Gemfile Gemfile.lock ./
+#COPY . .
+
+EXPOSE 4000
+CMD ["bundle","exec","jekyll","serve"]
