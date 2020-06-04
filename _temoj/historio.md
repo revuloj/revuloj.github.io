@@ -9,7 +9,6 @@ title: Historio de Reta Vortaro
 * Enhavo
 {:toc}
 
-<br clear="all"/>
 
 ## Fondiĝo de la projekto
 
@@ -76,6 +75,8 @@ averaĝa artikolofonto pli ampleksiĝis de 40 al 150 linioj, alivorte la enhavo 
 
 ![Revo-ŝangoj](../assets/img/revo_commits.png)
 
+En 2004 Libera Folio [artikolas pri Reta Vortaro](https://www.liberafolio.org/arkivo/www.liberafolio.org/2005/Interreto/Document.2004-04-13.html).
+
 
 ## Evoluo de la kodo
 
@@ -98,7 +99,7 @@ La vortaro estas plurlingva ne nur por la uzantoj, sed ankaŭ por la programinto
 |1999 | Revo: Perlo, XML, XSLT, HTML, CSS|
 |2003 | Serĉilo kaj redakt-formularo: Perlo, Javoskripto, SQL (Wieland Pusch)|
 |2006 | Nova transformilo: Ant, Javo, XML, XSLT|
-|2014 | Prevo por Androido: Javo (Neil Roberts)|
+|2013 | Prevo por Androido: Javo (Neil Roberts), [artikolo en LF](https://www.liberafolio.org/arkivo/www.liberafolio.org/2013/reta-vortaro-por-la-poso/)|
 |2015 | Vortanalizilo: Prologo|
 |2016 | PoŝRevo por iOS: Swift, Ruby (Robin Hill)|
 |2017 | Nova redaktilo: Prologo + Javoskripto|
