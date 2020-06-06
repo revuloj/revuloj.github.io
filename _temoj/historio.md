@@ -34,7 +34,7 @@ Jen eltiraĵoj el la letero al SAT en Novembro 1997 (tiutempe oni uzis ordinare 
 ... (detaligoj sur kelkaj pliaj paĝoj) ...
 
 La retpaĝo menciita en la letero kun detalaj klarigoj ankoraŭ
-[troviĝas en la Interretarĥivo](https://web.archive.org/web/19990429174525/http://www.uni-leipzig.de/esperanto/material/epiv2/index.html). 
+[troviĝas en la Interretarĥivo](https://web.archive.org/web/19990429174525/http://www.uni-leipzig.de/esperanto/material/epiv2/index.html)
 
 ### MCMXCVIII
 
@@ -57,7 +57,7 @@ La [rezultopaĝo de Oktobro 1999](https://web.archive.org/web/19991007003636/htt
 
 Jen la anonco en la projekta diskutforumo pri redaktebla Revo en Oktobro 1999:
 
-![Anonco redaktebla Revo en Oktobro 1999](../assets/img/redaktebla_revo_okt99.png).
+![Anonco redaktebla Revo en Oktobro 1999](../assets/img/redaktebla_revo_okt99.png)
 
 ### MM
 
