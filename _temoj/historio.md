@@ -45,10 +45,14 @@ Post pretigo de *pruvo de la koncepto*, fine de 1998 ĉio sendiĝis lumdiske al 
 
 ### MCMXCIX
 
-La volo pri komputile konsultebla vortaro persistis, kaj do kiel komenco de ĉirkaŭvojo ĝis somero 1999 estiĝis Reta Vortaro surbaze de la ellaboritaj teĥnikaj rimedoj kaj la enhavo de publike haveblaj vortaroj kiel Plena Vortaro kaj traduklistoj. 
-Ĝis Oktobro aldoniĝis ankaŭ la ebleco sendi ŝanĝojn per retpoŝto kaj iom poste ankaŭ retformularo. Intertempe okazis ankaŭ transiro de SGML al la lastatempe normigita XML, nelaste pro bezonata Unikodo...
-La [rezultopaĝo de Oktobro 1999](https://web.archive.org/web/19991007003636/http://www.uni-leipzig.de/esperanto/material/epiv2/docu/rezultoj.html) pli detalas ĉion ĉi.
+La volo pri komputile konsultebla vortaro persistis, kaj do kiel komenco de ĉirkaŭvojo ĝis somero 1999 estiĝis Reta Vortaro surbaze de la ellaboritaj teĥnikaj rimedoj kaj la enhavo de publike haveblaj vortaroj kiel Plena Vortaro kaj traduklistoj. Intertempe okazis ankaŭ transiro de SGML al la lastatempe normigita XML, nelaste pro bezonata Unikodo...
 
+Prototipa versio publikiĝis en Septembro 1999. La 
+[anonco kun la sekva diskuto en soc.culture.esperanto](https://groups.google.com/forum/m/#!topic/soc.culture.esperanto/biE92u2Tu3I)
+ankoraŭ estas legebla en la reto.
+
+Ĝis Oktobro aldoniĝis ankaŭ la ebleco sendi ŝanĝojn per retpoŝto kaj iom poste ankaŭ retformularo. 
+La [rezultopaĝo de Oktobro 1999](https://web.archive.org/web/19991007003636/http://www.uni-leipzig.de/esperanto/material/epiv2/docu/rezultoj.html) pli detalas ĉion ĉi.
 
 |    Septembro 1999 | Publikigo de unua kruda versio en Interreto. |
 |    Aŭtuno 1999    | Eksperimentado pri redakteblecoj rekte per CGI-programoj. |
