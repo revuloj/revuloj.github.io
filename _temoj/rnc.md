@@ -19,6 +19,12 @@ title: Dokumentstrukturo (RelaxNG)
 
 La [teĥnika manlibro](manlibro) montras al vi kiel en artikoloj kombini tiujn strukturelementojn pri la plej oftaj okazoj.
 
+
+***
+.  
+
+## *KADRA STRUKTURO DE VORTARO*{: style="color: brown"}
+***
 ### vortaro <a href="#enhavo">▲</a>
 
 Radiko de la strukturarbo de vortaro. La elemento ampleksas
@@ -540,11 +546,12 @@ attlist-kap &= empty
 Radiko de kapvorto. Ĝi estas bezonata por anstaŭigo
 de tildoj. Sekve la "radiko" de afiksoj kaj finaĵoj estu
 ili mem, sen la streketoj antaŭe aŭ malantaŭe.
+La atributo <em>var</em> povas identigi radikon de variaĵo.
 
 
 ```
 rad = element rad { attlist-rad, text }
-attlist-rad &= empty
+attlist-rad &= attribute var { text }?
 ```
 
 ### ofc <a href="#enhavo">▲</a>
@@ -866,11 +873,14 @@ Tildo rilatas al la radiko, donita en la kapvorto
 ĝi ne bezonas enhavon. La atributo <em>lit</em> indikas alian
 komencliteron ol havas la radiko, grava por majuskligo kaj
 minuskligo.
+La atributo <em>var</em> povas identigi radikon de variaĵo.
 
 
 ```
 tld = element tld { attlist-tld, empty }
-attlist-tld &= attribute lit { text }?
+attlist-tld &= 
+  attribute lit { text }?,
+  attribute var { text }?
 ```
 
 ### klr <a href="#enhavo">▲</a>
