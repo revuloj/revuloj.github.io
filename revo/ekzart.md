@@ -9,6 +9,6 @@ title: Ekzemplaj artikoloj
 - [-iĝ](art/igx.html)
 - [pri](art/pri.html)
 - [pro](art/pro.html)
-- [sen](art/sen.html)
+- [sen](art/sen)
 - [teni](art/ten.html)
 - [-ul](art/ul.html)
