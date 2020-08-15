@@ -32,9 +32,13 @@
             request.send(data);  
           }
 
+          window.onbeforeunload = function() {
+            store_preferences();
+          }
+
           window.onload = function() {
             
-            restore_preferences();
+            restore_preferences();            
 
             HTTPRequest('GET', "lingvoj.xml", {},
                 function() {
@@ -46,20 +50,57 @@
                     
                     for (e of doc.getElementsByTagName("lingvo")) {
                         var c = e.attributes["kodo"];
-                        //console.log(c);
-                        //codes[c.value] = e.textContent;
-                        var li = document.createElement("LI");
-                        li.appendChild(document.createTextNode(e.textContent));
 
-                        if ( pref_lng.indexOf(c.value) < 0 ) {
-                            alist.appendChild(li);
-                        } else {
-                            plist.appendChild(li);
+                        if (c.value != "eo") {
+                            var li = document.createElement("LI");
+                            li.setAttribute("data-lng",c.value);
+                            li.appendChild(document.createTextNode(e.textContent));
+
+                            if ( pref_lng.indexOf(c.value) < 0 ) {
+                                li.setAttribute("title","aldonu");
+                                alist.appendChild(li);
+                            } else {
+                                li.setAttribute("title","forigu");
+                                plist.appendChild(li);
+                            }
                         }
                     } 
+
+                    alist.addEventListener("click",aldonuLingvon);
+                    plist.addEventListener("click",foriguLingvon);
                 });  
           }   
 
+
+        function aldonuLingvon(event) {
+            var el = event.target; 
+
+            if (el.tagName == "LI") {
+                var lng = el.getAttribute("data-lng");
+                if (lng) {
+                    console.log("+"+lng);
+                    pref_lng.push(lng);
+                }
+                el.parentElement.removeChild(el);
+                document.getElementById("pref_lng").appendChild(el);
+            }
+        }
+
+        function foriguLingvon(event) {
+            var el = event.target; 
+
+            if (el.tagName == "LI") {
+                var lng = el.getAttribute("data-lng");
+                if (lng) {
+                    console.log("-"+lng);
+                    // forigu elo la areo pref_lng
+                    var i = pref_lng.indexOf(lng);
+                    pref_lng.splice(i, 1);
+                }
+                el.parentElement.removeChild(el);
+                document.getElementById("alia_lng").appendChild(el);
+            }
+        }
 
         // memoras valorojn de preferoj en la loka memoro de la retumilo
         function store_preferences() {
@@ -74,7 +115,7 @@
             var prefs = (str? JSON.parse(str) : null);
 
             var nav_lng = navigator.languages || [navigator.language];
-            pref_lng = (prefs && prefs["w:preflng"])? prefs["w:preflng"] : nav_lng;
+            pref_lng = (prefs && prefs["w:preflng"])? prefs["w:preflng"] : nav_lng.slice();
         }
 
 
@@ -82,7 +123,39 @@
         <style>
             #pref_lng {
                 font-weight: bold;
+                list-style: none; /* Remove list bullets */
             }
+
+            #alia_lng {
+                list-style: none; /* Remove list bullets */
+            }
+/*            ul {    
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                padding-left: 16px;
+            }
+            */
+
+            #pref_lng li:before {
+                content: "\2296"; /* Insert content that looks like bullets */
+                padding-right: .5em;
+            }   
+            
+            #alia_lng li:before {
+                content: "\2295"; /* Insert content that looks like bullets */
+                padding-right: .5em;
+            }                           
+
+            #pref_lng li:hover, #alia_lng li:hover {
+                background-color: goldenrod;
+            }              
+
+            #pref_lng li:active, #alia_lng li:active {
+                background-color: greenyellow;
+            }              
         </style>
     </head>
     <body>
