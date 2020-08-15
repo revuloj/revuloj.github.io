@@ -2,9 +2,10 @@ var js_sojlo = 3; //30+3;
 var sec_art = "s_artikolo";
 
 var icon_kashu = "\u2305"; //"\u2306";
-var icon_malkashu = "\u2304"; // "\u23f7";
-var icon_kashu_chiujn = "\u2796"; // "\u23eb\uFE0E";
-var icon_malkashu_chiujn = "\u2795"; //"\u23ec\uFE0E";
+var icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
+var icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
+var icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
+var icon_opcioj = "\uD83D\uDC41"; //"\1f441;\uFE0E"; 
 
 ///
 window.onload = function() {
@@ -18,13 +19,13 @@ function preparu_art() {
         + ']';
     /* aktivigu nur por longaj artikoloj... */
     var d = document.getElementsByClassName("kasxebla");
-    if (d.length > js_sojlo) {
+    //if (d.length > js_sojlo) {
         preparu_kashu_sekciojn();
         preparu_maletendu_sekciojn();
         h1_kashu_malkashu_butonoj();
         interna_navigado();
         //etendu_ekzemplojn();   
-    }
+    //}
 }
 
 /* kaŝu sekciojn de derivaĵoj, se la artikolo estas tro longa
@@ -34,13 +35,14 @@ function preparu_kashu_sekciojn() {
     var h = document.location.hash.substr(1); // derivaĵo aŭ alia elemento celita kaj do montrenda
     var trg = h? document.getElementById(h) : null;
     var d_vid = trg? trg.closest("section.drv, section.fontoj").firstElementChild.id : null;
+    var multaj = d.length > js_sojlo;
     var first = true;
 
     for (var el of d) {
         var h2 = getPrevH2(el);
         if (h2) {
             h2.classList.add("kashilo");
-            if ((h && h2.id != d_vid) || (!h && !first)) { 
+            if ( multaj && (h && h2.id != d_vid) || (!h && !first) ) { 
                 // \u25be
                 h2.appendChild(make_flat_button(icon_malkashu,
                     kashu_malkashu_drv,"malkaŝu derivaĵon"));
@@ -124,12 +126,14 @@ function maletendu_trd(element) {
     for (var id of element.children) {
         var id_lng = id.getAttribute("lang");
         // la tradukoj estas paroj de ea lingvo-nomo kaj nacilingvaj tradukoj
-        if ( id_lng == "eo") {
-            eo = id;
-        } else if ( nav_lng.indexOf(id_lng) < 0 ) {
-            eo.classList.add("kasxita");
-            id.classList.add("kasxita");
-            kashita = true;
+        if (id_lng) {
+            if ( id_lng == "eo") {
+                eo = id;
+            } else if ( nav_lng.indexOf(id_lng) < 0 ) {
+                eo.classList.add("kasxita");
+                id.classList.add("kasxita");
+                kashita = true;
+            }
         }
     }
     // aldonu pli...
@@ -144,7 +148,6 @@ function maletendu_trd(element) {
     }
 }
 
-
 function etendu_trd(event) {
     event.preventDefault();
     var div_trd = event.target.parentElement;
@@ -154,8 +157,6 @@ function etendu_trd(event) {
     // kaŝu pli...
     div_trd.querySelector(".pli").classList.add("kasxita");
 }
-
-
 
 function make_flat_button(label,handler,hint='') {
     var span = document.createElement("SPAN");
@@ -170,8 +171,9 @@ function h1_kashu_malkashu_butonoj() {
     // aldonu kasho/malkasho-butonojn  
     var art = document.getElementById(sec_art);
     var h1 = art.getElementsByTagName("H1")[0];   
-    h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
     h1.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
+    h1.appendChild(make_button(icon_opcioj,montru_opciojn,"agordu viajn preferojn"));
+    h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
 }
 
 function make_button(label,handler,hint='') {
@@ -182,6 +184,47 @@ function make_button(label,handler,hint='') {
     if (hint) btn.setAttribute("title",hint)
     return btn;
 }
+
+function montru_opciojn() {    
+    var opt = make_options();
+    var art = document.getElementById(sec_art);
+    var h1 = art.getElementsByTagName("H1")[0];   
+    h1.appendChild(opt);
+}
+
+// kreas opcio-menuon de la artikolo
+function make_options() {
+    var div = make_element("DIV",{class: "opcioj"});
+    add_radios(div,"o_drv","derivaĵoj",[{id: "drv_elektitaj", label: "elektitaj"},{id: "drv_chiuj", label: "ĉiuj"}]);
+    add_radios(div,"o_trd","tradukoj",[{id: "trd_preferataj", label: "preferataj"},{id: "trd_chiuj", label: "ĉiuj"}]);
+    add_radios(div,"o_fnt","fontoj",[{id: "fnt_elektita", label: "elektita"},{id: "fnt_chiuj", label: "ĉiuj"}]);
+    return div;
+}
+
+// kreas grupon de opcioj (radio), donu ilin kiel vektoro da {id,label}
+function add_radios(parent,name,glabel,radios) {
+    var gl = document.createElement("LABEL");
+    gl.appendChild(document.createTextNode(glabel));
+    parent.appendChild(gl);
+    for (r of radios) {
+        var span = document.createElement("SPAN");
+        var input = make_element("INPUT",{name: name, type: "radio", id: r.id, value: r.id});
+        var label = make_element("LABEL",{for: r.id}, r.label);
+        span.appendChild(input);
+        span.appendChild(label);
+        parent.appendChild(span);
+    }
+}
+
+function make_element(name,attributes,textcontent) {
+    var element = document.createElement(name);
+    for (var a in attributes) {
+        element.setAttribute(a,attributes[a])
+    }
+    if (textcontent) element.appendChild(document.createTextNode(textcontent));
+    return element;
+}
+
 
 function interna_navigado() {
     // certigu, ke sekcioj malfermiĝu, kiam ili entenas navig-celon
