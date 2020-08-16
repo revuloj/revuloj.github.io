@@ -294,15 +294,15 @@ A IMG.viki:active {background-color:  #a0a070; border: 2px inset gray}
 /* tildoj en ekzemploj */
 .ekztld { font-weight: bold } /*text-decoration: underline solid #775533} */
 
-.kashilo, .etendilo {
+.kashilo, .etendilo, .pref {
     border: 1px solid #E0E0A0;
     box-shadow: none;
 }
-.kashilo:hover, .etendilo:hover {
+.kashilo:hover, .etendilo:hover, .pref:hover {
     background: #FFEEAA;
     border: 1px solid #775533;
 }    
-.kashilo:active, .etendilo:active {
+.kashilo:active, .etendilo:active, .pref:active {
     background: #E8C888;
     border: 1px solid #775533;
 }
@@ -354,7 +354,7 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 } 
 */
 
-.preferoj {
+.overlay {
     position: absolute;
     max-width: 90%;     
     overflow-x: auto;
@@ -364,16 +364,30 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     font-size: 1rem;
     background-color: #F5F5D5;
 
+    padding: 0.5em;
+    border: 2px dotted green;
+    box-shadow: 5px 5px 10px;
+}
+
+.overlay button {
+    /*
+    position: -webkit-sticky; 
+    position: sticky;
+    */
+    display: inline-block;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+}
+
+.preferoj {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     gap: 0.2em 0.2em;
     width: fit-content;
     width: -moz-fit-content;
     width: -webkit-fit-content;
 
-    padding: 0.5em;
-    border: 2px dotted green;
-    box-shadow: 5px 5px 10px;
 }
 
 #pref_lng {
@@ -463,13 +477,14 @@ SPAN.kashilo:hover {
     border: none;
 }
 
-a.pli {
+a.pli, a.pref {
     font-style: oblique;
     text-decoration: none;
     color: darkgreen;
     background: #E0E0A0;
     border-radius: .5em;
     padding: .1em .3em;
+    margin-bottom: .1em;
 }
 
 .square_min {

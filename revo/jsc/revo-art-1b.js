@@ -1,6 +1,7 @@
 var js_sojlo = 3; //30+3;
 var sec_art = "s_artikolo";
 var pref_lng = [];
+var pref_exists = false;
 var lingvoj_xml = "../cfg/lingvoj.xml";
 
 var icon_kashu = "\u2305"; //"\u2306";
@@ -8,14 +9,14 @@ var icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
 var icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
 var icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
 var icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
+var icon_close = "\u274C\uFE0E";
 
 window.onbeforeunload = function() {
     store_preferences();
  }
 
 ///
-window.onload = function() {
-    
+window.onload = function() {    
     restore_preferences();            
     preparu_art()
 }   
@@ -128,31 +129,37 @@ function kashu_malkashu_drv(event) {
 }
 
 function maletendu_trd(element) {
-    var nav_lng = navigator.languages || [navigator.language];
+    //var nav_lng = navigator.languages || [navigator.language];
     var eo;
-    var kashita = false;
+    var maletendita = false;
     for (var id of element.children) {
         var id_lng = id.getAttribute("lang");
         // la tradukoj estas paroj de ea lingvo-nomo kaj nacilingvaj tradukoj
         if (id_lng) {
             if ( id_lng == "eo") {
                 eo = id;
-            } else if ( nav_lng.indexOf(id_lng) < 0 ) {
+            } else if ( pref_lng.indexOf(id_lng) < 0 ) {
                 eo.classList.add("kasxita");
                 id.classList.add("kasxita");
-                kashita = true;
+                maletendita = true;
             }
         }
     }
     // aldonu pli...
-    if (kashita) {
-        var pli = document.createElement("A");
+    if (maletendita) {
+        var pli = make_element("A",{lang: "eo", href: "#"},"pli...");
+            // href=# necesas por ebligi fokusadon per TAB-klavo
         pli.addEventListener("click",etendu_trd);
-        pli.setAttribute("lang","eo");    
-        pli.setAttribute("href","#"); // por ebligi fokusadon per TAB-klavo
         pli.classList.add("pli","etendilo");
-        pli.appendChild(document.createTextNode('pli...')); 
         element.appendChild(pli);
+
+        if (!pref_exists) {
+            var pref = make_element("A",{lang: "eo", href: "#"}, "preferoj...");
+            pref.addEventListener("click",preferoj_dlg);
+            pref.classList.add("pref");
+            element.appendChild(make_element("SPAN")); // pro la krado
+            element.appendChild(pref);
+        }
     }
 }
 
@@ -196,24 +203,31 @@ function make_button(label,handler,hint='') {
 function preferoj_dlg() {
 //    <ul id="pref_lng"></ul>
     //<ul id="alia_lng"></ul>
-    var pref = document.getElementById("preferoj");
+    var pref = document.getElementById("pref_dlg");
 
     // se ankoraŭ ne ekzistas, faru la fenestrojn por preferoj (lingvoj)
     if (pref) {
         pref.classList.toggle("kasxita");
     } else {
+        var dlg = make_element("DIV",{id: "pref_dlg", class: "overlay"});
         var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
-        var pdiv = div.appendChild(make_element("DIV"));
-        pdiv.appendChild(make_element("H3",[],"preferataj lingvoj"));
-        pdiv.appendChild(make_element("UL",{id: "pref_lng"}));
-        var adiv = div.appendChild(make_element("DIV"));
-        adiv.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
-        adiv.appendChild(make_element("UL",{id: "alia_lng"}));
+        var close = make_button(icon_close,function(){
+            document.getElementById("pref_dlg").classList.add("kasxita")
+        },"fermu preferojn");
+        close.setAttribute("id","pref_dlg_close");
+
+        div.appendChild(make_element("H3",[],"preferataj lingvoj"));
+        div.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
+        div.appendChild(make_element("UL",{id: "pref_lng"}));
+        div.appendChild(make_element("UL",{id: "alia_lng"}));
+
+        dlg.appendChild(close);
+        dlg.appendChild(div);
     
         // enigu liston de preferoj en la artikolon
         var art = document.getElementById(sec_art);
-        var h1 = art.getElementsByTagName("H1")[0];   
-        h1.appendChild(div);
+        var h1 = art.getElementsByTagName("H1")[0];           
+        h1.appendChild(dlg);
     
         load_lng();
     } 
@@ -336,9 +350,11 @@ function foriguLingvon(event) {
 
 // memoras valorojn de preferoj en la loka memoro de la retumilo
 function store_preferences() {
-    var prefs = {};
-    prefs["w:preflng"] = pref_lng;
-    window.localStorage.setItem("revo_preferoj",JSON.stringify(prefs));  
+    if (pref_lng.length > 0) {
+        var prefs = {};
+        prefs["w:preflng"] = pref_lng;
+        window.localStorage.setItem("revo_preferoj",JSON.stringify(prefs));     
+    }
 }
 
 // reprenas memorigitajn valorojn de preferoj el la loka memoro de la retumilo
@@ -347,7 +363,7 @@ function restore_preferences() {
     var prefs = (str? JSON.parse(str) : null);
 
     var nav_lng = navigator.languages || [navigator.language];
-    pref_lng = (prefs && prefs["w:preflng"])? prefs["w:preflng"] : nav_lng.slice();
+    pref_lng = (prefs && prefs["w:preflng"])? (pref_exists=true) && prefs["w:preflng"] : nav_lng.slice();
 }
 
 /* 
