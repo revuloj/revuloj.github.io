@@ -1,16 +1,24 @@
 var js_sojlo = 3; //30+3;
 var sec_art = "s_artikolo";
+var pref_lng = [];
+var lingvoj_xml = "../cfg/lingvoj.xml";
 
 var icon_kashu = "\u2305"; //"\u2306";
 var icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
 var icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
 var icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
-var icon_opcioj = "\uD83D\uDC41"; //"\1f441;\uFE0E"; 
+var icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
+
+window.onbeforeunload = function() {
+    store_preferences();
+ }
 
 ///
 window.onload = function() {
+    
+    restore_preferences();            
     preparu_art()
-}
+}   
 
 
 function preparu_art() {
@@ -172,7 +180,7 @@ function h1_kashu_malkashu_butonoj() {
     var art = document.getElementById(sec_art);
     var h1 = art.getElementsByTagName("H1")[0];   
     h1.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
-    h1.appendChild(make_button(icon_opcioj,montru_opciojn,"agordu viajn preferojn"));
+    h1.appendChild(make_button(icon_opcioj,montru_preferojn,"agordu viajn preferatajn lingvojn"));
     h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
 }
 
@@ -185,13 +193,144 @@ function make_button(label,handler,hint='') {
     return btn;
 }
 
+function montru_preferojn() {
+//    <ul id="pref_lng"></ul>
+    //<ul id="alia_lng"></ul>
+
+    var div = make_element("DIV",{class: "preferoj"});
+    var pdiv = div.appendChild(make_element("DIV"));
+    pdiv.appendChild(make_element("H3",[],"preferataj lingvoj"));
+    pdiv.appendChild(make_element("UL",{id: "pref_lng"}));
+    var adiv = div.appendChild(make_element("DIV"));
+    adiv.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
+    adiv.appendChild(make_element("UL",{id: "alia_lng"}));
+
+    // enigu liston de preferoj en la artikolon
+    var art = document.getElementById(sec_art);
+    var h1 = art.getElementsByTagName("H1")[0];   
+    h1.appendChild(div);
+
+    load_lng();
+}
+
+function load_lng() {
+    HTTPRequest('GET', lingvoj_xml, {},
+    function() {
+        // Success!
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(this.response,"text/xml");
+        var plist = document.getElementById("pref_lng");
+        var alist = document.getElementById("alia_lng");
+        
+        for (e of doc.getElementsByTagName("lingvo")) {
+            var c = e.attributes["kodo"];
+    
+            if (c.value != "eo") {
+                var li = document.createElement("LI");
+                li.setAttribute("data-lng",c.value);
+                li.appendChild(document.createTextNode(e.textContent));
+    
+                if ( pref_lng.indexOf(c.value) < 0 ) {
+                    li.setAttribute("title","aldonu");
+                    alist.appendChild(li);
+                } else {
+                    li.setAttribute("title","forigu");
+                    plist.appendChild(li);
+                }
+            }
+        } 
+    
+        alist.addEventListener("click",aldonuLingvon);
+        plist.addEventListener("click",foriguLingvon);
+    });     
+}
+
+/*
 function montru_opciojn() {    
     var opt = make_options();
     var art = document.getElementById(sec_art);
     var h1 = art.getElementsByTagName("H1")[0];   
     h1.appendChild(opt);
 }
+*/
 
+
+function HTTPRequest(method, url, params, onSuccess) {
+    var request = new XMLHttpRequest();
+    var data = new FormData();
+  
+    for (let [key, value] of Object.entries(params)) {
+      data.append(key,value);
+    }
+  
+    request.open(method, url , true);
+    
+    request.onload = function() {
+      if (this.status >= 200 && this.status < 400) {
+        onSuccess.call(this,this.response);
+      } else {
+        // post konektiĝo okazis eraro
+        console.error('Eraro dum ŝargo de ' + url);       
+      }
+    };
+    
+    request.onerror = function() {
+      // konekteraro
+      console.error('Eraro dum konektiĝo por ' + url);
+    };
+    
+    //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(data);  
+  }
+
+  
+function aldonuLingvon(event) {
+    var el = event.target; 
+
+    if (el.tagName == "LI") {
+        var lng = el.getAttribute("data-lng");
+        if (lng) {
+            console.log("+"+lng);
+            pref_lng.push(lng);
+        }
+        el.parentElement.removeChild(el);
+        document.getElementById("pref_lng").appendChild(el);
+    }
+}
+
+function foriguLingvon(event) {
+    var el = event.target; 
+
+    if (el.tagName == "LI") {
+        var lng = el.getAttribute("data-lng");
+        if (lng) {
+            console.log("-"+lng);
+            // forigu elo la areo pref_lng
+            var i = pref_lng.indexOf(lng);
+            pref_lng.splice(i, 1);
+        }
+        el.parentElement.removeChild(el);
+        document.getElementById("alia_lng").appendChild(el);
+    }
+}
+
+// memoras valorojn de preferoj en la loka memoro de la retumilo
+function store_preferences() {
+    var prefs = {};
+    prefs["w:preflng"] = pref_lng;
+    window.localStorage.setItem("revo_preferoj",JSON.stringify(prefs));  
+}
+
+// reprenas memorigitajn valorojn de preferoj el la loka memoro de la retumilo
+function restore_preferences() {
+    var str = window.localStorage.getItem("revo_preferoj");            
+    var prefs = (str? JSON.parse(str) : null);
+
+    var nav_lng = navigator.languages || [navigator.language];
+    pref_lng = (prefs && prefs["w:preflng"])? prefs["w:preflng"] : nav_lng.slice();
+}
+
+/* 
 // kreas opcio-menuon de la artikolo
 function make_options() {
     var div = make_element("DIV",{class: "opcioj"});
@@ -215,6 +354,7 @@ function add_radios(parent,name,glabel,radios) {
         parent.appendChild(span);
     }
 }
+*/
 
 function make_element(name,attributes,textcontent) {
     var element = document.createElement(name);

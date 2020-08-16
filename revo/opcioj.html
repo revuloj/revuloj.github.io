@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+           .opcioj {
+               display: grid;
+               grid-template-columns: auto auto auto;
+               width: fit-content;
+               width: -moz-fit-content;
+               width: -webkit-fit-content;
+
+               padding: 0.5em;
+               border: 1px solid green;
+           }
+          .opcioj input {
+            display: none;
+          } 
+          /*
+          .opcioj span {
+              justify-self: stretch
+          } 
+          */
+          .opcioj span label {
+            display: inline-block;
+            width: 100%;
+          } 
+          .opcioj input:checked + label {
+            background: goldenrod;
+          } 
+        </style>
+    </head>
+    <body>
+        <h3>&#x1f441; videblaj</h3>
+        <div class="opcioj">
+            <label>derivaĵoj</label>
+            <span><input name="o_drv" type="radio" id="drv_elektitaj" value="drv_elektitaj"><label for="drv_elektitaj">elektitaj</label></span>
+            <span><input name="o_drv" type="radio" id="drv_chiuj" value="drv_chiuj"><label for="drv_chiuj">ĉiuj</label></span>
+            <label>tradukoj</label>
+            <span><input name="o_trd" type="radio" id="trd_preferataj" value="trd_preferataj"><label for="trd_preferataj">preferataj</label></span>
+            <span><input name="o_trd" type="radio" id="trd_chiuj" value="trd_chiuj"><label for="trd_chiuj">ĉiuj</label></span>
+            <label>fontoj</label>
+            <span><input name="o_fnt" type="radio" id="fnt_elektitaj" value="fnt_elektitaj"><label for="fnt_elektitaj">elektita</label></span>
+            <span><input name="o_fnt" type="radio" id="fnt_chiuj" value="fnt_chiuj"><label for="fnt_chiuj">ĉiuj</label></span>
+        </div>
+    </body>
+</html>

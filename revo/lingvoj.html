@@ -40,7 +40,7 @@
             
             restore_preferences();            
 
-            HTTPRequest('GET', "lingvoj.xml", {},
+            HTTPRequest('GET', "cfg/lingvoj.xml", {},
                 function() {
                     // Success!
                     var parser = new DOMParser();
@@ -160,7 +160,7 @@
     </head>
     <body>
         <h3>preferataj tradukoj</h3>
-        <div class="pref_lng">
+        <div>
             <label>tradukoj</label>
             <span><input name="o_trd" type="radio" id="trd_preferataj" value="trd_preferataj"><label for="trd_preferataj">preferataj</label></span>
             <span><input name="o_trd" type="radio" id="trd_chiuj" value="trd_chiuj"><label for="trd_chiuj">ĉiuj</label></span>
