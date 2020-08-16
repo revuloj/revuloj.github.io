@@ -222,23 +222,31 @@ function load_lng() {
         var plist = document.getElementById("pref_lng");
         var alist = document.getElementById("alia_lng");
         
+        // kolekti la lingvojn unue, ni bezonoso ordigi ilin...
+        var lingvoj = {};
         for (e of doc.getElementsByTagName("lingvo")) {
             var c = e.attributes["kodo"];
-    
             if (c.value != "eo") {
-                var li = document.createElement("LI");
-                li.setAttribute("data-lng",c.value);
-                li.appendChild(document.createTextNode(e.textContent));
-    
-                if ( pref_lng.indexOf(c.value) < 0 ) {
-                    li.setAttribute("title","aldonu");
-                    alist.appendChild(li);
-                } else {
-                    li.setAttribute("title","forigu");
-                    plist.appendChild(li);
-                }
+                var ascii = eo_ascii(e.textContent);
+                lingvoj[ascii] = {lc: c.value, ln: e.textContent};
             }
-        } 
+        }
+
+        for (l of Object.keys(lingvoj).sort()) {    
+            var lc = lingvoj[l].lc;
+            var ln = lingvoj[l].ln;
+            var li = document.createElement("LI");
+            li.setAttribute("data-lng",lc);
+            li.appendChild(document.createTextNode(ln));
+
+            if ( pref_lng.indexOf(lc) < 0 ) {
+                li.setAttribute("title","aldonu");
+                alist.appendChild(li);
+            } else {
+                li.setAttribute("title","forigu");
+                plist.appendChild(li);
+            }
+        }
     
         alist.addEventListener("click",aldonuLingvon);
         plist.addEventListener("click",foriguLingvon);
@@ -423,4 +431,14 @@ function isLocalLink(url) {
 
 function getUrlFileName(url) {
    return url.substring(url.lastIndexOf('/')+1).split('#')[0];
+}
+
+function eo_ascii(str) {
+    return str
+        .replace(/ĉ/g,'cx')
+        .replace(/ĝ/g,'gx')
+        .replace(/ŝ/g,'sx')
+        .replace(/ĵ/g,'jx')
+        .replace(/ĥ/g,'hx')
+        .replace(/ŭ/g,'ux');
 }
