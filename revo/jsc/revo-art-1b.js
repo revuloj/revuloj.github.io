@@ -180,7 +180,7 @@ function h1_kashu_malkashu_butonoj() {
     var art = document.getElementById(sec_art);
     var h1 = art.getElementsByTagName("H1")[0];   
     h1.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
-    h1.appendChild(make_button(icon_opcioj,montru_preferojn,"agordu viajn preferatajn lingvojn"));
+    h1.appendChild(make_button(icon_opcioj,preferoj_dlg,"agordu viajn preferatajn lingvojn"));
     h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
 }
 
@@ -193,24 +193,30 @@ function make_button(label,handler,hint='') {
     return btn;
 }
 
-function montru_preferojn() {
+function preferoj_dlg() {
 //    <ul id="pref_lng"></ul>
     //<ul id="alia_lng"></ul>
+    var pref = document.getElementById("preferoj");
 
-    var div = make_element("DIV",{class: "preferoj"});
-    var pdiv = div.appendChild(make_element("DIV"));
-    pdiv.appendChild(make_element("H3",[],"preferataj lingvoj"));
-    pdiv.appendChild(make_element("UL",{id: "pref_lng"}));
-    var adiv = div.appendChild(make_element("DIV"));
-    adiv.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
-    adiv.appendChild(make_element("UL",{id: "alia_lng"}));
-
-    // enigu liston de preferoj en la artikolon
-    var art = document.getElementById(sec_art);
-    var h1 = art.getElementsByTagName("H1")[0];   
-    h1.appendChild(div);
-
-    load_lng();
+    // se ankoraŭ ne ekzistas, faru la fenestrojn por preferoj (lingvoj)
+    if (pref) {
+        pref.classList.toggle("kasxita");
+    } else {
+        var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
+        var pdiv = div.appendChild(make_element("DIV"));
+        pdiv.appendChild(make_element("H3",[],"preferataj lingvoj"));
+        pdiv.appendChild(make_element("UL",{id: "pref_lng"}));
+        var adiv = div.appendChild(make_element("DIV"));
+        adiv.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
+        adiv.appendChild(make_element("UL",{id: "alia_lng"}));
+    
+        // enigu liston de preferoj en la artikolon
+        var art = document.getElementById(sec_art);
+        var h1 = art.getElementsByTagName("H1")[0];   
+        h1.appendChild(div);
+    
+        load_lng();
+    } 
 }
 
 function load_lng() {
