@@ -356,6 +356,8 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 
 .preferoj {
     position: absolute;
+    max-width: 90%;     
+    overflow-x: auto;
     right: 0.5em;
     top: 2.5em;
     font-weight: normal;
@@ -383,6 +385,10 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 #alia_lng {
     list-style: none; /* Remove list bullets */
     padding-left: 0;
+
+    columns: 6;
+    -webkit-columns: 6;
+    -moz-columns: 6;
 }
 
 #pref_lng li, #alia_lng li {
