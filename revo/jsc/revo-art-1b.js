@@ -1,26 +1,26 @@
-var js_sojlo = 3; //30+3;
-var sec_art = "s_artikolo";
-var pref_lng = [];
-var pref_exists = false;
-var lingvoj_xml = "../cfg/lingvoj.xml";
+const js_sojlo = 3; //30+3;
+const sec_art = "s_artikolo";
+const lingvoj_xml = "../cfg/lingvoj.xml";
 
-var icon_kashu = "\u2305"; //"\u2306";
-var icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
-var icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
-var icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
-var icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
-var icon_close = "\u274C\uFE0E";
+var pref_lng = [];
+var pref_dat = Date.now();
+
+const icon_kashu = "\u2305"; //"\u2306";
+const icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
+const icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
+const icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
+//const icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
+const icon_close = "\u274C\uFE0E";
 
 window.onbeforeunload = function() {
     store_preferences();
- }
+}
 
 ///
 window.onload = function() {    
     restore_preferences();            
     preparu_art()
 }   
-
 
 function preparu_art() {
     top.document.title='Reta Vortaro ['
@@ -32,6 +32,7 @@ function preparu_art() {
         preparu_kashu_sekciojn();
         preparu_maletendu_sekciojn();
         h1_kashu_malkashu_butonoj();
+        piedlinio_preferoj();
         interna_navigado();
         //etendu_ekzemplojn();   
     //}
@@ -153,7 +154,8 @@ function maletendu_trd(element) {
         pli.classList.add("pli","etendilo");
         element.appendChild(pli);
 
-        if (!pref_exists) {
+        const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+        if ( Math.round((Date.now() - pref_dat) / _MS_PER_DAY, 0) < 1 ) {
             var pref = make_element("A",{lang: "eo", href: "#"}, "preferoj...");
             pref.addEventListener("click",preferoj_dlg);
             pref.classList.add("pref");
@@ -171,6 +173,7 @@ function etendu_trd(event) {
     };
     // kaŝu pli...
     div_trd.querySelector(".pli").classList.add("kasxita");
+    div_trd.querySelector(".pref").classList.add("kasxita");
 }
 
 function make_flat_button(label,handler,hint='') {
@@ -187,8 +190,17 @@ function h1_kashu_malkashu_butonoj() {
     var art = document.getElementById(sec_art);
     var h1 = art.getElementsByTagName("H1")[0];   
     h1.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
-    h1.appendChild(make_button(icon_opcioj,preferoj_dlg,"agordu viajn preferatajn lingvojn"));
+    //h1.appendChild(make_button(icon_opcioj,preferoj_dlg,"agordu viajn preferatajn lingvojn"));
     h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
+}
+
+function piedlinio_preferoj() {
+    var pied = document.body.getElementsByTagName("FOOTER")[0];
+    var first_a = pied.querySelector("A");
+    var pref = make_element("A",{class: "redakto", href: "#", title: "agordu preferatajn lingvojn"},"preferoj");
+    pref.addEventListener("click",preferoj_dlg);
+    first_a.insertAdjacentElement("afterend",pref);
+    first_a.insertAdjacentText("afterend"," | ");
 }
 
 function make_button(label,handler,hint='') {
@@ -201,8 +213,6 @@ function make_button(label,handler,hint='') {
 }
 
 function preferoj_dlg() {
-//    <ul id="pref_lng"></ul>
-    //<ul id="alia_lng"></ul>
     var pref = document.getElementById("pref_dlg");
 
     // se ankoraŭ ne ekzistas, faru la fenestrojn por preferoj (lingvoj)
@@ -211,17 +221,20 @@ function preferoj_dlg() {
     } else {
         var dlg = make_element("DIV",{id: "pref_dlg", class: "overlay"});
         var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
+        var tit = make_element("H2",{title: "tiun ĉi dialogon vi povas malfermi ĉiam el la piedlinio!"},"preferoj");
         var close = make_button(icon_close,function(){
             document.getElementById("pref_dlg").classList.add("kasxita")
         },"fermu preferojn");
         close.setAttribute("id","pref_dlg_close");
+        tit.appendChild(close);
 
-        div.appendChild(make_element("H3",[],"preferataj lingvoj"));
-        div.appendChild(make_element("H3",[],"aldoneblaj lingvoj"));
+        div.appendChild(make_element("H3",{},"preferataj lingvoj"));
+        div.appendChild(make_element("H3",{},"aldoneblaj lingvoj"));
         div.appendChild(make_element("UL",{id: "pref_lng"}));
         div.appendChild(make_element("UL",{id: "alia_lng"}));
 
-        dlg.appendChild(close);
+        dlg.appendChild(tit)
+        //dlg.appendChild(close);
         dlg.appendChild(div);
     
         // enigu liston de preferoj en la artikolon
@@ -324,6 +337,7 @@ function aldonuLingvon(event) {
         if (lng) {
             console.log("+"+lng);
             pref_lng.push(lng);
+            pref_dat = Date.now();
         }
         //el.parentElement.removeChild(el);
         document.getElementById("pref_lng").appendChild(el.cloneNode(true));
@@ -353,6 +367,7 @@ function store_preferences() {
     if (pref_lng.length > 0) {
         var prefs = {};
         prefs["w:preflng"] = pref_lng;
+        prefs["w:prefdat"] = pref_dat;
         window.localStorage.setItem("revo_preferoj",JSON.stringify(prefs));     
     }
 }
@@ -363,7 +378,8 @@ function restore_preferences() {
     var prefs = (str? JSON.parse(str) : null);
 
     var nav_lng = navigator.languages || [navigator.language];
-    pref_lng = (prefs && prefs["w:preflng"])? (pref_exists=true) && prefs["w:preflng"] : nav_lng.slice();
+    pref_lng = (prefs && prefs["w:preflng"])? prefs["w:preflng"] : nav_lng.slice();
+    pref_dat = (prefs && prefs["w:prefdat"])? prefs["w:prefdat"] : Date.now();
 }
 
 /* 

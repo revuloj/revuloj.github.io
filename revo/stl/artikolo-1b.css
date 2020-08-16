@@ -369,16 +369,14 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     box-shadow: 5px 5px 10px;
 }
 
+/*
 .overlay button {
-    /*
-    position: -webkit-sticky; 
-    position: sticky;
-    */
     display: inline-block;
     position: absolute;
     right: .5em;
     top: .5em;
 }
+*/
 
 .preferoj {
     display: grid;
