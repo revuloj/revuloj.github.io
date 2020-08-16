@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ekzemplaj artikoloj
+title: Specimenoj
 ---
 
 - [de](art/de.html)
