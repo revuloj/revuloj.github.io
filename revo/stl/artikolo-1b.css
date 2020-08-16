@@ -358,9 +358,9 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     position: absolute;
     right: 0.5em;
     top: 2.5em;
-    background: #E0E0A0;
     font-weight: normal;
     font-size: 1rem;
+    background-color: #F5F5D5;
 
     display: grid;
     grid-template-columns: auto auto auto;
@@ -377,10 +377,19 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 #pref_lng {
     font-weight: bold;
     list-style: none; /* Remove list bullets */
+    padding-left: 0;
 }
 
 #alia_lng {
     list-style: none; /* Remove list bullets */
+    padding-left: 0;
+}
+
+#pref_lng li, #alia_lng li {
+    background: #E0E0A0;
+    margin: .1em;
+    padding: .1em .5em;
+    border-radius: 2px;
 }
 
 #pref_lng li:before {
@@ -394,11 +403,12 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 }                           
 
 #pref_lng li:hover, #alia_lng li:hover {
-    background-color: goldenrod;
+    background-color: #FFEEAA;
 }              
 
 #pref_lng li:active, #alia_lng li:active {
-    background-color: greenyellow;
+    background-color: #E8C888;
+    ;
 }     
 
 BUTTON.kashilo {

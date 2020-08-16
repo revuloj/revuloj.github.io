@@ -245,6 +245,10 @@ function load_lng() {
             } else {
                 li.setAttribute("title","forigu");
                 plist.appendChild(li);
+
+                var lk = li.cloneNode(true);
+                lk.setAttribute("class","kasxita");
+                alist.appendChild(lk);
             }
         }
     
@@ -301,8 +305,9 @@ function aldonuLingvon(event) {
             console.log("+"+lng);
             pref_lng.push(lng);
         }
-        el.parentElement.removeChild(el);
-        document.getElementById("pref_lng").appendChild(el);
+        //el.parentElement.removeChild(el);
+        document.getElementById("pref_lng").appendChild(el.cloneNode(true));
+        el.classList.add("kasxita");
     }
 }
 
@@ -318,7 +323,8 @@ function foriguLingvon(event) {
             pref_lng.splice(i, 1);
         }
         el.parentElement.removeChild(el);
-        document.getElementById("alia_lng").appendChild(el);
+        ela = document.getElementById("alia_lng").querySelector("[data-lng='"+lng+"'");
+        ela.classList.remove("kasxita");
     }
 }
 
