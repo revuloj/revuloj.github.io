@@ -6,15 +6,15 @@ var pref_lng = [];
 var pref_dat = Date.now();
 
 const icon_kashu = "\u2305"; //"\u2306";
-const icon_malkashu = "\u2335"; //"\u2304"; // "\u23f7";
-const icon_kashu_chiujn = "\u2796\uFE0E"; // "\u23eb\uFE0E";
-const icon_malkashu_chiujn = "\u2795\uFE0E"; //"\u23ec\uFE0E";
+const icon_malkashu = "\u2304"; //"\u2335"; // "\u23f7";
+const icon_kashu_chiujn = "\u2306"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
+const icon_malkashu_chiujn = "\u23ec"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
 //const icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
-const icon_close = "\u274C\uFE0E";
+const icon_close = "fermu"; //"\u274C\uFE0E";
 
-window.onbeforeunload = function() {
-    store_preferences();
-}
+//window.onbeforeunload = function() {
+//    store_preferences();
+//}
 
 ///
 window.onload = function() {    
@@ -215,26 +215,28 @@ function make_button(label,handler,hint='') {
 function preferoj_dlg() {
     var pref = document.getElementById("pref_dlg");
 
-    // se ankoraŭ ne ekzistas, faru la fenestrojn por preferoj (lingvoj)
     if (pref) {
         pref.classList.toggle("kasxita");
+        store_preferences();
+    // se ankoraŭ ne ekzistas, faru la fenestrojn por preferoj (lingvoj)
     } else {
         var dlg = make_element("DIV",{id: "pref_dlg", class: "overlay"});
         var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
-        var tit = make_element("H2",{title: "tiun ĉi dialogon vi povas malfermi ĉiam el la piedlinio!"},"preferoj");
-        var close = make_button(icon_close,function(){
-            document.getElementById("pref_dlg").classList.add("kasxita")
+        //var tit = make_element("H2",{title: "tiun ĉi dialogon vi povas malfermi ĉiam el la piedlinio!"},"preferoj");
+        var close = make_button(icon_close,function() {
+            document.getElementById("pref_dlg").classList.add("kasxita");
+            store_preferences();
         },"fermu preferojn");
         close.setAttribute("id","pref_dlg_close");
-        tit.appendChild(close);
+        //tit.appendChild(close);
 
         div.appendChild(make_element("H3",{},"preferataj lingvoj"));
         div.appendChild(make_element("H3",{},"aldoneblaj lingvoj"));
         div.appendChild(make_element("UL",{id: "pref_lng"}));
         div.appendChild(make_element("UL",{id: "alia_lng"}));
 
-        dlg.appendChild(tit)
-        //dlg.appendChild(close);
+        //dlg.appendChild(tit)
+        dlg.appendChild(close);
         dlg.appendChild(div);
     
         // enigu liston de preferoj en la artikolon

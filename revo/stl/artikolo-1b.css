@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Revo';
+    src: url('Revo.woff2') format('woff2'),
+         url('Revo.woff') format('woff');
+}
+
 /* HTML-elementoj */
 BODY {background: #F5F5D5; 
       margin-right: 0.5cm;
@@ -439,12 +445,14 @@ BUTTON.kashilo {
     border: 1px solid #E0E0A0;
     border-radius: .5em;
     /* padding: 1rem 2rem; */
+    padding: .2em;
     margin: .2em;
     text-decoration: none;
 
     /*box-shadow: 1px 1px 2px;*/
     box-shadow: none;
-    font: inherit;
+    /*font: inherit;*/
+    font-family: Revo;
     font-size: 1rem;
     /*font-family: sans-serif;
     font-size: 1rem; */
@@ -467,7 +475,10 @@ SPAN.kashilo {
     border: none;
     /*vertical-align: middle; */
     /*border-radius: 50%;*/
-    font-size: 1rem;
+    font-family: Revo;
+    font-size: .8rem;
+    padding-top: .4rem;
+    font-weight: normal;
     /*background-color: #eee8aa; */
 }
 
