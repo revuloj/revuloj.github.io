@@ -7,8 +7,8 @@ var pref_dat = Date.now();
 
 const icon_kashu = "\u2305"; //"\u2306";
 const icon_malkashu = "\u2304"; //"\u2335"; // "\u23f7";
-const icon_kashu_chiujn = "\u2306"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
-const icon_malkashu_chiujn = "\u23ec"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
+const icon_kashu_chiujn = "\u2353"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
+const icon_malkashu_chiujn = "\u234c"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
 //const icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
 const icon_close = "fermu"; //"\u274C\uFE0E";
 

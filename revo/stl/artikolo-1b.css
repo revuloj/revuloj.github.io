@@ -1,7 +1,9 @@
 @font-face {
     font-family: 'Revo';
-    src: url('./Revo.woff2') format('woff2'),
-         url('./Revo.woff') format('woff');
+    src: url('Revo.woff2') format('woff2'),
+         url('Revo.woff') format('woff'),
+         url('Revo.ttf') format('truetype'),
+         url('Revo.svg#Revo') format('svg');
 }
 
 /* HTML-elementoj */
