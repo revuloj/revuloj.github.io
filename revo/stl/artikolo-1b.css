@@ -445,6 +445,11 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     margin: 0.1em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
+    background-color: #E0E0A0;
+
+    /* border: none; */
+    border: 1px solid #E0E0A0;
+    border-radius: .5em;
 }
 
 .icon_btn {
@@ -453,11 +458,6 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     /*display: inline-block;*/
     float: right;
     color: darkgreen;
-    background-color: #E0E0A0;
-
-    /* border: none; */
-    border: 1px solid #E0E0A0;
-    border-radius: .5em;
     /* padding: 1rem 2rem; */
     padding: .2em;
     margin: .2em;
@@ -477,8 +477,10 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     -moz-appearance: none;
 }
 
-SPAN.kashilo {
+H2 .icon_btn {
     float: right; 
+    border: none;
+/*    
     color: darkgreen;
     margin-right: 0.5em; 
     width: 1.6em; 
@@ -486,17 +488,16 @@ SPAN.kashilo {
     cursor: pointer;
     text-align:center;
     border: none;
-    /*vertical-align: middle; */
-    /*border-radius: 50%;*/
-    font-size: .8rem;
+    font-size: 1.2rem;
     padding-top: .4rem;
     font-weight: normal;
-    /*background-color: #eee8aa; */
+    */
 }
 
-SPAN.kashilo:hover {
+H2 .icon_btn:hover, H2 .icon_btn:active, H2 .icon_btn:focus {
     border: none;
 }
+
 
 a.pli, a.pref {
     font-style: oblique;

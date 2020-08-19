@@ -48,12 +48,12 @@ function preparu_kashu_sekciojn() {
             if ( multaj && (h && h2.id != d_vid) || (!h && !first) ) { 
                 // \u25be
                 h2.appendChild(make_icon_button("i_mkash",
-                    kashu_malkashu_drv,"malkaŝu derivaĵon"));
+                    null,"malkaŝu derivaĵon"));
                 el.classList.add("kasxita") 
             } else {
                 // "\u25b2"
                 h2.appendChild(make_icon_button("i_kash",
-                    kashu_malkashu_drv,"kaŝu derivaĵon"));
+                    null,"kaŝu derivaĵon"));
             }                    
             first = false;
             h2.addEventListener("click", function(event) { 
@@ -82,7 +82,8 @@ function kashu_chiujn_drv() {
         var h2 = getPrevH2(el);
         if (h2) {
             el.classList.add("kasxita");
-            h2.querySelector(".i_kash").classList.replace("i_kash","i_mkash");
+            var kash = h2.querySelector(".i_kash");
+            if (kash) kash.classList.replace("i_kash","i_mkash");
         }
     }    
 }
@@ -92,8 +93,9 @@ function malkashu_chiujn_drv() {
     for (var el of document.getElementsByClassName("kasxebla")) {
         var h2 = getPrevH2(el);
         if (h2) {
-            el.classList.remove("kasxita") 
-            h2.querySelector(".i_mkash").classList.replace("i_mkash","i_kash");
+            el.classList.remove("kasxita");
+            var mkash = h2.querySelector(".i_mkash");
+            if (mkash) mkash.classList.replace("i_mkash","i_kash");
         }
     }    
 }
@@ -211,7 +213,7 @@ function make_button(label,handler,hint='') {
 function make_icon_button(iclass,handler,hint='') {
     var btn = document.createElement("BUTTON");
     //btn.appendChild(document.createTextNode(label)); 
-    btn.addEventListener("click",handler);
+    if (handler) btn.addEventListener("click",handler);
     btn.classList.add(iclass,"icon_btn");
     if (hint) btn.setAttribute("title",hint)
     return btn;
