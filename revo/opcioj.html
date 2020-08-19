@@ -1,6 +1,9 @@
 <html>
     <head>
         <style>
+            BODY {
+              background-color: silver;
+            }
            .opcioj {
                display: grid;
                grid-template-columns: auto auto auto;
@@ -26,11 +29,29 @@
           .opcioj input:checked + label {
             background: goldenrod;
           } 
+          BUTTON {
+            background-color:white !important;
+            height: 1rem;
+          }
+          #kash_btn {
+            position: fixed;
+            right: 0;
+            bottom: 50%;
+            margin-bottom: -1rem;
+          }
         </style>
+        <link title="piktogramoj" type="text/css" rel="stylesheet" href="stl/piktogram-1b.css">
     </head>
     <body>
         <h3>&#x1f441; videblaj</h3>
+        <button class="i_kash"></button>
+        <button class="i_mkash"></button>
+        <div id="kash_btn">
+          <button class="i_kash_ch"></button><br/>
+          <button class="i_mkash_ch"></button>
+        </div>
         <div class="opcioj">
+            
             <label>derivaĵoj</label>
             <span><input name="o_drv" type="radio" id="drv_elektitaj" value="drv_elektitaj"><label for="drv_elektitaj">elektitaj</label></span>
             <span><input name="o_drv" type="radio" id="drv_chiuj" value="drv_chiuj"><label for="drv_chiuj">ĉiuj</label></span>
