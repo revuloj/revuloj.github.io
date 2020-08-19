@@ -231,7 +231,7 @@ function preferoj_dlg() {
         var dlg = make_element("DIV",{id: "pref_dlg", class: "overlay"});
         var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
         //var tit = make_element("H2",{title: "tiun ĉi dialogon vi povas malfermi ĉiam el la piedlinio!"},"preferoj");
-        var close = make_button("fermu",function() {
+        var close = make_button("preta",function() {
             document.getElementById("pref_dlg").classList.add("kasxita");
             store_preferences();
         },"fermu preferojn");

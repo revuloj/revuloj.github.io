@@ -360,6 +360,7 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 .ix_literoj > label {
     font-weight: bold;
     text-align: right;
+    padding: .1em;
 }
 .ix_literoj > label::after {
     content: ":\00a0"
@@ -367,16 +368,9 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 .ix_literoj input {
     display: none;
 } 
-/*
-.ix_literoj span label {
-    display: inline-block;
-    width: 100%;
-    border-radius: 2px;
-    text-align: center;
-    padding: 0.1em;
-} 
-*/
 .ix_literoj input:checked + label {
+    border-radius: 2px;
+    padding: .1em;
     background: goldenrod;
 } 
 
@@ -438,6 +432,7 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 }
 
 BUTTON {
+    height: 1.5rem;
     margin: 0.1em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
@@ -449,7 +444,8 @@ BUTTON {
 }
 
 #kash_btn BUTTON {
-    margin: 0.1em .2em;
+    height: 1.5rem;
+    margin: .3em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
     background-color: #E0E0A0;
