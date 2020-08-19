@@ -8,7 +8,7 @@
 
 /* HTML-elementoj */
 BODY {background: #F5F5D5; 
-      margin-right: 0.5cm;
+      padding-right: 1.5em;
       /*font-family: "Latin Modern Roman", "TimesNewRoman", "Liberation Serif", serif;*/
       /*font-family: "Utopia", "TimesNewRoman", "Liberation Serif", serif;*/
     }
@@ -364,6 +364,7 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 
 .overlay {
     position: absolute;
+    z-index: 100;
     max-width: 90%;     
     overflow-x: auto;
     right: 0.5em;
@@ -447,7 +448,9 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 }
 
 #kash_btn button {
-    margin: 0;
+    margin: 0.1em .2em;
+    /*border: 1px solid gray;*/
+    box-shadow: 1px 1px 3px gray;
 }
 
 BUTTON.kashilo {
