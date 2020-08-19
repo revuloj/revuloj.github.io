@@ -455,6 +455,15 @@ BUTTON {
     border-radius: .5em;
 }
 
+BUTTON:hover, #kash_btn BUTTON:hover {
+    background-color: #FFEEAA;
+    border: 1px solid #775533;
+}    
+BUTTON:active,#kash_btn BUTTON:active {
+    background-color: #E8C888;
+    border: 1px solid #775533;
+}
+
 .icon_btn {
     height: 1.2rem;
     width: 1.2rem;
