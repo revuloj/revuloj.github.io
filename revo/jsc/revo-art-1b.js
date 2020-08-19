@@ -31,7 +31,7 @@ function preparu_art() {
     //if (d.length > js_sojlo) {
         preparu_kashu_sekciojn();
         preparu_maletendu_sekciojn();
-        h1_kashu_malkashu_butonoj();
+        kashu_malkashu_butonoj();
         piedlinio_preferoj();
         interna_navigado();
         //etendu_ekzemplojn();   
@@ -185,13 +185,15 @@ function make_flat_button(label,handler,hint='') {
     return span;
 }
 
-function h1_kashu_malkashu_butonoj() {
+function kashu_malkashu_butonoj() {
     // aldonu kasho/malkasho-butonojn  
     var art = document.getElementById(sec_art);
-    var h1 = art.getElementsByTagName("H1")[0];   
-    h1.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
+    //var h1 = art.getElementsByTagName("H1")[0];   
+    var div=make_element("DIV",{id: "kash_btn"});
+    div.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
+    div.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
     //h1.appendChild(make_button(icon_opcioj,preferoj_dlg,"agordu viajn preferatajn lingvojn"));
-    h1.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
+    art.appendChild(div);
 }
 
 function piedlinio_preferoj() {
