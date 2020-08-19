@@ -5,13 +5,6 @@ const lingvoj_xml = "../cfg/lingvoj.xml";
 var pref_lng = [];
 var pref_dat = Date.now();
 
-//const icon_kashu = "\u2305"; //"\u2306";
-//const icon_malkashu = "\u2304"; //"\u2335"; // "\u23f7";
-//const icon_kashu_chiujn = "\u2353"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
-//const icon_malkashu_chiujn = "\u234c"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
-//const icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
-//const icon_close = "fermu"; //"\u274C\uFE0E";
-
 //window.onbeforeunload = function() {
 //    store_preferences();
 //}
@@ -89,7 +82,7 @@ function kashu_chiujn_drv() {
         var h2 = getPrevH2(el);
         if (h2) {
             el.classList.add("kasxita");
-            h2.querySelector(".kashilo").textContent = icon_malkashu;
+            h2.querySelector(".i_kash").classList.replace("i_kash","i_mkash");
         }
     }    
 }
@@ -100,7 +93,7 @@ function malkashu_chiujn_drv() {
         var h2 = getPrevH2(el);
         if (h2) {
             el.classList.remove("kasxita") 
-            h2.querySelector(".kashilo").textContent = icon_kashu;
+            h2.querySelector(".i_mkash").classList.replace("i_mkash","i_kash");
         }
     }    
 }
@@ -113,7 +106,7 @@ function kashu_malkashu_drv(event) {
         for (var el of section.getElementsByClassName("kasxebla")) {
             el.classList.remove("kasxita");
         }
-        section.querySelector("h2 .kashilo").textContent = icon_kashu;
+        section.querySelector("h2 .i_mkash").classList.replace("i_mkash","i_kash");
         // aktualigu la salto-markon per la "id" de section>h2
         // por teni ĝin malkaŝita ĉe reŝargo de la dokumento
         // aŭ ĉu ni lasu la originan???
@@ -125,7 +118,7 @@ function kashu_malkashu_drv(event) {
         for (var el of section.getElementsByClassName("kasxebla")) {
             el.classList.add("kasxita");
         }
-        section.querySelector("h2 .kashilo").textContent = icon_malkashu;
+        section.querySelector("h2 .i_kash").classList.replace("i_kash","i_mkash");
     }
 }
 
