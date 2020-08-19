@@ -237,26 +237,20 @@ function preferoj_dlg() {
         },"fermu preferojn");
         close.setAttribute("id","pref_dlg_close");
 
-        var xbtn = inx.map(
-            i => {
-                var s = i.join('..');
-                return make_button(s, function(){
-                    console.log(s)
-                },
-                "lingvoj "+s)
-            });
+        var xopt = inx.map(i => { return {id: i.join('_'), label: i.join('..')}; });
         var xdiv = make_element("DIV",{class: "ix_literoj"});
-        xdiv.append(...xbtn);
+        add_radios(xdiv,"pref_lingvoj",null,xopt,change_pref_lng);
         
-        div.appendChild(make_element("SPAN"));
+        //div.appendChild(make_element("SPAN"));
+        xdiv.appendChild(close);
         div.appendChild(xdiv);
+
         div.appendChild(make_element("H3",{},"preferataj lingvoj"));
         div.appendChild(make_element("H3",{},"aldoneblaj lingvoj"));
         div.appendChild(make_element("UL",{id: "pref_lng"}));
         div.appendChild(make_element("UL",{id: "alia_lng"}));
 
         //dlg.appendChild(tit)
-        dlg.appendChild(close);
         dlg.appendChild(div);
     
         // enigu liston de preferoj en la artikolon
@@ -264,11 +258,11 @@ function preferoj_dlg() {
         var h1 = art.getElementsByTagName("H1")[0];           
         h1.appendChild(dlg);
     
-        load_lng();
+        load_pref_lng();
     } 
 }
 
-function load_lng() {
+function load_pref_lng() {
     HTTPRequest('GET', lingvoj_xml, {},
     function() {
         // Success!
@@ -276,8 +270,11 @@ function load_lng() {
         var doc = parser.parseFromString(this.response,"text/xml");
         var plist = document.getElementById("pref_lng");
         var alist = document.getElementById("alia_lng");
+
+        var selection = document.getElementById("preferoj")
+            .querySelector('input[name="pref_lingvoj"]:checked').value.split('_');
         
-        // kolekti la lingvojn unue, ni bezonoso ordigi ilin...
+        // kolekti la lingvojn unue, ni bezonos ordigi ilin...
         var lingvoj = {};
         for (e of doc.getElementsByTagName("lingvo")) {
             var c = e.attributes["kodo"];
@@ -292,10 +289,13 @@ function load_lng() {
             var ln = lingvoj[l].ln;
             var li = document.createElement("LI");
             li.setAttribute("data-lng",lc);
+            li.setAttribute("data-la",l);
             li.appendChild(document.createTextNode(ln));
 
             if ( pref_lng.indexOf(lc) < 0 ) {
                 li.setAttribute("title","aldonu");
+                if (ln[0] < selection[0] || ln[0] > selection[1]) 
+                    li.classList.add("kasxita");
                 alist.appendChild(li);
             } else {
                 li.setAttribute("title","forigu");
@@ -310,6 +310,19 @@ function load_lng() {
         alist.addEventListener("click",aldonuLingvon);
         plist.addEventListener("click",foriguLingvon);
     });     
+}
+
+function change_pref_lng() {
+    var selection = document.getElementById("preferoj")
+        .querySelector('input[name="pref_lingvoj"]:checked').value.split('_');
+
+    for (ch of document.getElementById("alia_lng").childNodes) {
+        var la=ch.getAttribute("data-la");
+        if (la[0] < selection[0] || la[0] > selection[1]) 
+            ch.classList.add("kasxita");
+        else
+            ch.classList.remove("kasxita");
+    }
 }
 
 /*
@@ -413,22 +426,32 @@ function make_options() {
     add_radios(div,"o_fnt","fontoj",[{id: "fnt_elektita", label: "elektita"},{id: "fnt_chiuj", label: "ĉiuj"}]);
     return div;
 }
+*/
 
 // kreas grupon de opcioj (radio), donu ilin kiel vektoro da {id,label}
-function add_radios(parent,name,glabel,radios) {
-    var gl = document.createElement("LABEL");
-    gl.appendChild(document.createTextNode(glabel));
-    parent.appendChild(gl);
+function add_radios(parent,name,glabel,radios,handler) {
+    if (glabel) {
+        var gl = document.createElement("LABEL");
+        gl.appendChild(document.createTextNode(glabel));
+        parent.appendChild(gl);   
+    }
+    var first = true;
     for (r of radios) {
         var span = document.createElement("SPAN");
-        var input = make_element("INPUT",{name: name, type: "radio", id: r.id, value: r.id});
+        var input = first?
+            make_element("INPUT",{name: name, type: "radio", id: r.id, checked: "checked", value: r.id}) :
+            make_element("INPUT",{name: name, type: "radio", id: r.id, value: r.id});
+        first = false;
         var label = make_element("LABEL",{for: r.id}, r.label);
         span.appendChild(input);
         span.appendChild(label);
         parent.appendChild(span);
     }
+    if(handler) {
+        parent.addEventListener("click",handler);
+    }
 }
-*/
+
 
 function make_element(name,attributes,textcontent) {
     var element = document.createElement(name);

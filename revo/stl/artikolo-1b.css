@@ -314,47 +314,6 @@ A IMG.viki:active {background-color:  #a0a070; border: 2px inset gray}
 i.ekz { display: block; margin-left: 1.6em; text-indent: -1.2em; text-align: left }
 i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 
-/*
-.opcioj {
-    position: absolute;
-    right: 0.5em;
-    top: 2.5em;
-    background: #E0E0A0;
-    font-weight: normal;
-    font-size: 1rem;
-
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 0.2em 0.2em;
-    width: fit-content;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-
-    padding: 0.5em;
-    border: 2px dotted green;
-    box-shadow: 5px 5px 10px;
-}
-.opcioj > label {
-    font-weight: bold;
-    text-align: right;
-}
-.opcioj > label::after {
-    content: ":\00a0"
-} 
-.opcioj input {
-    display: none;
-} 
-.opcioj span label {
-    display: inline-block;
-    width: 100%;
-    border-radius: 2px;
-    text-align: center;
-    padding: 0.1em;
-} 
-.opcioj input:checked + label {
-    background: goldenrod;
-} 
-*/
 
 .overlay {
     position: absolute;
@@ -388,8 +347,38 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     width: fit-content;
     width: -moz-fit-content;
     width: -webkit-fit-content;
-
 }
+
+.ix_literoj {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.ix_literoj span {
+    padding: 0 .3em;
+    border-left: 2px solid #E0E0A0;
+}
+.ix_literoj > label {
+    font-weight: bold;
+    text-align: right;
+}
+.ix_literoj > label::after {
+    content: ":\00a0"
+} 
+.ix_literoj input {
+    display: none;
+} 
+/*
+.ix_literoj span label {
+    display: inline-block;
+    width: 100%;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0.1em;
+} 
+*/
+.ix_literoj input:checked + label {
+    background: goldenrod;
+} 
 
 #pref_lng {
     font-weight: bold;
@@ -401,9 +390,16 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     list-style: none; /* Remove list bullets */
     padding-left: 0;
 
-    columns: 6;
-    -webkit-columns: 6;
-    -moz-columns: 6;
+    /*
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    */
+    /*
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    */
 }
 
 #pref_lng li, #alia_lng li {
@@ -439,6 +435,17 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     margin-bottom: -1rem;
     display: flex;
     flex-direction: column;
+}
+
+BUTTON {
+    margin: 0.1em .2em;
+    /*border: 1px solid gray;*/
+    box-shadow: 1px 1px 3px gray;
+    background-color: #E0E0A0;
+
+    /* border: none; */
+    border: 1px solid #E0E0A0;
+    border-radius: .5em;
 }
 
 #kash_btn BUTTON {
