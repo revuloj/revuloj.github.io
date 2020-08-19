@@ -5,12 +5,12 @@ const lingvoj_xml = "../cfg/lingvoj.xml";
 var pref_lng = [];
 var pref_dat = Date.now();
 
-const icon_kashu = "\u2305"; //"\u2306";
-const icon_malkashu = "\u2304"; //"\u2335"; // "\u23f7";
-const icon_kashu_chiujn = "\u2353"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
-const icon_malkashu_chiujn = "\u234c"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
+//const icon_kashu = "\u2305"; //"\u2306";
+//const icon_malkashu = "\u2304"; //"\u2335"; // "\u23f7";
+//const icon_kashu_chiujn = "\u2353"; //"\u2796\uFE0E"; // "\u23eb\uFE0E";
+//const icon_malkashu_chiujn = "\u234c"; //"\u2795\uFE0E"; //"\u23ec\uFE0E";
 //const icon_opcioj = "\u2f42"; //"\uD83D\uDC41"; //"\1f441;\uFE0E"; 
-const icon_close = "fermu"; //"\u274C\uFE0E";
+//const icon_close = "fermu"; //"\u274C\uFE0E";
 
 //window.onbeforeunload = function() {
 //    store_preferences();
@@ -54,12 +54,12 @@ function preparu_kashu_sekciojn() {
             h2.classList.add("kashilo");
             if ( multaj && (h && h2.id != d_vid) || (!h && !first) ) { 
                 // \u25be
-                h2.appendChild(make_flat_button(icon_malkashu,
+                h2.appendChild(make_icon_button("i_mkash",
                     kashu_malkashu_drv,"malkaŝu derivaĵon"));
                 el.classList.add("kasxita") 
             } else {
                 // "\u25b2"
-                h2.appendChild(make_flat_button(icon_kashu,
+                h2.appendChild(make_icon_button("i_kash",
                     kashu_malkashu_drv,"kaŝu derivaĵon"));
             }                    
             first = false;
@@ -176,6 +176,7 @@ function etendu_trd(event) {
     div_trd.querySelector(".pref").classList.add("kasxita");
 }
 
+/*
 function make_flat_button(label,handler,hint='') {
     var span = document.createElement("SPAN");
     span.classList.add("kashilo");
@@ -183,15 +184,15 @@ function make_flat_button(label,handler,hint='') {
     //span.addEventListener("click",handler);
     if (hint) span.setAttribute("title",hint)
     return span;
-}
+}*/
 
 function kashu_malkashu_butonoj() {
     // aldonu kasho/malkasho-butonojn  
     var art = document.getElementById(sec_art);
     //var h1 = art.getElementsByTagName("H1")[0];   
     var div=make_element("DIV",{id: "kash_btn"});
-    div.appendChild(make_button(icon_kashu_chiujn,kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
-    div.appendChild(make_button(icon_malkashu_chiujn,malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
+    div.appendChild(make_icon_button("i_kash_ch",kashu_chiujn_drv,"kaŝu ĉiujn derivaĵojn"));
+    div.appendChild(make_icon_button("i_mkash_ch",malkashu_chiujn_drv,"malkaŝu ĉiujn derivaĵojn"));
     //h1.appendChild(make_button(icon_opcioj,preferoj_dlg,"agordu viajn preferatajn lingvojn"));
     art.appendChild(div);
 }
@@ -209,13 +210,23 @@ function make_button(label,handler,hint='') {
     var btn = document.createElement("BUTTON");
     btn.appendChild(document.createTextNode(label)); 
     btn.addEventListener("click",handler);
-    btn.classList.add("kashilo");
+    //btn.classList.add("kashilo");
+    if (hint) btn.setAttribute("title",hint)
+    return btn;
+}
+
+function make_icon_button(iclass,handler,hint='') {
+    var btn = document.createElement("BUTTON");
+    //btn.appendChild(document.createTextNode(label)); 
+    btn.addEventListener("click",handler);
+    btn.classList.add(iclass,"icon_btn");
     if (hint) btn.setAttribute("title",hint)
     return btn;
 }
 
 function preferoj_dlg() {
     var pref = document.getElementById("pref_dlg");
+    var inx = [['a','b'],['c','g'],['h','j'],['k','l'],['m','o'],['p','s'],['t','z']];
 
     if (pref) {
         pref.classList.toggle("kasxita");
@@ -225,13 +236,25 @@ function preferoj_dlg() {
         var dlg = make_element("DIV",{id: "pref_dlg", class: "overlay"});
         var div = make_element("DIV",{id: "preferoj", class: "preferoj"});
         //var tit = make_element("H2",{title: "tiun ĉi dialogon vi povas malfermi ĉiam el la piedlinio!"},"preferoj");
-        var close = make_button(icon_close,function() {
+        var close = make_button("fermu",function() {
             document.getElementById("pref_dlg").classList.add("kasxita");
             store_preferences();
         },"fermu preferojn");
         close.setAttribute("id","pref_dlg_close");
-        //tit.appendChild(close);
 
+        var xbtn = inx.map(
+            i => {
+                var s = i.join('..');
+                return make_button(s, function(){
+                    console.log(s)
+                },
+                "lingvoj "+s)
+            });
+        var xdiv = make_element("DIV",{class: "ix_literoj"});
+        xdiv.append(...xbtn);
+        
+        div.appendChild(make_element("SPAN"));
+        div.appendChild(xdiv);
         div.appendChild(make_element("H3",{},"preferataj lingvoj"));
         div.appendChild(make_element("H3",{},"aldoneblaj lingvoj"));
         div.appendChild(make_element("UL",{id: "pref_lng"}));
