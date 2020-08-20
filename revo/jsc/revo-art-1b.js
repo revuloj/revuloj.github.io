@@ -63,8 +63,8 @@ function preparu_kashu_sekciojn() {
     }    
 }
 
-/* kelkajn sekciojn kiel ekzemploj, tradukoj, rimarkoj ni maletendas, pro eviti troan amplekson,
-  ili ricevas eblecon por reetendi ilin per "pli..." */
+/* kelkajn sekciojn kiel ekzemploj, tradukoj, rimarkoj ni maletendas, poo eviti troan amplekson.
+  Ili ricevas eblecon por reetendi ilin per "pli..." */
 function preparu_maletendu_sekciojn() {
     var d = document.getElementsByClassName("etendebla");
 //    var sojlo = 3+2; // ekde tri drv + trd + fnt, au du drv kaj adm
@@ -138,11 +138,16 @@ function maletendu_trd(element) {
                 eo.classList.add("kasxita");
                 id.classList.add("kasxita");
                 maletendita = true;
+            } else {
+                // tio necesas, se ni adaptas la preferojn
+                // por vidi pli da tradukoj!
+                eo.classList.remove("kasxita");
+                id.classList.remove("kasxita");
             }
         }
     }
     // aldonu pli...
-    if (maletendita) {
+    if (maletendita && ! element.querySelector(".pli")) {
         var pli = make_element("A",{lang: "eo", href: "#"},"pli...");
             // href=# necesas por ebligi fokusadon per TAB-klavo
         pli.addEventListener("click",etendu_trd);
@@ -234,6 +239,8 @@ function preferoj_dlg() {
         var close = make_button("preta",function() {
             document.getElementById("pref_dlg").classList.add("kasxita");
             store_preferences();
+            // adaptu la rigardon, t.e. trd-listojn
+            preparu_maletendu_sekciojn();            
         },"fermu preferojn");
         close.setAttribute("id","pref_dlg_close");
 
