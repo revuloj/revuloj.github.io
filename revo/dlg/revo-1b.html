@@ -51,8 +51,8 @@
             */
             
             function ref_target(a_el) {
-                var href = a_el.attr("href");
-                var trg = a_el.attr("target");   
+                var href = a_el.getAttribute("href");
+                var trg = a_el.getAttribute("target");   
 
                 if (href.startsWith('#')) {
                     return "int";
@@ -80,11 +80,11 @@
 
             function normalize_href(target, href) {
                 // ĉu estas fidinde uzi "target" tie ĉi aŭ ĉu ni uzu "source"?
-                const trg_prefix = { main: "art/", nav: "inx/"};
+                const prefix = { main: "art/", nav: "inx/"};
                 if (href.startsWith('../')) {
                     return '/revo/' + href.substr(3);
                 } else if (href[0] != '/' && ! href.startsWith('http')) {
-                    return '/revo/' + prefix(target) + href;
+                    return '/revo/' + prefix[target] + href;
                 } else if (href.startsWith('/cgi-bin/vokomail.pl')) {
                     var query = href.substring(href.search('art='));
                     return '/revo/dlg/redaktilo.html?' + query
@@ -101,10 +101,14 @@
                         var doc = parser.parseFromString(data,"text/html");
 
                         if (target == "nav") {
-                            document.getElementById("navigado").append(doc.querySelector("table"));
+                            var nav = document.getElementById("navigado");
+                            nav.textContent= '';
+                            nav.append(doc.querySelector("table"));
                         } else if (target == "main") {
                            var body = doc.body;
-                           document.querySelector("main").append(...body.children);
+                           var main = document.querySelector("main");
+                           main.textContent = '';
+                           main.append(...body.children);
                         }                    
 
                         // var article = doc.getElementsByTagName("article");
@@ -117,8 +121,7 @@
             }
 
             function navigate(event) {
-                var el = event.currentTarget();
-                // el = el.closest("a");
+                var el = event.target.closest("a");
                 var href = el.getAttribute("href");
                 var target = ref_target(el);
 
@@ -188,6 +191,8 @@
             window.onload = function() { 
                 load_page("main","titolo.html");
                 load_page("nav","../inx/_eo.html");
+                document.getElementById("navigado")
+                    .addEventListener("click",navigate);
 
                 /*
                 $('#navigado').click(load_inx);
