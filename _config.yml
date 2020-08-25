@@ -63,3 +63,9 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+
+include:
+  - revo/inx/_eo.html
+  - revo/inx/_lng.html
+  - revo/inx/_fak.html
+  - revo/inx/_ktp.html
