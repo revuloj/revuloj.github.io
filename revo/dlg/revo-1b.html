@@ -109,6 +109,7 @@
                            var main = document.querySelector("main");
                            main.textContent = '';
                            main.append(...body.children);
+                           preparu_art();
                         }                    
 
                         // var article = doc.getElementsByTagName("article");
@@ -189,6 +190,7 @@
 
             // preparu la paĝon: evento-reagoj...
             window.onload = function() { 
+                restore_preferences();
                 load_page("main","titolo.html");
                 load_page("nav","../inx/_eo.html");
                 document.getElementById("navigado")
@@ -216,7 +218,7 @@
     <body>
 
 <nav>
-    <div class="nav_btn" onclick="nav_toggle()"><a href="#navigado">&#x2630;</a></div>
+    <!--div class="nav_btn" onclick="nav_toggle()"><a href="#navigado">&#x2630;</a></div-->
     <div id="navigado"></div>
 </nav>
 
