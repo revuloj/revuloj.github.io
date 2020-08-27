@@ -10,8 +10,8 @@ body {
     display: flex;
     flex-direction: row;
     height: 100%;
-    background-color: var(--main-bg-color);
-    color: var(--main-color);
+    background-color: var(--main-bgr-clr);
+    color: var(--main-fnt-clr);
     font-size: 120%;
     font-family: monospace; 
     /*font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;*/
@@ -50,25 +50,26 @@ main {
     text-shadow: 1px 1px silver;
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;    
-    background-color: var(--nav-bg-color);
+    background-color: var(--nav-bgr-clr);
     border-bottom-right-radius: 0.2em;
 }
 
 nav a:focus {
-    outline: 2px dotted var(--highlight-bg-color) !important;
+    outline: 2px dotted var(--nav-act-bgr-clr) !important;
 }
 
-nav a:hover, a:focus {
-    background-color: var(--highlight-bg-color);
+nav a:hover {
+    background-color: var(--nav-hov-bgr-clr);
+    color: var(--nav-hov-fnt-clr) !important;
     background-image: none;
     color: var(--highlight-color);
 }
 
-nav a:active {
-    background-color: var(--active-bg-color);
-    color: var(--highlight-color);
+nav a:active, a:focus {
+    background-color: var(--nav-act-bgr-clr);
+    color: var(--nav-act-fnt-clr);
     background-image: none;
-    border: 1px solid var(--active-border-color);
+    border: 1px solid var(--nav-act-brd-clr);
     box-shadow: none;
 }
 
@@ -90,7 +91,7 @@ nav a:active {
 
     /*padding-inline-start: 0;*/    
     padding: 0.5em; 
-    background-color: var(--nav-bg-color);
+    background-color: var(--nav-bgr-clr);
     z-index: 100;
     box-shadow: 1px 1px 2px;
 
@@ -104,6 +105,7 @@ nav a:active {
 #navigado h1 {
     font-style: italic;
     font-size: 120%;
+    color: var(--nav-fnt-clr);
 }
 
 #navigado .enhavo {
@@ -164,7 +166,7 @@ nav a:active {
     width: initial;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid var(--active-border-color);
+    border-bottom: 2px solid var(--nav-act-brd-clr);
 }
 
 #navigado td.fona a {
@@ -173,7 +175,13 @@ nav a:active {
     border-bottom: none;
 
     margin-left: .2em;
-    background-image: linear-gradient(var(--nav-bg-color) 15%, var(--active-bg-color) 50%, var(--nav-bg-color) 85%);
+    background-image: 
+    linear-gradient(
+        var(--nav-bgr-clr) 5%, 
+        var(--nav-act-bgr-clr) 35%,
+/*        var(--highlight-bg-color) 45%, */
+        var(--nav-act-bgr-clr) 70%, 
+        var(--nav-bgr-clr) 95%);
 }
 
 @media all and (max-width: 50em) {
@@ -222,7 +230,12 @@ nav li {
     /*background-color: #cA9510;*/
     color: black;
 
-    background-image: linear-gradient(var(--nav-bg-color) 15%, var(--active-bg-color) 50%, var(--nav-bg-color) 85%);
+    background-image: linear-gradient(
+        var(--nav-bgr-clr) 5%, 
+        var(--nav-act-bgr-clr) 35%,
+        var(--nav-hov-bgr-clr) 45%, 
+        var(--nav-act-bgr-clr) 70%, 
+        var(--nav-bgr-clr) 95%);
     /*background-image: radial-gradient(ellipse closest-side at 30% 50%, #eAb530 5%, goldenrod 55%);*/
 
     /*border-left: 3px dotted lightgoldenrodyellow;*/
@@ -234,6 +247,7 @@ nav li {
 
 .literoj a:hover, .literoj a:active {
     background-image: none;
+    color: var(--nav-hov-fnt-clr) !important;
     /*background-color: var(--active-bg-color);*/
 }
 
@@ -272,7 +286,7 @@ nav li {
     padding: 0.3em; 
     margin-top: 0.3em;
     text-decoration: none;
-    color: black;
+    color: var(--nav-fnt-clr);
 }
 
 #navigado td a, li a {
@@ -280,7 +294,7 @@ nav li {
     padding: 0.3em; 
     margin-top: 0.3em;*/
     text-decoration: none;
-    color: black;
+    color: var(--nav-fnt-clr);
     /*background-image: linear-gradient(0deg, goldenrod 15%, #eAb530 50%, goldenrod 85%);*/
 }
 
@@ -302,7 +316,7 @@ footer {
     /*border: 1px dotted red;*/
 }
 
-
+/***
 #s_artikolo {
     margin-left: 1em;
     margin-right: 1em;
@@ -313,7 +327,6 @@ footer {
     flex-grow: 1;
     text-align: center;
     margin-top: 1em;
-    /*border: 1px dotted red;*/
 }
 
 #sercho {
@@ -324,35 +337,25 @@ footer {
     font-size: 200%;
 }
 
-/*
-#sercho input {
-    border-radius: 0.2em;
-    padding: 0.5em;
-    margin: 0.3em;
-}*/
-
 #trovoj {
     display: flex;
     flex-wrap: wrap;
-    /* border: 1px dotted green; */
 }
 
 #trovoj table {
     min-width: 48%;
     padding: 1em;
     margin: auto;
-    /* margin-right: 1em; */
     border-collapse: separate;
     border-spacing: 0 0.3em;
 }
 
 #trovoj td {
     padding: 0.5em;
-    /*border-bottom: 1px solid gray;*/
 }
 
 #trovoj td:first-child {
-    background-color: var(--list1-bg-color);
+    background-color: var(--list-bgr-clr);
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     border-right: 2px solid gainsboro;
@@ -362,7 +365,6 @@ footer {
     background-color: var(--list2-bg-color);
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-    /*border-bottom: 1px solid gray;*/
 }
 
 #trovoj td:nth-child(2):hover {
@@ -383,15 +385,11 @@ footer {
     text-shadow: 1px 1px silver;
     padding: 0.2em;
     text-align: center;
-/*                vertical-align: middle; 
-    border: 1px hidden darkblue;*/
     border-radius: 50%;
     border: 2px solid gray;
-/*                background-color: gainsboro; */
     background-color: var(--button-bg-color);
     background-image: radial-gradient(at 49.5% 49.5%, darkgoldenrod 20%, goldenrod 60%, khaki 80%);
     box-shadow: 10px 10px 20px;
-    /* opacity: 0.9; */
     position: relative;
 }
 .cirklo.R { top: 0em; }
@@ -410,21 +408,17 @@ footer {
     header { padding-left: 1.8em; margin-right: -0.4em }
     .cirklo { font-size: 250% }
 }
+***/
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/***
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    /*
-    height: 38px;
-    padding: 0 30px;
-    font-size: 11px;
-    line-height: 38px;
-    */
     font-size: 133%;
     background-color: goldenrod;
     background-image: radial-gradient(at 49.5% 49.5%, darkgoldenrod 20%, goldenrod 60%, khaki 80%);
@@ -454,10 +448,11 @@ input[type="button"]:focus {
     box-shadow: 2px 2px 4px darkslategray;
     background-image: none;    
 }
-
+***/
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/***
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -467,9 +462,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-    /*height: 38px;*/
     height: 2.4em;
-    /*padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     padding: 0.3em 0.6em;
     background-color: var(--input-bg-color);
     color: var(--input-color);
@@ -478,8 +471,10 @@ select {
     box-shadow: none;
     box-sizing: border-box; 
 }
+***/
 
 /* Removes awkward default styles on some inputs for iOS */
+/***
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -534,12 +529,4 @@ label > .label-body {
     margin-left: .5rem;
     font-weight: normal; 
 }
-
-
-
-/*
-.revo_btn {border-radius: 2em; width: 4em; height:4em; 
-    border: 1px solid red; background: silver; font-size: 200%; 
-    text-align:center; }
-.revo_btn a { vertical-align: middle; padding: 1em; margin: 1em} 
-*/
+***/

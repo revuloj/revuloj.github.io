@@ -1,35 +1,117 @@
-:root {
-    --main-bg-color: lightgoldenrodyellow;
-    --nav-bg-color:  #eAb530 /* #FAC540 #eAb530 goldenrod */;
-    --button-bg-color:  goldenrod;
-    --button-border-color: darkgoldenrod;
-    --highlight-bg-color: lightgoldenrodyellow;
-    --active-bg-color: #FAC540;
-    --active-border-color: black;
+/* 
+    La nomoj sekvas la skemon:
+    --<element-tipo>-<parto>-<atributo>
 
-    --list1-bg-color: palegoldenrod;
-    --list2-bg-color: khaki;
-    --list2-highlight-bg-color: lightgoldenrodyellow;
-    --main-color: black;
-    --highlight-color: black;
-    --input-bg-color: white;
-    --input-color: black;
+    Por :active, :hover ni aldonas infikson al la atributo, 
+    ekz. --nav-hov-bgr-clr, --btn-act-fnt-clr
+    Ni provas uzi centrajn main-act-*, main-hov-* kaj nur
+    esceptokaze difini por apartaj elementoj...
+
+    Ni ne distingas :focus de :active, sed por ambaŭ uzas -act-,
+    same ni uzas por :visited la ordinaran koloron.
+
+*/
+
+:root {
+
+    /* por navigado */
+    --nav-fnt-clr: black;
+    --nav-bgr-clr: #eAb530  /* #FAC540  #eAb530 goldenrod */;
+    --nav-hov-bgr-clr: lightgoldenrodyellow;
+    --nav-hov-fnt-clr: darkgray;
+    --nav-act-bgr-clr: #FAC540;
+    --nav-act-brd-clr: black;
+
+    /* por la ĉefa paĝo (main) */
+    --main-bgr-clr: lightgoldenrodyellow;
+    --main-fnt-clr: black;
+    --main-act-fnt-clr: black;
+    --main-hov-fnt-clr: black;
+ 
+    --mh2-bgr-clr: goldenrod; 
+    --mh2-act-fnt-clr: black; 
+
+    --btn-bgr-clr: goldenrod; 
+    --btn-brd-clr: darkgoldenrod;
+
+    --btn-hov-bgr-clr: khaki;
+    --btn-hov-brd-clr: black;
+    --btn-hov-fnt-clr: black; 
+
+    --btn-act-bgr-clr: #FAC540 /*khaki*/;
+    --btn-act-brd-clr: black;
+
+    --input-bgr-clr: white;
+    --input-fnt-clr: black;
+
+    --list-bgr-clr: palegoldenrod;
+    --lst2-bgr-clr: khaki;
+    --lst2-act-bgr-clr: lightgoldenrodyellow;
+
+    --ekz-fnt-clr: #303030;
+    --ekz-act-fnt-clr: silver;
+    --fnt-fnt-clr: #303030;
+
+    --rim-fnt-clr: #000060;
+
+    --ref-fnt-clr: #600000;
+
+    --adm-fnt-clr: #303030;
+    --label-fnt-clr: #104040;
+    --img-bgr-clr: #E0E0A0;
 }
 
 
 @media (prefers-color-scheme: dark) {
     /* CSS por malhela aspekto */ 
     :root {
-        --main-bg-color: #222222;
-        --nav-bg-color:  darkgoldenrod;
-        --button-bg-color:  darkgoldenrod;
-        --highlight-bg-color: palegoldenrod;
-        --list1-bg-color: darkgoldenrod;
-        --list2-bg-color: goldenrod;
-        --list2-highlight-bg-color: palegoldenrod;
-        --main-color: ivory;
-        --highlight-color: slategray;
-        --input-bg-color: darkslategray;
-        --input-color: white;
+
+    /* por navigado */
+    --nav-fnt-clr: ivory;
+    --nav-bgr-clr: #996600 /* #B8860B #FAC540  #eAb530 goldenrod */;
+    --nav-hov-bgr-clr: #a5a5a5;
+    --nav-hov-fnt-clr: black;
+    --nav-act-bgr-clr: slategray;
+    --nav-act-brd-clr: silver;
+
+
+    /* por la ĉefa paĝo (main) */
+    --main-fnt-clr: lightgoldenrodyellow;
+    --main-bgr-clr: #221100;
+    --main-act-fnt-clr: black;
+    --main-hov-fnt-clr: black;
+
+    --mh2-bgr-clr: darkgoldenrod; 
+    --mh2-act-fnt-clr: black; 
+ 
+    --btn-bgr-clr: darkgoldenrod; 
+    --btn-act-fnt-clr: black; 
+
+    --btn-hov-bgr-clr: khaki;
+    --btn-hov-brd-clr: black;
+    --btn-hov-fnt-clr: black; 
+
+    --btn-act-bgr-clr: #FAC540 /*khaki*/;
+    --btn-act-brd-clr: black;
+ 
+    --input-bgr-clr: white;
+    --input-fnt-clr: black;
+
+    --list-bgr-clr: palegoldenrod;
+    --lst2-bgr-clr: khaki;
+    --lst2-act-bgr-clr: lightgoldenrodyellow;
+
+    --ekz-fnt-clr: goldenrod;
+    --ekz-act-fnt-clr: darkgoldenrod;
+    --fnt-fnt-clr: goldenrod;
+
+    --rim-fnt-clr: steelblue;
+
+    --ref-fnt-clr: khaki;
+
+    --adm-fnt-clr: goldenrod;
+    --label-fnt-clr: goldenrod;
+    --img-bgr-clr: #996600;
+
     }
 }

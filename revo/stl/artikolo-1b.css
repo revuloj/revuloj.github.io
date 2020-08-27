@@ -1,16 +1,20 @@
+@import url("normalize.css");
+@import url("koloroj.css");
 @import url("piktogram-1b.css");
 
 /* HTML-elementoj */
-BODY {background: #F5F5D5; 
-      padding-right: 1.5em;
+BODY, ARTICLE, HEADER, FOOTER {
+    background-color: var(--main-bgr-clr); 
+    color: var(--main-fnt-clr); 
+    padding-right: 1.5em;
       /*font-family: "Latin Modern Roman", "TimesNewRoman", "Liberation Serif", serif;*/
       /*font-family: "Utopia", "TimesNewRoman", "Liberation Serif", serif;*/
     }
 
-H1 {color: #000000; font-size: large}
-H2 {color: #000000; 
+H1 {color: var(--main-fnt-clr); font-size: large}
+H2 {color: var(--main-fnt-clr); 
     font-size: 110%; 
-    background: #E0E0A0;
+    background: var(--mh2-bgr-clr);
 /*    background-image: url(angulo.png);
     background-repeat: no-repeat;
     */
@@ -31,7 +35,9 @@ H3 {font-size: 90%; border-top-width: 2px; border-top-style: solid;
 
 DD {text-align: justify}
 
-HR {border-style: dotted; border-color: black; 
+HR {
+  border-style: dotted; 
+  border-color: var(--main-fnt-clr); 
   border-top-width: 2px;
   border-bottom-width: 0px;
   margin-top: 4ex}
@@ -68,6 +74,7 @@ section.drv>div, section.subart>div {
 
 div.drv-enh, div.subart-enh, dl.tradukoj {
     max-width: 50em;
+    line-height: 120%;
 }
 
 div.drv-enh dl, div.subart-enh dl {
@@ -143,7 +150,7 @@ dl.tradukoj dd {
 }
 
 dl.tradukoj .lng {
-    color: gray; 
+    color: var(--label-fnt-clr); 
     /* margin-right: 0.5em;*/
 }
 /*
@@ -164,35 +171,36 @@ A:hover {color: red; background-color: #d5d5a5}
 SUP {font-size: 75%}
 
 /* ekzemploj */
-.ekz {color: #303030}
+.ekz {color: var(--ekz-fnt-clr)}
 .rimekz {font-style: italic}
-A.ekz:link {text-decoration: underline; color: #303030}
-A.ekz:visited {text-decoration: underline; color: #303030}
-A.ekz:active {text-decoration: underline; color: silver}
+A.ekz:link {text-decoration: underline; color: var(--ekz-fnt-clr)}
+A.ekz:visited {text-decoration: underline; color: var(--ekz-fnt-clr)}
+A.ekz:active {text-decoration: underline; color: var(--ekz-act-fnt-clr)}
 
 /* difinoj */
-.drvdif {color: black}
-.sncgrpdif {color: black}
-.dif {color: black}
-A.dif:link {text-decoration: underline; color: black}
-A.dif:visited {text-decoration: underline; color: black}
+.drvdif {color: var(--main-fnt-clr)}
+.sncgrpdif {color: var(--main-fnt-clr)}
+.dif {color: var(--main-fnt-clr)}
+A.dif:link {text-decoration: underline; color: var(--main-fnt-clr)}
+A.dif:visited {text-decoration: underline; color: var(--main-fnt-clr)}
 A.dif:active {text-decoration: underline; color: gray}
 
 /* rimarkoj */
-.rim {color: #000060}
-A.rim:link {text-decoration: underline; color: #000060}
-A.rim:visited {text-decoration: underline; color: #000060}
+div.rim { margin-top: .3em; }
+.rim {color: var(--rim-fnt-clr)}
+A.rim:link {text-decoration: underline; color: var(--rim-fnt-clr)}
+A.rim:visited {text-decoration: underline; color: var(--rim-fnt-clr)}
 A.rim:active {text-decoration: underline; color: blue}
 
 /* referencoj */
-.ref {color: #600000}
-A.ref:link {text-decoration: underline; color: #600000}
-A.ref:visited {text-decoration: underline; color: #600000}
+.ref {color: var(--ref-fnt-clr)}
+A.ref:link {text-decoration: underline; color: var(--ref-fnt-clr)}
+A.ref:visited {text-decoration: underline; color: var(--ref-fnt-clr)}
 A.ref:active {text-decoration: underline; color: red}
 
 /* bildoj */
-A.bld:link {text-decoration: underline; color: black}
-A.bld:visited {text-decoration: underline; color: black}
+A.bld:link {text-decoration: underline; color: var(--main-fnt-clr)}
+A.bld:visited {text-decoration: underline; color: var(--main-fnt-clr)}
 A.bld:active {text-decoration: underline; color: gray}
 
 /* klarigo */
@@ -207,50 +215,56 @@ p.trd_ref {text-align: right}
 A.trd_ref:link {text-decoration: underline; color: #666666}
 A.trd_ref:visited {text-decoration: underline; color: #666666}
 A.trd_ref:active {text-decoration: underline; color: black}
-.trd {color: #104040}
+.trd {color: var(--label-fnt-clr)}
 .rimtrd {font-style: italic}
 .diftrd {font-style: italic}
-.trdeo {color: black; font-weight: bold}
-.trdnac {color: #104040}
-A.trdeo:link {text-decoration: underline; font-weight: bold; color: black}
-A.trdeo:visited {text-decoration: underline; font-weight: bold; color:
-black}
+.trdeo {color: var(--label-fnt-clr); font-weight: bold}
+.trdnac {color: var(--label-fnt-clr)}
+A.trdeo:link {text-decoration: underline; font-weight: bold; color: var(--main-fnt-clr)}
+A.trdeo:visited {text-decoration: underline; font-weight: bold; 
+    color: var(--main-fnt-clr)}
 A.trdeo:active {text-decoration: underline; font-weight: bold; color: gray}
 
 
 /* fontindikoj en la teksto */
 .fnt {font-style: normal}
-A.fnt:link {text-decoration: underline; color: #303030}
-A.fnt:visited {text-decoration: underline; color: #303030}
-A.fnt:active {text-decoration: underline; color: green}
+A.fnt:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
+A.fnt:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
+A.fnt:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
 
-.fntref {font-size: small; font-style: normal; vertical-align: text-top; font-stretch: extra-condensed}
-A.fntref:link {text-decoration: underline; color: #303030}
-A.fntref:visited {text-decoration: underline; color: #303030}
-A.fntref:active {text-decoration: underline; color: green}
+.fntref {font-size: small; font-style: normal; font-stretch: extra-condensed}
+A.fntref:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
+A.fntref:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
+A.fntref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
 
 sup.ofc { margin-right: 0.7ex; }
 
 /* fontindikaj piednotoj */
-.fontoj {color: 303030; font-size: small}
-.notoj {color: 303030; font-size: small}
+.fontoj {color: var(--fnt-fnt-clr); font-size: small}
+.notoj {color: var(--adm-fnt-clr); font-size: small}
 /* notoj pri mankoj */
 .mankoj {font-family: monospace; font-size: small}
-.mankoj A:link {text-decoration: underline; color: #303030}
-.mankoj A:visited {text-decoration: underline; color: #303030}
+.mankoj A:link {text-decoration: underline; color: var(--adm-fnt-clr)}
+.mankoj A:visited {text-decoration: underline; color: var(--adm-fnt-clr)}
 .mankoj A:active {text-decoration: underline; color: green}
 
 /* redaktolinio malsupre de la artikolo */
-.redakto {color: #104040}
-A.redakto:link {text-decoration: underline; color: black}
-A.redakto:visited {text-decoration: underline; color: black}
+.redakto {color: var(--label-fnt-clr)}
+A.redakto:link {text-decoration: underline; color: var(--main-fnt-clr)}
+A.redakto:visited {text-decoration: underline; color: var(--main-fnt-clr)}
 A.redakto:active {text-decoration: underline; color: gray}
 
 .flago {  border-color: #cccccc; border-width: 1px;  border-style: outset}
-EMBED.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; border-style: solid; padding: 2px; margin: 0.5em} 
-OBJECT.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; border-style: solid; padding: 2px; margin: 0.5em} 
-IMG.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; border-style: solid; padding: 2px; margin: 0.5em} 
-IMG.bld { border-color: #cccccc; border-width: 1px; background: #E0E0A0; border-style: solid; padding: 2px; margin: 0.5em} 
+EMBED.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+    border-style: solid; padding: 2px; margin: 0.5em} 
+OBJECT.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+    border-style: solid; padding: 2px; margin: 0.5em} 
+
+IMG { background-color: var(--img-bgr-clr) }
+IMG.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+    border-style: solid; padding: 2px; margin: 0.5em} 
+IMG.bld { border-color: #cccccc; border-width: 1px; background: var(--img-bgr-clr); 
+    border-style: solid; padding: 2px; margin: 0.5em} 
 IMG.fak { height: 1.5em; vertical-align: bottom; }
 
 IMG.tez { height: 1.2em; padding: 1px; vertical-align: bottom;
@@ -259,22 +273,30 @@ A IMG.tez:focus {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:hover {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:active {background-color:  #a0a070; border: 2px inset gray}
 
-A.tez-ref { text-decoration: none; baseline-shift: super; color: darkgreen; font-weight: normal; padding: 0.1em; border-radius: 40%}
-A.tez-ref:visited { background-color: transparent; color: darkgreen}
-A.tez-ref:focus {background-color:  #c0c090; color: brown}
-A.tez-ref:hover {background-color:  #c0c090; color: brown}
-A.tez-ref:active {background-color:  #a0a070; color: coral}
+A.tez-ref { text-decoration: none; 
+    color: darkgreen; font-weight: normal; padding: 0.1em; border-radius: 40%}
+A.tez-ref:visited { background-color: transparent; 
+    color: darkgreen}
+A.tez-ref:focus {background-color:  #c0c090; 
+    color: brown}
+A.tez-ref:hover {background-color:  #c0c090; 
+    color: brown}
+A.tez-ref:active {background-color:  #a0a070; 
+    color: coral}
 
 IMG.viki { height: 1.2em; vertical-align: bottom;
 	   border-radius: 20%; border: 2px outset transparent}
-A IMG.viki:focus {background-color:  #c0c090; border: 2px outset gray}
-A IMG.viki:hover {background-color:  #c0c090; border: 2px outset gray}
-A IMG.viki:active {background-color:  #a0a070; border: 2px inset gray}
+A IMG.viki:focus {background-color:  #c0c090; 
+    border: 2px outset gray}
+A IMG.viki:hover {background-color:  #c0c090; 
+    border: 2px outset gray}
+A IMG.viki:active {background-color:  #a0a070; 
+    border: 2px inset gray}
 
-.piedlinio {color: #104040; text-align: center}
+.piedlinio {color: var(--label-fnt-clr); text-align: center}
 .kuketoaverto { position: fixed; bottom: 0px; left: 5%; width: 90%; min-height:7em;
 		background-color: #c0c090; margin: 0; display: none;
-		border-radius: 5px 5px 0 0; border: 1px solid #303030; border-bottom: none
+		border-radius: 5px 5px 0 0; border: 1px solid var(--adm-fnt-clr); border-bottom: none
 	      }
 .kuketoaverto P { text-align:center }
 .kuketoaverto FORM { text-align:center }
@@ -283,28 +305,30 @@ A IMG.viki:active {background-color:  #a0a070; border: 2px inset gray}
 .frm { font-style: normal }
 .frm_am { font-size: 90% }
 
-.bld_atrib { font-size: 80%; color: gray }
-.bld_atrib:link { font-size: 80%; color: gray }
-.bld_atrib:visited { font-size: 80%; color: gray }
-.bld_atrib:focus { font-size: 80%; color: gray }
-.bld_atrib:hover { font-size: 80%; color: gray }
-.bld_atrib:active { font-size: 80%; color: gray }
+.bld_atrib { font-size: 80%; color: var(--label-fnt-clr) }
+.bld_atrib:link { font-size: 80%; color: var(--label-fnt-clr) }
+.bld_atrib:visited { font-size: 80%; color: var(--label-fnt-clr) }
+.bld_atrib:focus { font-size: 80%; color: var(--label-fnt-clr) }
+.bld_atrib:hover { font-size: 80%; color: var(--label-fnt-clr) }
+.bld_atrib:active { font-size: 80%; color: var(--label-fnt-clr) }
 
 
 /* tildoj en ekzemploj */
 .ekztld { font-weight: bold } /*text-decoration: underline solid #775533} */
 
 .kashilo, .etendilo, .pref {
-    border: 1px solid #E0E0A0;
+    border: 1px solid var(--btn-brd-clr);
     box-shadow: none;
 }
 .kashilo:hover, .etendilo:hover, .pref:hover {
-    background: #FFEEAA;
-    border: 1px solid #775533;
+    background-color: var(--btn-hov-bgr-clr);
+    color: var(--main-hov-fnt-clr);
+    border: 1px solid var(--btn-hov-brd-clr);
 }    
 .kashilo:active, .etendilo:active, .pref:active {
-    background: #E8C888;
-    border: 1px solid #775533;
+    background: var(--btn-act-bgr-clr);
+    color: var(--main-act-fnt-clr);
+    border: 1px solid var(--btn-act-brd-clr);
 }
 
 .kasxita { display: none !important; }
@@ -437,7 +461,7 @@ BUTTON {
     margin: .1em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
-    background-color: #E0E0A0;
+    background-color: var(--btn-bgr-clr);
 
     /* border: none; */
     border: 1px solid #E0E0A0;
@@ -449,7 +473,7 @@ BUTTON {
     margin: .3em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
-    background-color: #E0E0A0;
+    background-color: var(--btn-bgr-clr);
 
     /* border: none; */
     border: 1px solid #E0E0A0;
@@ -519,7 +543,7 @@ a.pli, a.pref {
     font-style: oblique;
     text-decoration: none;
     color: darkgreen;
-    background: #E0E0A0;
+    background: var(--btn-bgr-clr);
     border-radius: .5em;
     padding: .1em .3em;
     margin-bottom: .1em;
