@@ -254,14 +254,14 @@ A.redakto:link {text-decoration: underline; color: var(--main-fnt-clr)}
 A.redakto:visited {text-decoration: underline; color: var(--main-fnt-clr)}
 A.redakto:active {text-decoration: underline; color: gray}
 
-.flago {  border-color: #cccccc; border-width: 1px;  border-style: outset}
-EMBED.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+.flago {  border-color: var(--svg-brd-clr); border-width: 1px;  border-style: outset}
+EMBED.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
-OBJECT.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+OBJECT.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
 
 IMG { background-color: var(--img-bgr-clr) }
-IMG.svg { border-color: #cccccc; border-width: 1px; background: #ffffee; 
+IMG.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
 IMG.bld { border-color: #cccccc; border-width: 1px; background: var(--img-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 

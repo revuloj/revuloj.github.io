@@ -59,6 +59,10 @@
     --adm-fnt-clr: #303030;
     --label-fnt-clr: #104040;
     --img-bgr-clr: #E0E0A0;
+
+    --svg-bgr-clr: #ffffee; 
+    --svg-brd-clr: #cccccc;
+
 }
 
 
@@ -113,5 +117,7 @@
     --label-fnt-clr: goldenrod;
     --img-bgr-clr: #996600;
 
+    --svg-bgr-clr: #ffffee; 
+    --svg-brd-clr: #cccccc;
     }
 }
