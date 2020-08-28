@@ -13,7 +13,7 @@ body {
     background-color: var(--main-bgr-clr);
     color: var(--main-fnt-clr);
     font-size: 120%;
-    font-family: monospace; 
+    font-family: sans-serif; 
     /*font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;*/
 }
 
@@ -27,6 +27,7 @@ nav {
 
 main {
     flex-grow: 3;
+    background-color: var(--main-bgr-clr);
 
     /*
     display: flex;

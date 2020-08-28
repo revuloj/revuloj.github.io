@@ -1,3 +1,5 @@
+/***
+
 html {
     margin: 0;
     height: 100%;
@@ -8,6 +10,14 @@ body {
     height: 100%;
     margin: 0;
 }
+
+h2 {
+    background-color: palegoldenrod;
+    border: 2px solid palegoldenrod;
+    margin-bottom: 0;
+}
+
+***/
 
 #r\:redaktilo {
     display: flex;
@@ -174,11 +184,6 @@ span.right {
     color: black;
 }
 
-h2 {
-    background-color: palegoldenrod;
-    border: 2px solid palegoldenrod;
-    margin-bottom: 0;
-}
 
 .averto {
     margin-top: 0;
