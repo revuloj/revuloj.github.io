@@ -282,23 +282,6 @@ var artikolo = function() {
         }
     }
 
-    function make_button(label,handler,hint='') {
-        var btn = document.createElement("BUTTON");
-        btn.appendChild(document.createTextNode(label)); 
-        btn.addEventListener("click",handler);
-        //btn.classList.add("kashilo");
-        if (hint) btn.setAttribute("title",hint)
-        return btn;
-    }
-
-    function make_icon_button(iclass,handler,hint='') {
-        var btn = document.createElement("BUTTON");
-        //btn.appendChild(document.createTextNode(label)); 
-        if (handler) btn.addEventListener("click",handler);
-        btn.classList.add(iclass,"icon_btn");
-        if (hint) btn.setAttribute("title",hint)
-        return btn;
-    }
 
     function preferoj_dlg() {
         var pref = document.getElementById("pref_dlg");
@@ -497,65 +480,17 @@ var artikolo = function() {
         }
     }
 
-    function make_element(name,attributes,textcontent) {
-        var element = document.createElement(name);
-        for (var a in attributes) {
-            element.setAttribute(a,attributes[a])
-        }
-        if (textcontent) element.appendChild(document.createTextNode(textcontent));
-        return element;
-    }
-
     function getPrevH2(element) {
         var prv = element.previousSibling;
         while ( prv && prv.nodeName != "H2") { prv = prv.previousSibling }
         return prv;
     }
 
-    function isLocalLink(url) {
-        if (url[0] == '#') return true;
-        // necesas kompari ankaŭ la dosiernomon      
-        var doc = getUrlFileName(document.location.pathname);
-        var trg = getUrlFileName(url);
-        return doc==trg;
-    }
 
-    function getUrlFileName(url) {
-    return url.substring(url.lastIndexOf('/')+1).split('#')[0];
-    }
-
-    function getHashParts() {
-        var h = (location.hash[0] == '#'
-            ? location.hash.substr(1) 
-            : location.hash);
-        var r = {};
-        for (p of h.split('&')) {
-            if (p.indexOf('=') < 0) {
-                r.mrk = p
-            } else {
-                var v = p.split('=');
-                r[v[0]] = v[1];
-            }
-        }
-        return r;
-    }
-
-    function eo_ascii(str) {
-        return str
-            .replace(/ĉ/g,'cx')
-            .replace(/ĝ/g,'gx')
-            .replace(/ŝ/g,'sx')
-            .replace(/ĵ/g,'jx')
-            .replace(/ĥ/g,'hx')
-            .replace(/ŭ/g,'ux');
-    }
-
-
-
-  // eksportu publikajn funkction
-  return {
-    restore_preferences: restore_preferences,
-    preparu_art: preparu_art
-  }
+   // eksportu publikajn funkction
+   return {
+        restore_preferences: restore_preferences,
+        preparu_art: preparu_art
+   }
 
 }();

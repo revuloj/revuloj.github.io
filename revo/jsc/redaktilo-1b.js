@@ -678,34 +678,6 @@ var redaktilo = function() {
       + '</vortaro>\n';
   }
 
-  function HTTPRequest(method, url, params, onSuccess) {
-    var request = new XMLHttpRequest();
-    var data = new FormData();
-
-    for (let [key, value] of Object.entries(params)) {
-      data.append(key,value);
-    }
-
-    request.open(method, url , true);
-    
-    request.onload = function() {
-      if (this.status >= 200 && this.status < 400) {
-        onSuccess.call(this,this.response);
-      } else {
-        // post konektiĝo okazis eraro
-        console.error('Eraro dum ŝargo de ' + url);       
-      }
-    };
-    
-    request.onerror = function() {
-      // konekteraro
-      console.error('Eraro dum konektiĝo por ' + url);
-    };
-    
-    //request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.send(data);  
-  }
-
   function vokohtmlx(xml) {
     HTTPRequest('POST','/cgi-bin/vokohtmlx.pl',
     {
@@ -809,14 +781,6 @@ var redaktilo = function() {
   }
 
 
-  function ready(fn) {
-    if (document.readyState != 'loading'){
-      fn();
-    } else {
-      document.addEventListener('DOMContentLoaded', fn);
-    }
-  }
-
   function sf(pos, line, lastline) {
     document.getElementById("r:xmltxt").focus();
     var txtarea = document.getElementById('r:xmltxt');
@@ -836,15 +800,17 @@ var redaktilo = function() {
   }
 
   ready(function() { 
-    sf(0, 0, 1);
-    restore_preferences();
-    revo_codes.lingvoj.load();
-    revo_codes.fakoj.load("r:sfak");
-    revo_codes.stiloj.load("r:sstl");
-    load_xml(); // se doniĝis ?art=xxx ni fone ŝargas tiun artikolon
-
-    window.onbeforeunload = function() {
-      store_preferences();
+    if (document.getElementById("r:xmltxt")) {
+      sf(0, 0, 1);
+      restore_preferences();
+      revo_codes.lingvoj.load();
+      revo_codes.fakoj.load("r:sfak");
+      revo_codes.stiloj.load("r:sstl");
+      load_xml(); // se doniĝis ?art=xxx ni fone ŝargas tiun artikolon
+  
+      window.onbeforeunload = function() {
+        store_preferences();
+      }  
     }
   })
 
