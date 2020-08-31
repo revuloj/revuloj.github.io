@@ -30,8 +30,10 @@ H2 {color: var(--main-fnt-clr);
     margin-top: 2ex;
 }
 
+/*** H3 ne plu estas uzata en artikoloj, sed eble tamen en kadro "precipa" - necesas kontroli tion!
 H3 {font-size: 90%; border-top-width: 2px; border-top-style: solid; 
   border-top-color: #E0E0A0; padding-top: 0.5ex}
+***/
 
 DD {text-align: justify}
 
@@ -164,95 +166,181 @@ dl.tradukoj .lng {
 div.trd_lng_2 { display: inline; line-height: 135%;  }
 */
 
-/*A {text-decoration: none}*/
-A:link {color: blue}
-A:visited {color: blue}
-A:hover {color: red; background-color: #d5d5a5}
 SUP {font-size: 75%}
+SUP.ofc { margin-right: 0.7ex; }
+
 
 /* ekzemploj */
 .ekz {color: var(--ekz-fnt-clr)}
 .rimekz {font-style: italic}
-A.ekz:link {text-decoration: underline; color: var(--ekz-fnt-clr)}
-A.ekz:visited {text-decoration: underline; color: var(--ekz-fnt-clr)}
+
+/*
+A.ekz:link, A.ekz:visited {text-decoration: underline; color: var(--ekz-fnt-clr)}
+A.ekz:hover {text-decoration: underline; color: var(--ekz-hov-fnt-clr)}
 A.ekz:active {text-decoration: underline; color: var(--ekz-act-fnt-clr)}
+*/
 
 /* difinoj */
 .drvdif {color: var(--main-fnt-clr)}
 .sncgrpdif {color: var(--main-fnt-clr)}
 .dif {color: var(--main-fnt-clr)}
-A.dif:link {text-decoration: underline; color: var(--main-fnt-clr)}
-A.dif:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.dif:active {text-decoration: underline; color: gray}
+/*
+A.dif:link, A.dif:visited {text-decoration: underline; color: var(--main-fnt-clr)}
+A.dif:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
+A.dif:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
 
 /* rimarkoj */
 div.rim { margin-top: .3em; }
 .rim {color: var(--rim-fnt-clr)}
+
+/*
 A.rim:link {text-decoration: underline; color: var(--rim-fnt-clr)}
 A.rim:visited {text-decoration: underline; color: var(--rim-fnt-clr)}
-A.rim:active {text-decoration: underline; color: blue}
+A.rim:hover {text-decoration: underline; color: var(--rim-hov-fnt-clr)}
+A.rim:active {text-decoration: underline; color: var(--rim-act-fnt-clr)}
+*/
 
 /* referencoj */
 .ref {color: var(--ref-fnt-clr)}
+/*
 A.ref:link {text-decoration: underline; color: var(--ref-fnt-clr)}
 A.ref:visited {text-decoration: underline; color: var(--ref-fnt-clr)}
-A.ref:active {text-decoration: underline; color: red}
+A.ref:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
+A.ref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
 
 /* bildoj */
+/*
 A.bld:link {text-decoration: underline; color: var(--main-fnt-clr)}
 A.bld:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.bld:active {text-decoration: underline; color: gray}
+A.bld:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
+A.bld:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
 
 /* klarigo */
 .klr {font-style: normal}
-A.klr:link {text-decoration: underline; color: #775533}
-A.klr:visited {text-decoration: underline; color: #775533}
-A.klr:active {text-decoration: underline; color: #775533}
+/*
+A.klr:link {text-decoration: underline; color: var(--klr-fnt-clr)}
+A.klr:visited {text-decoration: underline; color: var(--klr-fnt-clr)}
+A.klr:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
+A.klr:active {text-decoration: underline; color: var(--klr-fnt-clr)}
+*/
 
 /*tradukoj*/
+/***
 .trd_ref {color: #666666}
 p.trd_ref {text-align: right}
 A.trd_ref:link {text-decoration: underline; color: #666666}
 A.trd_ref:visited {text-decoration: underline; color: #666666}
 A.trd_ref:active {text-decoration: underline; color: black}
+***/
 .trd {color: var(--label-fnt-clr)}
 .rimtrd {font-style: italic}
 .diftrd {font-style: italic}
 .trdeo {color: var(--label-fnt-clr); font-weight: bold}
 .trdnac {color: var(--label-fnt-clr)}
+/***
 A.trdeo:link {text-decoration: underline; font-weight: bold; color: var(--main-fnt-clr)}
 A.trdeo:visited {text-decoration: underline; font-weight: bold; 
     color: var(--main-fnt-clr)}
 A.trdeo:active {text-decoration: underline; font-weight: bold; color: gray}
+***/
 
 
 /* fontindikoj en la teksto */
 .fnt {font-style: normal}
+/*
 A.fnt:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
 A.fnt:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
 A.fnt:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
 
 .fntref {font-size: small; font-style: normal; font-stretch: extra-condensed}
+/*
 A.fntref:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
 A.fntref:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
+A.fntref:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
 A.fntref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
 
-sup.ofc { margin-right: 0.7ex; }
+
 
 /* fontindikaj piednotoj */
 .fontoj {color: var(--fnt-fnt-clr); font-size: small}
 .notoj {color: var(--adm-fnt-clr); font-size: small}
 /* notoj pri mankoj */
 .mankoj {font-family: monospace; font-size: small}
+
+/*
 .mankoj A:link {text-decoration: underline; color: var(--adm-fnt-clr)}
 .mankoj A:visited {text-decoration: underline; color: var(--adm-fnt-clr)}
 .mankoj A:active {text-decoration: underline; color: green}
+*/
 
 /* redaktolinio malsupre de la artikolo */
 .redakto {color: var(--label-fnt-clr)}
+/*
 A.redakto:link {text-decoration: underline; color: var(--main-fnt-clr)}
 A.redakto:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.redakto:active {text-decoration: underline; color: gray}
+A.redakto:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
+*/
+
+
+/*A {text-decoration: none}*/
+A:link, A:visited {color: var(--a-fnt-clr)}
+
+A.dif:link, 
+A.ekz:link, 
+A.bld:link, 
+A.klr:link, 
+A.ref:link, 
+A.fnt:link, 
+A.fntref:link, 
+A.rim:link,
+A.mankoj:link,
+A.redakto:link,
+A.dif:visited, 
+A.ekz:visited, 
+A.bld:visited, 
+A.klr:visited, 
+A.ref:visited, 
+A.fnt:visited, 
+A.fntref:visited, 
+A.rim:visited,
+A.mankoj:visited,
+A.redakto:visited {
+    text-decoration: underline; 
+    color: inherit;
+}
+
+A:hover/**,
+A.dif:hover, 
+A.ekz:hover, 
+A.bld:hover, 
+A.klr:hover, 
+A.ref:hover, 
+A.fnt:hover, 
+A.fntref:hover, 
+A.rim:hover,
+A.mankoj:hover,
+A.redakto:hover**/ {
+    color: var(--main-hov-fnt-clr) !important
+}
+A.active/**,
+A.dif:active, 
+A.ekz:active, 
+A.bld:active, 
+A.klr:active, 
+A.ref:active, 
+A.fnt:active, 
+A.fntref:active, 
+A.rim:active,
+A.mankoj:active,
+A.redakto:active**/ {
+    color: var(--main-act-fnt-clr) !important
+}
+
 
 .flago {  border-color: var(--svg-brd-clr); border-width: 1px;  border-style: outset}
 EMBED.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
@@ -260,15 +348,16 @@ EMBED.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var
 OBJECT.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
 
-IMG { background-color: var(--img-bgr-clr) }
+IMG { background-color: var(--vnj-bgr-clr) }
 IMG.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
-IMG.bld { border-color: #cccccc; border-width: 1px; background: var(--img-bgr-clr); 
+IMG.bld { border-color: var(--bld-brd-clr); border-width: 1px; background: var(--bld-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
-IMG.fak { height: 1.5em; vertical-align: bottom; }
+IMG.fak { height: 1.5em; vertical-align: bottom; background-color: var(--vnj-bgr-clr) }
 
 IMG.tez { height: 1.2em; padding: 1px; vertical-align: bottom;
-	  border-radius: 20%; border: 2px outset transparent}
+      border-radius: 20%; border: 2px outset transparent}
+      
 A IMG.tez:focus {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:hover {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:active {background-color:  #a0a070; border: 2px inset gray}
@@ -322,7 +411,7 @@ A IMG.viki:active {background-color:  #a0a070;
 }
 .kashilo:hover, .etendilo:hover, .pref:hover {
     background-color: var(--btn-hov-bgr-clr);
-    color: var(--main-hov-fnt-clr);
+    color: var(--btn-hov-fnt-clr);
     border: 1px solid var(--btn-hov-brd-clr);
 }    
 .kashilo:active, .etendilo:active, .pref:active {

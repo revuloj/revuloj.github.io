@@ -26,7 +26,9 @@
     --main-bgr-clr: lightgoldenrodyellow;
     --main-fnt-clr: black;
     --main-act-fnt-clr: black;
-    --main-hov-fnt-clr: black;
+    --main-hov-fnt-clr: coral;
+
+    --a-fnt-clr: royalblue;
  
     --mh2-bgr-clr: goldenrod; 
     --mh2-act-fnt-clr: black; 
@@ -49,19 +51,26 @@
     --lst2-act-bgr-clr: lightgoldenrodyellow;
 
     --ekz-fnt-clr: #303030;
+    --ekz-hov-fnt-clr: coral;
     --ekz-act-fnt-clr: silver;
+
     --fnt-fnt-clr: #303030;
 
     --rim-fnt-clr: #000060;
+    --rim-hov-fnt-clr: var(--a-hov-fnt-clr);
+    --rim-fnt-clr: var(--a-fnt-clr);
 
     --ref-fnt-clr: #600000;
 
     --adm-fnt-clr: #303030;
     --label-fnt-clr: #104040;
-    --img-bgr-clr: #E0E0A0;
+    --vnj-bgr-clr: lightgoldenrodyellow;
 
     --svg-bgr-clr: #ffffee; 
     --svg-brd-clr: #cccccc;
+    
+    --bld-bgr-clr: lightgoldenrodyellow;
+    --bld-brd-clr: #cccccc;
 
 }
 
@@ -107,15 +116,15 @@
 
     --ekz-fnt-clr: goldenrod;
     --ekz-act-fnt-clr: darkgoldenrod;
+
     --fnt-fnt-clr: goldenrod;
-
+    --klr-fnt-clr: #775533;
     --rim-fnt-clr: steelblue;
-
     --ref-fnt-clr: khaki;
 
     --adm-fnt-clr: goldenrod;
     --label-fnt-clr: goldenrod;
-    --img-bgr-clr: #996600;
+    --vnj-bgr-clr: #996600;
 
     --svg-bgr-clr: #ffffee; 
     --svg-brd-clr: #cccccc;
