@@ -174,97 +174,31 @@ SUP.ofc { margin-right: 0.7ex; }
 .ekz {color: var(--ekz-fnt-clr)}
 .rimekz {font-style: italic}
 
-/*
-A.ekz:link, A.ekz:visited {text-decoration: underline; color: var(--ekz-fnt-clr)}
-A.ekz:hover {text-decoration: underline; color: var(--ekz-hov-fnt-clr)}
-A.ekz:active {text-decoration: underline; color: var(--ekz-act-fnt-clr)}
-*/
-
 /* difinoj */
 .drvdif {color: var(--main-fnt-clr)}
 .sncgrpdif {color: var(--main-fnt-clr)}
 .dif {color: var(--main-fnt-clr)}
-/*
-A.dif:link, A.dif:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.dif:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
-A.dif:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
 
 /* rimarkoj */
 div.rim { margin-top: .3em; }
 .rim {color: var(--rim-fnt-clr)}
 
-/*
-A.rim:link {text-decoration: underline; color: var(--rim-fnt-clr)}
-A.rim:visited {text-decoration: underline; color: var(--rim-fnt-clr)}
-A.rim:hover {text-decoration: underline; color: var(--rim-hov-fnt-clr)}
-A.rim:active {text-decoration: underline; color: var(--rim-act-fnt-clr)}
-*/
-
 /* referencoj */
 .ref {color: var(--ref-fnt-clr)}
-/*
-A.ref:link {text-decoration: underline; color: var(--ref-fnt-clr)}
-A.ref:visited {text-decoration: underline; color: var(--ref-fnt-clr)}
-A.ref:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
-A.ref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
-
-/* bildoj */
-/*
-A.bld:link {text-decoration: underline; color: var(--main-fnt-clr)}
-A.bld:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.bld:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
-A.bld:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
 
 /* klarigo */
 .klr {font-style: normal}
-/*
-A.klr:link {text-decoration: underline; color: var(--klr-fnt-clr)}
-A.klr:visited {text-decoration: underline; color: var(--klr-fnt-clr)}
-A.klr:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
-A.klr:active {text-decoration: underline; color: var(--klr-fnt-clr)}
-*/
 
 /*tradukoj*/
-/***
-.trd_ref {color: #666666}
-p.trd_ref {text-align: right}
-A.trd_ref:link {text-decoration: underline; color: #666666}
-A.trd_ref:visited {text-decoration: underline; color: #666666}
-A.trd_ref:active {text-decoration: underline; color: black}
-***/
 .trd {color: var(--label-fnt-clr)}
 .rimtrd {font-style: italic}
 .diftrd {font-style: italic}
 .trdeo {color: var(--label-fnt-clr); font-weight: bold}
 .trdnac {color: var(--label-fnt-clr)}
-/***
-A.trdeo:link {text-decoration: underline; font-weight: bold; color: var(--main-fnt-clr)}
-A.trdeo:visited {text-decoration: underline; font-weight: bold; 
-    color: var(--main-fnt-clr)}
-A.trdeo:active {text-decoration: underline; font-weight: bold; color: gray}
-***/
-
 
 /* fontindikoj en la teksto */
 .fnt {font-style: normal}
-/*
-A.fnt:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
-A.fnt:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
-A.fnt:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
-
 .fntref {font-size: small; font-style: normal; font-stretch: extra-condensed}
-/*
-A.fntref:link {text-decoration: underline; color: var(--fnt-fnt-clr)}
-A.fntref:visited {text-decoration: underline; color: var(--fnt-fnt-clr)}
-A.fntref:hover {text-decoration: underline; color: var(--main-hov-fnt-clr)}
-A.fntref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
-
-
 
 /* fontindikaj piednotoj */
 .fontoj {color: var(--fnt-fnt-clr); font-size: small}
@@ -272,22 +206,11 @@ A.fntref:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
 /* notoj pri mankoj */
 .mankoj {font-family: monospace; font-size: small}
 
-/*
-.mankoj A:link {text-decoration: underline; color: var(--adm-fnt-clr)}
-.mankoj A:visited {text-decoration: underline; color: var(--adm-fnt-clr)}
-.mankoj A:active {text-decoration: underline; color: green}
-*/
-
 /* redaktolinio malsupre de la artikolo */
 .redakto {color: var(--label-fnt-clr)}
-/*
-A.redakto:link {text-decoration: underline; color: var(--main-fnt-clr)}
-A.redakto:visited {text-decoration: underline; color: var(--main-fnt-clr)}
-A.redakto:active {text-decoration: underline; color: var(--main-act-fnt-clr)}
-*/
 
 
-/*A {text-decoration: none}*/
+/* A... */
 A:link, A:visited {color: var(--a-fnt-clr)}
 
 A.dif:link, 
@@ -314,34 +237,14 @@ A.redakto:visited {
     color: inherit;
 }
 
-A:hover/**,
-A.dif:hover, 
-A.ekz:hover, 
-A.bld:hover, 
-A.klr:hover, 
-A.ref:hover, 
-A.fnt:hover, 
-A.fntref:hover, 
-A.rim:hover,
-A.mankoj:hover,
-A.redakto:hover**/ {
+A:hover {
     color: var(--main-hov-fnt-clr) !important
 }
-A.active/**,
-A.dif:active, 
-A.ekz:active, 
-A.bld:active, 
-A.klr:active, 
-A.ref:active, 
-A.fnt:active, 
-A.fntref:active, 
-A.rim:active,
-A.mankoj:active,
-A.redakto:active**/ {
+A.active {
     color: var(--main-act-fnt-clr) !important
 }
 
-
+/* bildoj k.s. */
 .flago {  border-color: var(--svg-brd-clr); border-width: 1px;  border-style: outset}
 EMBED.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
@@ -358,35 +261,46 @@ IMG.fak { height: 1.5em; vertical-align: bottom; background-color: var(--vnj-bgr
 IMG.tez { height: 1.2em; padding: 1px; vertical-align: bottom;
       border-radius: 20%; border: 2px outset transparent}
       
+/* 
+    tezaŭrobildoj funkcias simile al butono, do eble ni uzu la klason "btn" anstataaŭe... 
+
+    momente ili ne (plu?) estas parto de la artikolo, sed eble ankoraŭ en la tez-indeksoj...
+*/
+/*
 A IMG.tez:focus {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:hover {background-color:  #c0c090; border: 2px outset gray}
 A IMG.tez:active {background-color:  #a0a070; border: 2px inset gray}
 
+A IMG.tez:focus {background-color:  var(--btn-act-bgr-clr); border: 2px outset var(--btn-act-brd-clr)}
+A IMG.tez:hover {background-color:  var(--btn-hov-bgr-clr); border: 2px outset var(--btn-act-brd-clr)}
+A IMG.tez:active {background-color:  var(--btn-act-bgr-clr); border: 2px inset var(--btn-act-brd-clr)}
+*/
+
 A.tez-ref { text-decoration: none; 
-    color: darkgreen; font-weight: normal; padding: 0.1em; border-radius: 40%}
+    color: var(--icn-fnt-clr); font-weight: normal; padding: 0.1em; border-radius: 40%}
 A.tez-ref:visited { background-color: transparent; 
-    color: darkgreen}
-A.tez-ref:focus {background-color:  #c0c090; 
-    color: brown}
-A.tez-ref:hover {background-color:  #c0c090; 
-    color: brown}
-A.tez-ref:active {background-color:  #a0a070; 
-    color: coral}
+    color: var(--icn-fnt-clr)}
+A.tez-ref:focus {background-color:  var(--icn-act-bgr-clr); 
+    color: var(--icn-act-fnt-clr)}
+A.tez-ref:hover {background-color:  var(--icn-hov-bgr-clr); 
+    color: var(--icn-hov-fnt-clr)}
+A.tez-ref:active {background-color:  var(--icn-act-bgr-clr); 
+    color: var(--icn-act-fnt-clr)}
 
 IMG.viki { height: 1.2em; vertical-align: bottom;
 	   border-radius: 20%; border: 2px outset transparent}
-A IMG.viki:focus {background-color:  #c0c090; 
-    border: 2px outset gray}
-A IMG.viki:hover {background-color:  #c0c090; 
-    border: 2px outset gray}
-A IMG.viki:active {background-color:  #a0a070; 
-    border: 2px inset gray}
+A IMG.viki:focus {background-color:  var(--tez-act-bgr-clr); 
+    border: 2px outset var(--tez-act-fnt-clr)}
+A IMG.viki:hover {background-color:  var(--tez-hov-bgr-clr); 
+    border: 2px outset var(--tez-hov-fnt-clr)}
+A IMG.viki:active {background-color:  var(--tez-act-bgr-clr); 
+    border: 2px inset var(--tez-act-fnt-clr)}
 
 .piedlinio {color: var(--label-fnt-clr); text-align: center}
 .kuketoaverto { position: fixed; bottom: 0px; left: 5%; width: 90%; min-height:7em;
-		background-color: #c0c090; margin: 0; display: none;
-		border-radius: 5px 5px 0 0; border: 1px solid var(--adm-fnt-clr); border-bottom: none
-	      }
+		background-color: var(--ovr-bgr-clr); margin: 0; display: none;
+		border-radius: 5px 5px 0 0; border: 1px solid var(--ovr-brd-clr); border-bottom: none
+	    }
 .kuketoaverto P { text-align:center }
 .kuketoaverto FORM { text-align:center }
 
@@ -425,7 +339,6 @@ A IMG.viki:active {background-color:  #a0a070;
 i.ekz { display: block; margin-left: 1.6em; text-indent: -1.2em; text-align: left }
 i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 
-
 .overlay {
     position: absolute;
     z-index: 100;
@@ -435,10 +348,10 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
     top: 2.5em;
     font-weight: normal;
     font-size: 1rem;
-    background-color: #F5F5D5;
+    background-color: var(--ovr-bgr-clr);
 
     padding: 0.5em;
-    border: 2px dotted green;
+    border: 2px dotted var(--ovr-brd-clr);
     box-shadow: 5px 5px 10px;
 }
 
@@ -528,11 +441,11 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 }                           
 
 #pref_lng li:hover, #alia_lng li:hover {
-    background-color: #FFEEAA;
+    background-color: var(--list-bgr-clr);
 }              
 
 #pref_lng li:active, #alia_lng li:active {
-    background-color: #E8C888;
+    background-color: var(--list-act-bgr-clr);
     ;
 }    
 
@@ -570,12 +483,12 @@ BUTTON {
 }
 
 BUTTON:hover, #kash_btn BUTTON:hover {
-    background-color: #FFEEAA;
-    border: 1px solid #775533;
+    background-color: var(--btn-hov-bgr-clr);
+    border: 1px solid var(--btn-hov-bgr-clr);
 }    
 BUTTON:active,#kash_btn BUTTON:active {
-    background-color: #E8C888;
-    border: 1px solid #775533;
+    background-color: var(--btn-act-bgr-clr);
+    border: 1px solid var(--btn-act-brd-clr);
 }
 
 .icon_btn {
@@ -583,7 +496,7 @@ BUTTON:active,#kash_btn BUTTON:active {
     width: 1.2rem;
     /*display: inline-block;*/
     float: right;
-    color: darkgreen;
+    color: var(--icn-fnt-clr);
     /* padding: 1rem 2rem; */
     padding: .2em;
     margin: .2em;

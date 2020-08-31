@@ -28,6 +28,9 @@
     --main-act-fnt-clr: black;
     --main-hov-fnt-clr: coral;
 
+    --ovr-bgr-clr: #F5F5D5;
+    --ovr-brd-clr: green;
+
     --a-fnt-clr: royalblue;
  
     --mh2-bgr-clr: goldenrod; 
@@ -46,7 +49,9 @@
     --input-bgr-clr: white;
     --input-fnt-clr: black;
 
-    --list-bgr-clr: palegoldenrod;
+    --list-bgr-clr: #FFEEAA;
+    --list-act-bgr-clr: #E8C888;
+
     --lst2-bgr-clr: khaki;
     --lst2-act-bgr-clr: lightgoldenrodyellow;
 
@@ -62,13 +67,20 @@
 
     --ref-fnt-clr: #600000;
 
+    --icn-fnt-clr: darkgreen; 
+    --icn-act-fnt-clr: brown;
+    --icn-hov-fnt-clr: coral;
+
+    --icn-hov-bgr-clr:  lightgoldenrodyellow; 
+    --icn-act-bgr-clr:  lightgoldenrodyellow; 
+
     --adm-fnt-clr: #303030;
     --label-fnt-clr: #104040;
     --vnj-bgr-clr: lightgoldenrodyellow;
 
     --svg-bgr-clr: #ffffee; 
     --svg-brd-clr: #cccccc;
-    
+
     --bld-bgr-clr: lightgoldenrodyellow;
     --bld-brd-clr: #cccccc;
 
