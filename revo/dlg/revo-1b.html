@@ -15,6 +15,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script -->
 
+        <script src="../jsc/util-1b.js"></script>
         <script src="../jsc/revo-art-1b.js"></script>
         <script src="../jsc/redaktilo-1b.js"></script>
               
@@ -110,7 +111,7 @@
                            var main = document.querySelector("main");
                            main.textContent = '';
                            main.append(...body.children);
-                           preparu_art();
+                           artikolo.preparu_art();
                         }                    
 
                         // var article = doc.getElementsByTagName("article");
@@ -187,6 +188,11 @@
                     }
                 });
                 */
+            }
+
+            function restore_preferences() {
+                redaktilo.restore_preferences();
+                artikolo.restore_preferences();
             }
 
             // preparu la paĝon: evento-reagoj...
