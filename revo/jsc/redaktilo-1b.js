@@ -58,13 +58,6 @@ var redaktilo = function() {
     };  
   }
 
-
-  function str_repeat(rStr, rNum) {
-      var nStr="";
-      for (var x=1;x<=rNum;x++) {nStr+=rStr;}
-      return nStr;
-  } 
-    
   /*
   function showhide(id){
       if (document.getElementById){
@@ -110,43 +103,7 @@ var redaktilo = function() {
       }
       return (str_repeat(" ", indent));
   }
-    
-  function cxigi(b, key) {
-      var n="";
-      var k=String.fromCharCode(key);
-    
-            if (b=='s'     ) n='\u015D';
-      else if (b=='\u015D') n='s'+k;
-      else if (b=='S'     ) n='\u015C';
-      else if (b=='\u015C') n='S'+k;
-    
-      else if (b=='c'     ) n='\u0109';
-      else if (b=='\u0109') n='c'+k;
-      else if (b=='C'     ) n='\u0108';
-      else if (b=='\u0108') n='C'+k;
-    
-      else if (b=='h'     ) n='\u0125';
-      else if (b=='\u0125') n='h'+k;
-      else if (b=='H'     ) n='\u0124';
-      else if (b=='\u0124') n='H'+k;
-    
-      else if (b=='g'     ) n='\u011D';
-      else if (b=='\u011D') n='g'+k;
-      else if (b=='G'     ) n='\u011C';
-      else if (b=='\u011C') n='G'+k;
-    
-      else if (b=='u'     ) n='\u016D';
-      else if (b=='\u016D') n='u'+k;
-      else if (b=='U'     ) n='\u016C';
-      else if (b=='\u016C') n='U'+k;
-    
-      else if (b=='j'     ) n='\u0135';
-      else if (b=='\u0135') n='j'+k;
-      else if (b=='J'     ) n='\u0134';
-      else if (b=='\u0134') n='J'+k;
-    
-      return n;
-  }
+  
     
   function klavo(event) {
       var key = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
@@ -418,10 +375,7 @@ var redaktilo = function() {
       }
   }
 
-  // aliras helpo-paĝon
-  function helpo_pagho(url) {
-    window.open('https://revuloj.github.io/temoj/'+url);
-  }
+
 
   // memoras valorojn de kelkaj kampoj en la loka memoro de la retumilo
   function store_preferences() {
@@ -752,16 +706,6 @@ var redaktilo = function() {
       });
   }
 
-  function getParamValue(param) {
-    var result = null,
-        tmp = [];
-    location.search.substr(1).split("&")
-        .forEach(function (item) {
-          tmp = item.split("=");
-          if (tmp[0] === param) result = decodeURIComponent(tmp[1]);
-        });
-    return result;
-  }
 
   function load_xml() {
     var art = getParamValue("art");
