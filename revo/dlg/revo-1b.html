@@ -95,25 +95,33 @@
                 }
             }     
             
-            function load_page(target,url) {
+            function load_page(trg,url,push_state=true) {
                 HTTPRequest('GET', url, {},
                     function(data) {
                         // Success!
                         var parser = new DOMParser();
                         var doc = parser.parseFromString(data,"text/html");
+                        var nav = document.getElementById("navigado");
+                        var main = document.querySelector("main");
 
-                        if (target == "nav") {
-                            var nav = document.getElementById("navigado");
+                        if (trg == "nav") {
                             nav.textContent= '';
                             nav.append(doc.querySelector("table"));
-                        } else if (target == "main") {
+                        } else if (trg == "main") {
                            var body = doc.body;
-                           var main = document.querySelector("main");
                            main.textContent = '';
                            main.append(...body.children);
+                           main.setAttribute("id","w:"+url);
                            artikolo.preparu_art();
                         }                    
 
+                        if (push_state)
+                            history.pushState({
+                                inx: nav.firstElementChild.id,
+                                art: main.id
+                                },
+                                null,
+                                main.id.substring(2));
                         // var article = doc.getElementsByTagName("article");
                         // if (article) {
                         // rigardo.textContent = '';
@@ -147,6 +155,17 @@
                     }
                 }
             }   
+
+            function navigate_history(event) {
+                var state = event.state;
+
+                console.log(state);
+
+                // FARENDA: ni komparu kun la nuna stato antaŭ decidi, ĉu parton
+                // ni devos renovigi!
+                load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
+                load_page("main",state.art.substring(2),false);
+            }            
 
             function load_xml(art) {
                 /*
@@ -202,6 +221,9 @@
                 load_page("nav","../inx/_eo.html");
                 document.body // getElementById("navigado")
                     .addEventListener("click",navigate);
+
+                window
+                    .addEventListener('popstate', navigate_history);
 
                 /*
                 $('#navigado').click(load_inx);
