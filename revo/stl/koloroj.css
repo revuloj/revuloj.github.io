@@ -63,7 +63,7 @@
 
     --rim-fnt-clr: #000060;
     --rim-hov-fnt-clr: var(--a-hov-fnt-clr);
-    --rim-fnt-clr: var(--a-fnt-clr);
+    --rim-act-fnt-clr: var(--a-fnt-clr);
 
     --ref-fnt-clr: #600000;
 
