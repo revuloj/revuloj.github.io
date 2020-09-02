@@ -82,7 +82,7 @@ nav a:active, a:focus {
     background-color: var(--nav-act-bgr-clr);
     color: var(--nav-act-fnt-clr);
     background-image: none;
-    border: 1px solid var(--nav-act-brd-clr);
+    border: 1px solid var(--nav-act-bgr-clr); /* ne montru randon: */
     box-shadow: none;
 }
 
@@ -117,6 +117,10 @@ nav a:active, a:focus {
     padding-top: 2.2em;
     */
     padding-right: 0.5em;
+}
+
+#navigado > table {
+    width: 100%;
 }
 
 #navigado h1 {
@@ -182,8 +186,8 @@ nav a:active, a:focus {
 #navigado td.aktiva a {
     width: initial;
     font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--nav-act-brd-clr);
+    /* ŝanĝiĝanta larĝeco ĝenas! text-transform: uppercase;*/
+    border-bottom: 3px solid var(--nav-act-brd-clr);
 }
 
 #navigado td.fona a {
@@ -192,13 +196,17 @@ nav a:active, a:focus {
     border-bottom: none;
 
     margin-left: .2em;
+
+    /*
     background-image: 
     linear-gradient(
         var(--nav-bgr-clr) 5%, 
         var(--nav-act-bgr-clr) 35%,
-/*        var(--highlight-bg-color) 45%, */
         var(--nav-act-bgr-clr) 70%, 
         var(--nav-bgr-clr) 95%);
+        */
+
+    text-shadow: 2px 2px 5px var(--nav-act-bgr-clr);
 }
 
 @media all and (max-width: 50em) {
@@ -232,8 +240,9 @@ nav li {
 
 .literoj {
     line-height: 185%;
-    max-width: 29.5rem;
-    font-family: monospace;
+    /*max-width: 29.5rem;*/
+    width: 100%;
+    /*font-family: monospace;*/
     display: inline-block;
     margin-top: .5em;
 }
@@ -248,12 +257,16 @@ nav li {
     /*background-color: #cA9510;*/
     color: black;
 
+    /*
     background-image: linear-gradient(
-        var(--nav-bgr-clr) 5%, 
-        var(--nav-act-bgr-clr) 35%,
+        var(--nav-bgr-clr) 40%, 
+          var(--nav-act-bgr-clr) 35%,
         var(--nav-hov-bgr-clr) 45%, 
-        var(--nav-act-bgr-clr) 70%, 
-        var(--nav-bgr-clr) 95%);
+          var(--nav-act-bgr-clr) 70%, 
+        var(--nav-bgr-clr) 70%);
+        */
+    text-shadow: 2px 2px 5px var(--nav-act-bgr-clr);
+        
     /*background-image: radial-gradient(ellipse closest-side at 30% 50%, #eAb530 5%, goldenrod 55%);*/
 
     /*border-left: 3px dotted lightgoldenrodyellow;*/
@@ -263,10 +276,22 @@ nav li {
     /*box-shadow: 1px 1px 3px var(--button-border-color); */
 }
 
-.literoj a:hover, .literoj a:active {
+.literoj a:hover {
     background-image: none;
+    background-color: var(--nav-hov-bgr-clr);
     color: var(--nav-hov-fnt-clr) !important;
     /*background-color: var(--active-bg-color);*/
+}
+
+.literoj a:active {
+    background-image: none;
+    background-color: var(--nav-act-bgr-clr);
+    color: var(--nav-act-fnt-clr) !important;
+    /*background-color: var(--active-bg-color);*/
+}
+
+.literoj .elektita {
+    border-bottom: 3px solid var(--nav-act-brd-clr);
 }
 
 #navigado li, li>a, p>a {

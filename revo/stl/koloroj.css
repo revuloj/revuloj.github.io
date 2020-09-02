@@ -18,9 +18,10 @@
     --nav-fnt-clr: black;
     --nav-bgr-clr: #eAb530  /* #FAC540  #eAb530 goldenrod */;
     --nav-hov-bgr-clr: lightgoldenrodyellow;
-    --nav-hov-fnt-clr: darkgray;
-    --nav-act-bgr-clr: #FAC540;
+    --nav-hov-fnt-clr: salmon;
+    --nav-act-bgr-clr: lightgoldenrodyellow;
     --nav-act-brd-clr: black;
+    --nav-act-fnt-clr: salmon;
 
     /* por la ĉefa paĝo (main) */
     --main-bgr-clr: lightgoldenrodyellow;
