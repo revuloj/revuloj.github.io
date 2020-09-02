@@ -69,6 +69,9 @@ main {
 
 nav a:focus {
     outline: 2px dotted var(--nav-act-bgr-clr) !important;
+    background-color: inherit;
+    box-shadow: none;
+    /* border-bottom: 3px solid var(--nav-act-brd-clr);*/
 }
 
 nav a:hover {
@@ -78,7 +81,7 @@ nav a:hover {
     color: var(--highlight-color);
 }
 
-nav a:active, a:focus {
+nav a:active {
     background-color: var(--nav-act-bgr-clr);
     color: var(--nav-act-fnt-clr);
     background-image: none;
