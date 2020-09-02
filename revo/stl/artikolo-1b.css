@@ -6,7 +6,8 @@
 BODY, ARTICLE, HEADER, FOOTER {
     background-color: var(--main-bgr-clr); 
     color: var(--main-fnt-clr); 
-    padding-right: 1.5em;
+    padding-right: min(2%,1.5em);
+    padding-left: min(1%,.75em);
       /*font-family: "Latin Modern Roman", "TimesNewRoman", "Liberation Serif", serif;*/
       /*font-family: "Utopia", "TimesNewRoman", "Liberation Serif", serif;*/
     }
@@ -451,28 +452,30 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 
 #kash_btn {
     position: fixed;
-    right: 0;
+    right: .75em;
     bottom: 50%;
     margin-bottom: -1rem;
     display: flex;
     flex-direction: column;
 }
 
-BUTTON {
-    height: 1.5rem;
-    margin: .1em .2em;
+#kash_btn BUTTON {
+    height: 2rem;
+    width: 1.5rem;
+    margin: .3em .2em;
+    background-size: 80%;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
     background-color: var(--btn-bgr-clr);
 
     /* border: none; */
     border: 1px solid #E0E0A0;
-    border-radius: .5em;
+    border-radius: .4em;
 }
 
-#kash_btn BUTTON {
+BUTTON {
     height: 1.5rem;
-    margin: .3em .2em;
+    margin: .1em .2em;
     /*border: 1px solid gray;*/
     box-shadow: 1px 1px 3px gray;
     background-color: var(--btn-bgr-clr);
