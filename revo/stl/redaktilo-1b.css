@@ -27,7 +27,7 @@ h2 {
 }
 
 #r\:navigado h1 {
-    font-family: monospace;
+    /*font-family: monospace;*/
     border-radius: 3px;
     border: 1px solid black;
     padding: 0.1em 0.5em;
@@ -145,7 +145,7 @@ fieldset {
 fieldset legend {
     text-decoration: underline;
     font-weight: bold;
-    font-family: monospace;
+    /*font-family: monospace;*/
     padding: 0.5em;
     border-radius: 4px;
     background-color: palegoldenrod;
@@ -164,7 +164,7 @@ span.right {
 .tabs a {
     padding: 0.5em;
     /*background-color: palegoldenrod; */
-    font-family: monospace;
+    /*font-family: monospace;*/
     font-weight: bold;
     color: black;
     text-decoration: none;
@@ -212,7 +212,7 @@ button, input[type="button"], input[type="checkbox"] {
     padding: 0.3em 0.5em;
     /*border-radius: 3px;*/
     box-shadow: 1px 1px 2px;
-    font-family: monospace;
+    /*font-family: monospace;*/
     /* font-size: 1rem;*/
 }
 
@@ -293,7 +293,7 @@ button, input[type="button"], input[type="checkbox"] {
     /*padding: 2px;*/
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
-    font-family: monospace;
+    /*font-family: monospace;*/
     /*font-size: 1rem;*/
     height: 1.8rem;
     -webkit-perspective: 100px;
