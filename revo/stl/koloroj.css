@@ -25,9 +25,11 @@
 
     /* por la ĉefa paĝo (main) */
     --main-bgr-clr: lightgoldenrodyellow;
+    --main-brd-clr: goldenrod;
     --main-fnt-clr: black;
     --main-act-fnt-clr: black;
     --main-hov-fnt-clr: coral;
+    --main-shd-clr: gray;
 
     --ovr-bgr-clr: #F5F5D5;
     --ovr-brd-clr: green;
@@ -50,8 +52,8 @@
     --input-bgr-clr: white;
     --input-fnt-clr: black;
 
-    --list-bgr-clr: #FFEEAA;
-    --list-act-bgr-clr: #E8C888;
+    --list-bgr-clr: khaki; /*#FFEEAA;*/
+    --list-act-bgr-clr: #FAC540; /*#E8C888;*/
 
     --lst2-bgr-clr: khaki;
     --lst2-act-bgr-clr: lightgoldenrodyellow;
