@@ -6,44 +6,47 @@ const lingvoj_xml = "../cfg/lingvoj.xml";
 const MalkashEvento = new Event("malkashu", {bubbles: true});
 const KomutEvento = new Event("komutu", {bubbles: true});
 
-// difinu ĉion sub nomprefikso "artikolo"
 
-var artikolo = function() {
-    var pref_lng = [];
-    var pref_dat = Date.now();
+//window.onbeforeunload = function() {
+//    store_preferences();
+//}
 
-    //window.onbeforeunload = function() {
-    //    store_preferences();
-    //}
+///
+window.onload = function() {    
+    artikolo.restore_preferences();   
+    artikolo.preparu_art();
+    artikolo.enkadrigu();
+}   
 
-    ///
-    window.onload = function() {    
-        restore_preferences();   
-        preparu_art()
-    }   
-
-    window.onhashchange = function() {
-        //console.log("hashchange: "+window.location.hash )
-        //event.stopPropagation();
-        //var id = this.getAttribute("href").split('#')[1];
-        var id = getHashParts().mrk;
+window.onhashchange = function() {
+    //console.log("hashchange: "+window.location.hash )
+    //event.stopPropagation();
+    //var id = this.getAttribute("href").split('#')[1];
+    var id = getHashParts().mrk; // el: util.js
+    if (id) {
         var trg = document.getElementById(id);
 
-        // this.console.log("ni malkaŝu "+id);
-
+        // this.console.log("ni malkaŝu "+id);    
         if (trg && trg.tagName == "H2") {
             // ĉe derivaĵoj, la kaŝita div venos post h2
             var sec = trg.closest("section"); //parentElement;    
             var trg = sec.querySelector("div.kasxebla");
         }
-
+    
         //showContainingDiv(trg);
         //triggerEvent(trg,"malkashu");
         if (trg)
             trg.dispatchEvent(MalkashEvento);
         else
-            this.console.error("ne troviĝis saltomarko "+id)
+            this.console.error("ne troviĝis saltomarko '"+id+'"')    
     }
+}
+
+// difinu ĉion sub nomprefikso "artikolo"
+
+var artikolo = function() {
+    var pref_lng = [];
+    var pref_dat = Date.now();
 
     function preparu_art() {
         // evitu preparon, se ni troviĝas en la redaktilo kaj
@@ -68,6 +71,26 @@ var artikolo = function() {
         //}
     }
 
+    // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
+    function enkadrigu() {
+        if (document.getElementsByName("main").length == 0) {
+            var main = make_element("main",{});
+            main.append(...document.body.children);
+            document.body.appendChild(main);
+        }
+        if (document.getElementsByName("nav").length == 0) {
+            var nav = make_element("nav",{});
+            var div = make_element("div",{id: "navigado"});
+            nav.appendChild(div);
+            document.body.prepend(nav);
+        }
+        if (history.state && history.state.inx) {
+            console.log(history.state);
+            // ni bezonas unue revo-1b.js:
+            //load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
+        }
+    }
+
     /* kaŝu sekciojn de derivaĵoj, se la artikolo estas tro longa
     kaj provizu ilin per ebleco remalkaŝi */
     function preparu_kashu_sekciojn() {
@@ -90,8 +113,14 @@ var artikolo = function() {
             }
             
             // provizore ne bezonata: el.addEventListener("kashu", function(event) { kashu_drv(event.currentTarget) });
-            el.addEventListener("malkashu", function(event) { malkashu_drv(event.currentTarget) });
-            el.addEventListener("komutu", function(event) { kashu_malkashu_drv(event.currentTarget) });           
+            el.addEventListener("malkashu", function(event) { 
+                malkashu_drv(event.currentTarget);
+                event.stopPropagation();
+            });
+            el.addEventListener("komutu", function(event) { 
+                kashu_malkashu_drv(event.currentTarget);
+                event.stopPropagation();
+            });           
 
             var h2 = getPrevH2(el);
             if (h2) {
@@ -128,7 +157,10 @@ var artikolo = function() {
     function preparu_malkashu_fontojn() {
         var d = document.getElementsByClassName("fontoj kasxita");
         for (var el of d) {
-            el.addEventListener("malkashu", function(event) { event.currentTarget.classList.remove("kasxita") });
+            el.addEventListener("malkashu", function(event) { 
+                event.currentTarget.classList.remove("kasxita");
+                event.stopPropagation();
+            });
         }
     }
 
@@ -490,7 +522,8 @@ var artikolo = function() {
    // eksportu publikajn funkction
    return {
         restore_preferences: restore_preferences,
-        preparu_art: preparu_art
+        preparu_art: preparu_art,
+        enkadrigu: enkadrigu
    }
 
 }();
