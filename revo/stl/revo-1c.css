@@ -1,6 +1,6 @@
 @import "normalize.css";
 @import "koloroj.css";
-@import url("piktogram-1c.css");
+@import "piktogram-1c.css";
 @import "artikolo-1c.css";
 @import "redaktilo-1c.css";
 
@@ -15,7 +15,7 @@ html {
 
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     height: 100vh;
     margin: 0 !important;
     padding: 0 !important;

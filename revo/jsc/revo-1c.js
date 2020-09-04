@@ -508,7 +508,8 @@ const revo_url = "reta-vortaro.de";
 
 
 // preparu la paĝon: evento-reagoj...
-window.onload = function() { 
+when_ready(function() { 
+    console.log("kadro, when_ready...")
     restore_preferences();
     enkadrigu();
     /*
@@ -536,7 +537,7 @@ window.onload = function() {
         }
     });
     */
-};
+});
 
 // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
 function enkadrigu() {
@@ -555,7 +556,7 @@ function enkadrigu() {
         var nav = make_element("nav",{});
         var div = make_element("div",{id: "navigado"});
         nav.appendChild(div);
-        document.body.prepend(nav);
+        document.body.appendChild(nav);
     }
 
     // rekreu la indekson laŭ la historio aŭ ŝargu la centran eo-indekson
@@ -678,25 +679,27 @@ function load_page(trg,url,push_state=true) {
 
 function navigate(event) {
     var el = event.target.closest("a");
-    var href = el.getAttribute("href");
-    var target = ref_target(el);
-
-    if (target != "int") {
-        event.preventDefault();
-        if (target == "ext") {
-            window.open(href);
-        } else if (target == "main") {
-            load_page(target,normalize_href(target,href));
-            /*
-            $('#s_artikolo').load(href, //+' body>*'                            
-                preparu_art
-            );   
-            */  
-        } else if (target == "nav") {                   
-            load_page(target,normalize_href(target,href));
-            /*
-            $('#navigado').load(href+' table');
-            */
+    if(el) {
+        var href = el.getAttribute("href");
+        var target = ref_target(el);
+    
+        if (target != "int") {
+            event.preventDefault();
+            if (target == "ext") {
+                window.open(href);
+            } else if (target == "main") {
+                load_page(target,normalize_href(target,href));
+                /*
+                $('#s_artikolo').load(href, //+' body>*'                            
+                    preparu_art
+                );   
+                */  
+            } else if (target == "nav") {                   
+                load_page(target,normalize_href(target,href));
+                /*
+                $('#navigado').load(href+' table');
+                */
+            }
         }
     }
 }   
