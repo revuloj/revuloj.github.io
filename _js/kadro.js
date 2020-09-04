@@ -1,5 +1,67 @@
 const revo_url = "reta-vortaro.de";
 
+
+// preparu la paĝon: evento-reagoj...
+window.onload = function() { 
+    restore_preferences();
+    enkadrigu();
+    /*
+    load_page("main","titolo.html");
+    load_page("nav","../inx/_eo.html");
+    */
+    document.body // getElementById("navigado")
+        .addEventListener("click",navigate);
+
+    window
+        .addEventListener('popstate', navigate_history);
+
+    /*
+    $('#navigado').click(load_inx);
+    $('#s_artikolo').click(load_art);
+    $("#sercho_frm").submit(serchu);
+    $.ajaxSetup({
+        converters: {
+            "* text": window.String, 
+            "text html": true, 
+            "text json": jQuery.parseJSON, 
+            // ne funkcias kun Voko-XML eble pro manko de DTD dum analizo:
+            // "text xml": jQuery.parseXML
+            "text xml": window.String
+        }
+    });
+    */
+};
+
+// se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
+function enkadrigu() {
+
+    // preparu la ĉefan parton de la paĝo
+    if (document.getElementsByName("main").length == 0) {
+        var main = make_element("main",{});
+        main.append(...document.body.children);
+        document.body.appendChild(main);
+    } else {
+        load_page("main","titolo.html");
+    }
+
+    // preparu la navigo-parton de la paĝo
+    if (document.getElementsByName("nav").length == 0) {
+        var nav = make_element("nav",{});
+        var div = make_element("div",{id: "navigado"});
+        nav.appendChild(div);
+        document.body.prepend(nav);
+    }
+
+    // rekreu la indekson laŭ la historio aŭ ŝargu la centran eo-indekson
+    if (history.state && history.state.inx) {
+        console.log(history.state);
+        // ni bezonas unue revo-1b.js:
+        load_page("nav","/revo/inx/"+history.state.inx.substring(2)+".html",false);
+    } else {
+        load_page("nav","../inx/_eo.html");
+    }
+}
+
 // vd. https://wiki.selfhtml.org/wiki/HTML/Tutorials/Navigation/Dropdown-Men%C3%BC
 function nav_toggle() {
     var menu = document.getElementById("navigado");
@@ -191,30 +253,3 @@ function restore_preferences() {
     artikolo.restore_preferences();
 }
 
-// preparu la paĝon: evento-reagoj...
-window.onload = function() { 
-    restore_preferences();
-    load_page("main","titolo.html");
-    load_page("nav","../inx/_eo.html");
-    document.body // getElementById("navigado")
-        .addEventListener("click",navigate);
-
-    window
-        .addEventListener('popstate', navigate_history);
-
-    /*
-    $('#navigado').click(load_inx);
-    $('#s_artikolo').click(load_art);
-    $("#sercho_frm").submit(serchu);
-    $.ajaxSetup({
-        converters: {
-            "* text": window.String, 
-            "text html": true, 
-            "text json": jQuery.parseJSON, 
-            // ne funkcias kun Voko-XML eble pro manko de DTD dum analizo:
-            // "text xml": jQuery.parseXML
-            "text xml": window.String
-        }
-    });
-    */
-};

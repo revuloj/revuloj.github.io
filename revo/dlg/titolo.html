@@ -20,13 +20,37 @@
    }
 //--></script></head>
 <body onload="checkCookieConsent(); document.f.sercxata.focus();">
+  <article>
   
-  
-  <h1 align="center" style="color:black; font-size: xx-large">Reta Vortaro</h1><div align="center"><form method="post" action="/cgi-bin/sercxu.pl" target="indekso" name="f"><p>
-	Serĉo en ReVo:
-	<input type="text" id="sercxata" name="sercxata" size="31" maxlength="255" onKeyUp="xAlUtf8(this.value,'sercxata')" placeholder="Ĵokeroj: % (pluraj) kaj _ (unu)"></input><input type="submit" value="trovu"></input></p><p><input type="checkbox" name="x" id="x" onClick="xAlUtf8(document.f.sercxata.value,'sercxata')" checked="checked"></input>anstataŭigu  c<u>x</u>, gx, ..., ux</p></form></div><div align="center"><form method="get" action="http://www.google.be/search" style="text-align: center" target="_parent"><p>
-       Per <img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="absmiddle"></img><input type="text" id="q" name="q" onKeyUp="xAlUtf8(this.value,'q')" size="31" maxlength="255" value=""></input><input type="submit" name="btnG" value="trovu"></input></p><input type="hidden" name="hl" value="eo"></input><input type="hidden" name="ie" value="utf-8"></input><input type="hidden" name="oe" value="utf-8"></input><input type="hidden" name="sitesearch" value="reta-vortaro.de"></input><input type="hidden" name="hq" value="inurl:revo/art"></input></form></div><p style="width: 80%; margin-left: 10%;text-align: center">aŭ iru al <a href="/cgi-bin/hazarda_art.pl?senkadroj=1" target="indekso">iu ajn artikolo</a>.</p><div align="center"><img src="revo.jpg" align="center" alt="titolbildo"></img></div><p style="width: 80%; margin-left: 10%;">
-      Jen Revo ― la ĝenerala esperanta vortaro en la reto.
+  <h1 align="center" style="color:black; font-size: xx-large">Reta Vortaro</h1>
+<div id="titol_sercho">
+
+  <div align="center">
+    <form method="post" action="/cgi-bin/sercxu.pl" target="indekso" name="f">
+    <p>
+
+      Serĉo en ReVo:
+    <input type="text" id="sercxata" name="sercxata" size="31" maxlength="255" onKeyUp="xAlUtf8(this.value,'sercxata')" placeholder="Ĵokeroj: % (pluraj) kaj _ (unu)"></input>
+    <input type="submit" value="trovu"></input></p>
+    <p><input type="checkbox" name="x" id="x" onClick="xAlUtf8(document.f.sercxata.value,'sercxata')" checked="checked"></input>anstataŭigu  c<u>x</u>, gx, ..., ux</p></form>
+  </div>
+  <div align="center"><form method="get" action="http://www.google.be/search" style="text-align: center" target="_parent"><p>
+       
+    Per <img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="absmiddle"></img>
+       <input type="text" id="q" name="q" onKeyUp="xAlUtf8(this.value,'q')" size="31" maxlength="255" value=""></input>
+       <input type="submit" name="btnG" value="trovu"></input></p><input type="hidden" name="hl" value="eo"></input>
+       <input type="hidden" name="ie" value="utf-8"></input><input type="hidden" name="oe" value="utf-8"></input>
+       <input type="hidden" name="sitesearch" value="reta-vortaro.de"></input>
+       <input type="hidden" name="hq" value="inurl:revo/art"></input></form>
+  </div>
+</div>
+
+       <p style="width: 80%; margin-left: 10%;text-align: center">aŭ iru al 
+        <a href="/cgi-bin/hazarda_art.pl?senkadroj=1" target="indekso">iu ajn artikolo</a>.</p>
+      <div align="center"><img src="revo.jpg" align="center" alt="titolbildo"></img></div>
+      <p style="width: 80%; margin-left: 10%;">
+
+        Jen Revo ― la ĝenerala esperanta vortaro en la reto.
 
     </p><p style="width: 80%; margin-left: 10%;">
       Se vi pretas helpi progresigi vortaron, kun
@@ -56,4 +80,5 @@
     <button name="konfirmo" onClick="setCookieConsent(); document.f.sercxata.focus();">Mi konfirmas</button>
   </footer>
 </div>
+</article>
   </body></html>

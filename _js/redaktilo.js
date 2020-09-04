@@ -743,7 +743,8 @@ var redaktilo = function() {
     }
   }
 
-  ready(function() { 
+  when_ready(function() { 
+    console.log("redaktilo.when_ready...:" +  location.href);
     if (document.getElementById("r:xmltxt")) {
       sf(0, 0, 1);
       restore_preferences();

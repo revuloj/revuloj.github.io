@@ -6,19 +6,7 @@ const lingvoj_xml = "../cfg/lingvoj.xml";
 const MalkashEvento = new Event("malkashu", {bubbles: true});
 const KomutEvento = new Event("komutu", {bubbles: true});
 
-
-//window.onbeforeunload = function() {
-//    store_preferences();
-//}
-
-///
-window.onload = function() {    
-    artikolo.restore_preferences();   
-    artikolo.preparu_art();
-    artikolo.enkadrigu();
-}   
-
-window.onhashchange = function() {
+window.addEventListener("hashchange", function() {
     //console.log("hashchange: "+window.location.hash )
     //event.stopPropagation();
     //var id = this.getAttribute("href").split('#')[1];
@@ -40,13 +28,20 @@ window.onhashchange = function() {
         else
             this.console.error("ne troviĝis saltomarko '"+id+'"')    
     }
-}
+});
 
 // difinu ĉion sub nomprefikso "artikolo"
 
 var artikolo = function() {
     var pref_lng = [];
     var pref_dat = Date.now();
+
+    when_ready(function() {
+        console.log("artikolo.when_ready...:" + location.href);
+        restore_preferences();   
+        preparu_art();
+        //enkadrigu();
+    });
 
     function preparu_art() {
         // evitu preparon, se ni troviĝas en la redaktilo kaj
@@ -69,26 +64,6 @@ var artikolo = function() {
             //interna_navigado();
             //etendu_ekzemplojn();   
         //}
-    }
-
-    // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
-    function enkadrigu() {
-        if (document.getElementsByName("main").length == 0) {
-            var main = make_element("main",{});
-            main.append(...document.body.children);
-            document.body.appendChild(main);
-        }
-        if (document.getElementsByName("nav").length == 0) {
-            var nav = make_element("nav",{});
-            var div = make_element("div",{id: "navigado"});
-            nav.appendChild(div);
-            document.body.prepend(nav);
-        }
-        if (history.state && history.state.inx) {
-            console.log(history.state);
-            // ni bezonas unue revo-1b.js:
-            load_page("nav","/revo/inx/"+history.state.inx.substring(2)+".html",false);
-        }
     }
 
     /* kaŝu sekciojn de derivaĵoj, se la artikolo estas tro longa
