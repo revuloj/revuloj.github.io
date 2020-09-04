@@ -779,6 +779,9 @@ var redaktilo = function() {
 
   // eksportu publikajn funkction
   return {
-    preparu_red: preparu_red
+    preparu_red: preparu_red,
+    create_new_art: create_new_art,
+    insertTags: insertTags,
+    insertTags2: insertTags2
   }
 }();
