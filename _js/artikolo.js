@@ -36,8 +36,8 @@ var artikolo = function() {
     var pref_lng = [];
     var pref_dat = Date.now();
 
-    when_ready(function() {
-        console.log("artikolo.when_ready...:" + location.href);
+    when_doc_ready(function() {
+        console.log("artikolo.when_doc_ready...:" + location.href);
         restore_preferences();   
         preparu_art();
         //enkadrigu();
@@ -311,7 +311,7 @@ var artikolo = function() {
             close.setAttribute("id","pref_dlg_close");
 
             var xopt = inx.map(i => { return {id: i.join('_'), label: i.join('..')}; });
-            var xdiv = make_element("DIV",{class: "ix_literoj"});
+            var xdiv = make_element("DIV",{id: "w:ix_literoj", class: "tabs"});
             add_radios(xdiv,"pref_lingvoj",null,xopt,change_pref_lng);
             
             //div.appendChild(make_element("SPAN"));

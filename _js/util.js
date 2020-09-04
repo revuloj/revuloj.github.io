@@ -33,7 +33,7 @@ function helpo_pagho(url) {
 }
 
 // por prepari paĝon post kiam ĝi estas ŝargita
-function when_ready(onready_fn) {
+function when_doc_ready(onready_fn) {
     if (document.readyState != 'loading'){
       onready_fn();
     } else {

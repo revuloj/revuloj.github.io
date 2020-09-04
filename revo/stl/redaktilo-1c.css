@@ -155,29 +155,6 @@ span.right {
     float: right;
 }
 
-.tabs {
-    margin-left: 0.5em;
-    margin-top: 0em;
-    margin-bottom: 1em;
-}   
-
-.tabs a {
-    padding: 0.5em;
-    /*background-color: palegoldenrod; */
-    /*font-family: monospace;*/
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
- 
-.tabs a.aktiva {
-   font-weight: bold;
-   color: black;
-   text-transform: uppercase;
-   border-left: 4px solid goldenrod;
-   border-right: 4px solid goldenrod;   
-   background-color: palegoldenrod;
-}
 
 .rhelpo a {
     font-weight: bold;

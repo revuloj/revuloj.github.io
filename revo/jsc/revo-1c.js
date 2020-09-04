@@ -37,8 +37,8 @@ var artikolo = function() {
     var pref_lng = [];
     var pref_dat = Date.now();
 
-    when_ready(function() {
-        console.log("artikolo.when_ready...:" + location.href);
+    when_doc_ready(function() {
+        console.log("artikolo.when_doc_ready...:" + location.href);
         restore_preferences();   
         preparu_art();
         //enkadrigu();
@@ -312,7 +312,7 @@ var artikolo = function() {
             close.setAttribute("id","pref_dlg_close");
 
             var xopt = inx.map(i => { return {id: i.join('_'), label: i.join('..')}; });
-            var xdiv = make_element("DIV",{class: "ix_literoj"});
+            var xdiv = make_element("DIV",{id: "w:ix_literoj", class: "tabs"});
             add_radios(xdiv,"pref_lingvoj",null,xopt,change_pref_lng);
             
             //div.appendChild(make_element("SPAN"));
@@ -508,16 +508,17 @@ const revo_url = "reta-vortaro.de";
 
 
 // preparu la paĝon: evento-reagoj...
-when_ready(function() { 
-    console.log("kadro, when_ready...")
+when_doc_ready(function() { 
+    console.log("kadro.when_doc_ready...")
     restore_preferences();
     enkadrigu();
     /*
     load_page("main","titolo.html");
     load_page("nav","../inx/_eo.html");
     */
-    document.body // getElementById("navigado")
-        .addEventListener("click",navigate);
+    document.body 
+    //document.getElementById("navigado")
+        .addEventListener("click",navigate_link);
 
     window
         .addEventListener('popstate', navigate_history);
@@ -602,6 +603,11 @@ function ref_target(a_el) {
     var href = a_el.getAttribute("href");
     var trg = a_el.getAttribute("target");   
 
+    if (! href) {
+        console.error("mankas atributo href ĉe elemento "+a_el.tagName+" ("+a_el.id+")");
+        return;
+    }
+
     if (href.startsWith('#')) {
         return "int";
     } else if (
@@ -677,13 +683,15 @@ function load_page(trg,url,push_state=true) {
     });
 }
 
-function navigate(event) {
+function navigate_link(event) {
     var el = event.target.closest("a");
-    if(el) {
+    var href = el? el.getAttribute("href") : null;
+
+    if (el && href) {
         var href = el.getAttribute("href");
         var target = ref_target(el);
     
-        if (target != "int") {
+        if (href && target && target != "int") {
             event.preventDefault();
             if (target == "ext") {
                 window.open(href);
@@ -707,12 +715,14 @@ function navigate(event) {
 function navigate_history(event) {
     var state = event.state;
 
-    console.log(state);
+    console.log("event.state:"+state);
 
     // FARENDA: ni komparu kun la nuna stato antaŭ decidi, ĉu parton
     // ni devos renovigi!
-    load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
-    load_page("main",state.art.substring(2),false);
+    if (state) {
+        load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
+        load_page("main",state.art.substring(2),false);    
+    }
 }            
 
 function load_xml(art) {
@@ -758,7 +768,10 @@ function serchu(event) {
 }
 
 function restore_preferences() {
-    redaktilo.restore_preferences();
+    // tion ni momente povas fari nur, kiam la redaktilo
+    // jam ĉeestas, ĉar ni metas valorojn 
+    // rekte al DOM:
+    // redaktilo.restore_preferences();
     artikolo.restore_preferences();
 }
 
@@ -1472,7 +1485,6 @@ var redaktilo = function() {
       });
   }
 
-
   function load_xml() {
     var art = getParamValue("art");
     if (art) {
@@ -1489,7 +1501,6 @@ var redaktilo = function() {
         });
     }
   }
-
 
   function sf(pos, line, lastline) {
     document.getElementById("r:xmltxt").focus();
@@ -1509,8 +1520,8 @@ var redaktilo = function() {
     }
   }
 
-  when_ready(function() { 
-    console.log("redaktilo.when_ready...:" +  location.href);
+  function preparu_red() {
+    // enlegu bezonaĵojn (listojn, XML-artikolon, preferojn)
     if (document.getElementById("r:xmltxt")) {
       sf(0, 0, 1);
       restore_preferences();
@@ -1518,16 +1529,36 @@ var redaktilo = function() {
       revo_codes.fakoj.load("r:sfak");
       revo_codes.stiloj.load("r:sstl");
       load_xml(); // se doniĝis ?art=xxx ni fone ŝargas tiun artikolon
-  
-      window.onbeforeunload = function() {
-        store_preferences();
-      }  
     }
-  })
+
+    // preparu aktivajn elmentoj / eventojn
+    var tabs = document.getElementById("r:tabs");
+    tabs.addEventListener("click", function(event) {
+      var a = event.target.closest("a");
+      tab_toggle(a.id);
+    });
+
+    var fs_t = document.getElementById("r:fs_toggle");
+    fs_t.addEventListener("click", function(event) {
+      var a = event.target.closest("a");
+      fs_toggle(a.id);
+      if (a.id == "r:trigardo") {
+        trigardo();
+      }
+    });
+  }
+
+  when_doc_ready(function() { 
+    console.log("redaktilo.when_doc_ready...:" +  location.href);
+    window.onbeforeunload = function() {
+      store_preferences();
+    }  
+
+  });
 
   // eksportu publikajn funkction
   return {
-    restore_preferences: restore_preferences
+    preparu_red: preparu_red
   }
 }();
 //_js/util.js
@@ -1566,7 +1597,7 @@ function helpo_pagho(url) {
 }
 
 // por prepari paĝon post kiam ĝi estas ŝargita
-function when_ready(onready_fn) {
+function when_doc_ready(onready_fn) {
     if (document.readyState != 'loading'){
       onready_fn();
     } else {

@@ -5,7 +5,7 @@
 @import "redaktilo-1c.css";
 
 /***************************************
-   Ĉefa kardo
+   Ĉefa kadro
 ****************************************/
 
 html {
@@ -393,6 +393,80 @@ footer {
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+
+
+.tabs {
+    margin-left: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+}   
+
+.tabs > label {
+    font-weight: bold;
+    text-align: right;
+    padding: .1em;
+}
+
+.tabs > label::after {
+    content: ":\00a0"
+} 
+.tabs input {
+    display: none;
+} 
+.tabs input:checked + label {
+    padding: .1em;
+    /*background: var(--list-act-bgr-clr);*/
+    border-bottom: 3px solid var(--main-brd-clr);
+} 
+
+.tabs a {
+    padding: 0.5em;
+    /*background-color: palegoldenrod; */
+    /*font-family: monospace;*/
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+ 
+.tabs a.aktiva {
+   font-weight: bold;
+   color: black;
+   text-transform: uppercase;
+   border-left: 4px solid goldenrod;
+   border-right: 4px solid goldenrod;   
+   background-color: palegoldenrod;
+}
+
+#w\:ix_literoj {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#w\:ix_literoj span {
+    padding: 0 .3em;
+    border-left: 2px solid var(--main-brd-clr)
+}
+
+/*
+.ix_literoj > label {
+    font-weight: bold;
+    text-align: right;
+    padding: .1em;
+}
+.ix_literoj > label::after {
+    content: ":\00a0"
+} 
+.ix_literoj input {
+    display: none;
+} 
+.ix_literoj input:checked + label {
+    *border-radius: 2px;*
+    padding: .1em;
+    *background: var(--list-act-bgr-clr);*
+    border-bottom: 3px solid var(--main-brd-clr);
+} 
+*/
 
 /***
 #s_artikolo {

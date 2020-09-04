@@ -2,16 +2,17 @@ const revo_url = "reta-vortaro.de";
 
 
 // preparu la paĝon: evento-reagoj...
-when_ready(function() { 
-    console.log("kadro, when_ready...")
+when_doc_ready(function() { 
+    console.log("kadro.when_doc_ready...")
     restore_preferences();
     enkadrigu();
     /*
     load_page("main","titolo.html");
     load_page("nav","../inx/_eo.html");
     */
-    document.body // getElementById("navigado")
-        .addEventListener("click",navigate);
+    document.body 
+    //document.getElementById("navigado")
+        .addEventListener("click",navigate_link);
 
     window
         .addEventListener('popstate', navigate_history);
@@ -96,6 +97,11 @@ function ref_target(a_el) {
     var href = a_el.getAttribute("href");
     var trg = a_el.getAttribute("target");   
 
+    if (! href) {
+        console.error("mankas atributo href ĉe elemento "+a_el.tagName+" ("+a_el.id+")");
+        return;
+    }
+
     if (href.startsWith('#')) {
         return "int";
     } else if (
@@ -171,13 +177,15 @@ function load_page(trg,url,push_state=true) {
     });
 }
 
-function navigate(event) {
+function navigate_link(event) {
     var el = event.target.closest("a");
-    if(el) {
+    var href = el? el.getAttribute("href") : null;
+
+    if (el && href) {
         var href = el.getAttribute("href");
         var target = ref_target(el);
     
-        if (target != "int") {
+        if (href && target && target != "int") {
             event.preventDefault();
             if (target == "ext") {
                 window.open(href);
@@ -201,12 +209,14 @@ function navigate(event) {
 function navigate_history(event) {
     var state = event.state;
 
-    console.log(state);
+    console.log("event.state:"+state);
 
     // FARENDA: ni komparu kun la nuna stato antaŭ decidi, ĉu parton
     // ni devos renovigi!
-    load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
-    load_page("main",state.art.substring(2),false);
+    if (state) {
+        load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
+        load_page("main",state.art.substring(2),false);    
+    }
 }            
 
 function load_xml(art) {
@@ -252,7 +262,10 @@ function serchu(event) {
 }
 
 function restore_preferences() {
-    redaktilo.restore_preferences();
+    // tion ni momente povas fari nur, kiam la redaktilo
+    // jam ĉeestas, ĉar ni metas valorojn 
+    // rekte al DOM:
+    // redaktilo.restore_preferences();
     artikolo.restore_preferences();
 }
 

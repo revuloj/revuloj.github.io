@@ -378,32 +378,6 @@ i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
 .preferoj H3 {
     margin-bottom: 0;
 }
-.ix_literoj {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.ix_literoj span {
-    padding: 0 .3em;
-    border-left: 2px solid var(--main-brd-clr)
-}
-.ix_literoj > label {
-    font-weight: bold;
-    text-align: right;
-    padding: .1em;
-}
-.ix_literoj > label::after {
-    content: ":\00a0"
-} 
-.ix_literoj input {
-    display: none;
-} 
-.ix_literoj input:checked + label {
-    /*border-radius: 2px;*/
-    padding: .1em;
-    /*background: var(--list-act-bgr-clr);*/
-    border-bottom: 3px solid var(--main-brd-clr);
-} 
 
 #pref_lng {
     font-weight: bold;

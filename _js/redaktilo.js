@@ -706,7 +706,6 @@ var redaktilo = function() {
       });
   }
 
-
   function load_xml() {
     var art = getParamValue("art");
     if (art) {
@@ -723,7 +722,6 @@ var redaktilo = function() {
         });
     }
   }
-
 
   function sf(pos, line, lastline) {
     document.getElementById("r:xmltxt").focus();
@@ -743,8 +741,8 @@ var redaktilo = function() {
     }
   }
 
-  when_ready(function() { 
-    console.log("redaktilo.when_ready...:" +  location.href);
+  function preparu_red() {
+    // enlegu bezonaĵojn (listojn, XML-artikolon, preferojn)
     if (document.getElementById("r:xmltxt")) {
       sf(0, 0, 1);
       restore_preferences();
@@ -752,15 +750,35 @@ var redaktilo = function() {
       revo_codes.fakoj.load("r:sfak");
       revo_codes.stiloj.load("r:sstl");
       load_xml(); // se doniĝis ?art=xxx ni fone ŝargas tiun artikolon
-  
-      window.onbeforeunload = function() {
-        store_preferences();
-      }  
     }
-  })
+
+    // preparu aktivajn elmentoj / eventojn
+    var tabs = document.getElementById("r:tabs");
+    tabs.addEventListener("click", function(event) {
+      var a = event.target.closest("a");
+      tab_toggle(a.id);
+    });
+
+    var fs_t = document.getElementById("r:fs_toggle");
+    fs_t.addEventListener("click", function(event) {
+      var a = event.target.closest("a");
+      fs_toggle(a.id);
+      if (a.id == "r:trigardo") {
+        trigardo();
+      }
+    });
+  }
+
+  when_doc_ready(function() { 
+    console.log("redaktilo.when_doc_ready...:" +  location.href);
+    window.onbeforeunload = function() {
+      store_preferences();
+    }  
+
+  });
 
   // eksportu publikajn funkction
   return {
-    restore_preferences: restore_preferences
+    preparu_red: preparu_red
   }
 }();
