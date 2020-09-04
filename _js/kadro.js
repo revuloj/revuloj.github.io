@@ -5,33 +5,21 @@ const revo_url = "reta-vortaro.de";
 when_doc_ready(function() { 
     console.log("kadro.when_doc_ready...")
     restore_preferences();
-    enkadrigu();
-    /*
-    load_page("main","titolo.html");
-    load_page("nav","../inx/_eo.html");
-    */
-    document.body 
-    //document.getElementById("navigado")
-        .addEventListener("click",navigate_link);
 
-    window
-        .addEventListener('popstate', navigate_history);
-
-    /*
-    $('#navigado').click(load_inx);
-    $('#s_artikolo').click(load_art);
-    $("#sercho_frm").submit(serchu);
-    $.ajaxSetup({
-        converters: {
-            "* text": window.String, 
-            "text html": true, 
-            "text json": jQuery.parseJSON, 
-            // ne funkcias kun Voko-XML eble pro manko de DTD dum analizo:
-            // "text xml": jQuery.parseXML
-            "text xml": window.String
-        }
-    });
-    */
+    // ni ne kreas la kadron, se ni estas en (la malnova) "frameset"
+    if (! top.frames.length) {
+        enkadrigu();
+        /*
+        load_page("main","titolo.html");
+        load_page("nav","../inx/_eo.html");
+        */
+        document.body 
+        //document.getElementById("navigado")
+            .addEventListener("click",navigate_link);
+    
+        window
+            .addEventListener('popstate', navigate_history);    
+    }
 });
 
 // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
@@ -67,15 +55,6 @@ function enkadrigu() {
 // vd. https://wiki.selfhtml.org/wiki/HTML/Tutorials/Navigation/Dropdown-Men%C3%BC
 function nav_toggle() {
     var menu = document.getElementById("navigado");
-    /*
-    if (menu.style.zIndex >- 1) {
-        menu.style.zIndex = -1;
-        menu.style.font = "0/0 serif";
-    } else {
-        menu.style.zIndex = 100;
-        menu.style.font = "";   
-        menu.style.width = 300;                 
-    }*/
     if (menu.style.display == "") {
         menu.style.display = "block"
     } else {
