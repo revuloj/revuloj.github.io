@@ -132,6 +132,7 @@ function load_page(trg,url,push_state=true) {
             if (trg == "nav") {
                 nav.textContent= '';
                 nav.append(doc.querySelector("table"));
+                //img_svg_bg(); // anst. fakvinjetojn, se estas la fak-indekso - ni testos en la funkcio mem!
             } else if (trg == "main") {
                 var body = doc.body;
                 main.textContent = '';
@@ -155,6 +156,17 @@ function load_page(trg,url,push_state=true) {
             ///preparu_art();                    
     });
 }
+
+// anstataŭigu vinjetojn per CSS-SVG-klasoj
+//function img_svg_bg() {
+//    var x_fak = document.getElementById('x:_fak');
+//    if (x_fak) {
+//        for (var i of x_fak.getElementsByTagName('img')) {
+//            var name=i.getAttribute("alt");
+//            i.classList.add(name);
+//        }
+//    }
+//}
 
 function navigate_link(event) {
     var el = event.target.closest("a");

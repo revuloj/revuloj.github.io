@@ -194,6 +194,27 @@ nav a:active {
     margin-top: 1em !important;
 }
 
+      
+@media (prefers-color-scheme: dark) {
+    IMG {
+        filter: invert(1) brightness(0.9) sepia(0.9);
+    }
+}
+
+/**
+#navigado img.fak {
+    * ŝovu la origina bildon dekstren kaj
+    per la klaso de la piktogramo la SVG-vinjeto aperu kiel fon-bildo*
+    **display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 1.5em;
+    padding-left: 1.5em; **
+    background: none;
+    filter: invert(1) brightness(0.85) sepia(1);
+}
+**/
+
 /***
 #navigado br {
     display: none;

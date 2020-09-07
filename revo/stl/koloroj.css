@@ -96,34 +96,36 @@
 
     /* por navigado */
     --nav-fnt-clr: ivory;
-    --nav-bgr-clr: #996600 /* #B8860B #FAC540  #eAb530 goldenrod */;
-    --nav-hov-bgr-clr: #a5a5a5;
+    --nav-bgr-clr: #774400 /* #B8860B #FAC540  #eAb530 goldenrod */;
+    --nav-hov-bgr-clr: lightgoldenrodyellow;
     --nav-hov-fnt-clr: black;
-    --nav-act-bgr-clr: slategray;
-    --nav-act-brd-clr: silver;
+    --nav-act-bgr-clr: goldenrod;
+    --nav-act-brd-clr: ivory;
 
 
     /* por la ĉefa paĝo (main) */
     --main-fnt-clr: lightgoldenrodyellow;
-    --main-bgr-clr: #221100;
-    --main-act-fnt-clr: black;
-    --main-hov-fnt-clr: black;
+    --main-bgr-clr: #0f0800;
+    --main-act-fnt-clr: lightgoldenrodyellow;
+    --main-hov-fnt-clr: #EE6F40;
+    --main-shd-clr: lightgoldenrodyellow;
+
 
     --mh2-bgr-clr: darkgoldenrod; 
-    --mh2-act-fnt-clr: black; 
+    --mh2-act-fnt-clr: lightgoldenrodyellow; 
  
     --btn-bgr-clr: darkgoldenrod; 
-    --btn-act-fnt-clr: black; 
+    --btn-act-fnt-clr: lightgoldenrodyellow; 
 
     --btn-hov-bgr-clr: khaki;
     --btn-hov-brd-clr: black;
-    --btn-hov-fnt-clr: black; 
+    --btn-hov-fnt-clr: coral; 
 
     --btn-act-bgr-clr: #FAC540 /*khaki*/;
     --btn-act-brd-clr: black;
  
     --input-bgr-clr: white;
-    --input-fnt-clr: black;
+    --input-fnt-clr: lightgoldenrodyellow;
 
     --list-bgr-clr: palegoldenrod;
     --lst2-bgr-clr: khaki;

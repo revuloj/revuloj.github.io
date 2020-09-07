@@ -254,16 +254,20 @@ EMBED.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var
 OBJECT.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
 
-IMG { background-color: var(--vnj-bgr-clr) }
+IMG { background: none }
 IMG.svg { border-color: var(--svg-brd-clr); border-width: 1px; background: var(--svg-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
 IMG.bld { border-color: var(--bld-brd-clr); border-width: 1px; background: var(--bld-bgr-clr); 
     border-style: solid; padding: 2px; margin: 0.5em} 
-IMG.fak { height: 1.5em; vertical-align: bottom; background-color: var(--vnj-bgr-clr) }
+IMG.fak { 
+    height: 1.5em; 
+    vertical-align: bottom; 
+    background: none;
+}
 
 IMG.tez { height: 1.2em; padding: 1px; vertical-align: bottom;
       border-radius: 20%; border: 2px outset transparent}
-      
+     
 /* 
     tezaŭrobildoj funkcias simile al butono, do eble ni uzu la klason "btn" anstataaŭe... 
 
@@ -310,6 +314,10 @@ A IMG.viki:active {background-color:  var(--tez-act-bgr-clr);
 /* formuloj */
 .frm { font-style: normal }
 .frm_am { font-size: 90% }
+
+.nom, .nac {
+    letter-spacing: .05em;
+}
 
 .bld_atrib { font-size: 80%; color: var(--label-fnt-clr) }
 .bld_atrib:link { font-size: 80%; color: var(--label-fnt-clr) }
