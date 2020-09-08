@@ -289,7 +289,6 @@ var artikolo = function() {
         }
     }
 
-
     function preferoj_dlg() {
         var pref = document.getElementById("pref_dlg");
         var inx = [['a','b'],['c','g'],['h','j'],['k','l'],['m','o'],['p','s'],['t','z']];
@@ -497,8 +496,7 @@ var artikolo = function() {
    // eksportu publikajn funkction
    return {
         restore_preferences: restore_preferences,
-        preparu_art: preparu_art,
-        enkadrigu: enkadrigu
+        preparu_art: preparu_art
    }
 
 }();

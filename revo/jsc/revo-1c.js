@@ -290,7 +290,6 @@ var artikolo = function() {
         }
     }
 
-
     function preferoj_dlg() {
         var pref = document.getElementById("pref_dlg");
         var inx = [['a','b'],['c','g'],['h','j'],['k','l'],['m','o'],['p','s'],['t','z']];
@@ -498,27 +497,28 @@ var artikolo = function() {
    // eksportu publikajn funkction
    return {
         restore_preferences: restore_preferences,
-        preparu_art: preparu_art,
-        enkadrigu: enkadrigu
+        preparu_art: preparu_art
    }
 
 }();
 //_js/kadro.js
 const revo_url = "reta-vortaro.de";
 
-
-// preparu la paĝon: evento-reagoj...
+// instalu farendaĵojn por prepari la paĝon: evento-reagoj...
 when_doc_ready(function() { 
     console.log("kadro.when_doc_ready...")
     restore_preferences();
 
     // ni ne kreas la kadron, se ni estas en (la malnova) "frameset"
     if (! top.frames.length) {
-        enkadrigu();
-        /*
-        load_page("main","titolo.html");
-        load_page("nav","../inx/_eo.html");
-        */
+        // provizore rezignu pri tia preparo, aparte la aŭtomata enkadrigo de artikoloj
+        // enkadrigu();
+        if (document.getElementById("navigado")) {
+            // anstataŭe ŝargu tiujn du el ĉefa indeks-paĝo
+            load_page("main","titolo.html");
+            load_page("nav","/revo/inx/_eo.html");   
+        }
+        
         document.body 
         //document.getElementById("navigado")
             .addEventListener("click",navigate_link);
@@ -528,11 +528,12 @@ when_doc_ready(function() {
     }
 });
 
+
 // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
 function enkadrigu() {
 
     // preparu la ĉefan parton de la paĝo
-    if (document.getElementsByName("main").length == 0) {
+    if (document.getElementsByTagName("main").length == 0) {
         var main = make_element("main",{});
         main.append(...document.body.children);
         document.body.appendChild(main);
@@ -541,7 +542,7 @@ function enkadrigu() {
     }
 
     // preparu la navigo-parton de la paĝo
-    if (document.getElementsByName("nav").length == 0) {
+    if (document.getElementsByTagName("nav").length == 0) {
         var nav = make_element("nav",{});
         var div = make_element("div",{id: "navigado"});
         nav.appendChild(div);
@@ -554,7 +555,7 @@ function enkadrigu() {
         // ni bezonas unue revo-1b.js:
         load_page("nav","/revo/inx/"+history.state.inx.substring(2)+".html",false);
     } else {
-        load_page("nav","../inx/_eo.html");
+        load_page("nav","/revo/inx/_eo.html");
     }
 }
 
@@ -635,32 +636,46 @@ function load_page(trg,url,push_state=true) {
             var nav = document.getElementById("navigado");
             var main = document.querySelector("main");
 
-            if (trg == "nav") {
+            if (nav && trg == "nav") {
                 nav.textContent= '';
-                nav.append(doc.querySelector("table"));
+                var table = doc.querySelector("table"); 
+                fix_url_path(table);
+                nav.append(table);
                 //img_svg_bg(); // anst. fakvinjetojn, se estas la fak-indekso - ni testos en la funkcio mem!
-            } else if (trg == "main") {
+            } else if (main && trg == "main") {
                 var body = doc.body;
+                fix_url_path(body);
                 main.textContent = '';
                 main.append(...body.children);
                 main.setAttribute("id","w:"+url);
                 artikolo.preparu_art();
             }                    
 
-            if (push_state)
+            //if (push_state)
+            //    history.pushState({
+            //        inx: nav.firstElementChild.id,
+            //        art: main.id
+            //        },
+            //        null,
+            //    main.id.substring(2));
+            // provizore ne ŝanĝu la URL de la paĝo
+            if (push_state) {
+                var nf = nav.firstElementChild? nav.firstElementChild.id : null;
                 history.pushState({
-                    inx: nav.firstElementChild.id,
+                    inx: nf,
                     art: main.id
                     },
                     null,
-                    main.id.substring(2));
-            // var article = doc.getElementsByTagName("article");
-            // if (article) {
-            // rigardo.textContent = '';
-            // rigardo.append(...article);  
-            
-            ///preparu_art();                    
+                    null);
+            }                
     });
+}
+
+function fix_url_path(element) {
+    for (var i of element.getElementsByTagName("img")) {
+        var src = i.getAttribute("src");
+        if (src.startsWith("..")) i.setAttribute("src",src.substring(1))
+    }
 }
 
 // anstataŭigu vinjetojn per CSS-SVG-klasoj
@@ -711,8 +726,8 @@ function navigate_history(event) {
     // FARENDA: ni komparu kun la nuna stato antaŭ decidi, ĉu parton
     // ni devos renovigi!
     if (state) {
-        load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
-        load_page("main",state.art.substring(2),false);    
+        if (state.inx) load_page("nav","/revo/inx/"+state.inx.substring(2)+".html",false);
+        if (state.art) load_page("main",state.art.substring(2),false);    
     }
 }            
 

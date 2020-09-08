@@ -1,8 +1,6 @@
-/*
 @import url("normalize.css");
 @import url("koloroj.css");
-@import url("piktogram-1b.css");
-*/
+@import url("piktogram-1c.css");
 
 /* HTML-elementoj */
 BODY, ARTICLE, HEADER, FOOTER {
@@ -347,8 +345,15 @@ A IMG.viki:active {background-color:  var(--tez-act-bgr-clr);
 
 .kasxita { display: none !important; }
 
-i.ekz { display: block; margin-left: 1.6em; text-indent: -1.2em; text-align: left }
-i.ekz::before, span.ekztrd::before { content: "\00a0•\00a0" }
+i.ekz { 
+    display: block; 
+    margin-left: 1.6em; 
+    text-indent: -1.6em; 
+    text-align: left 
+}
+i.ekz::before, span.ekztrd::before { 
+    content: "\00a0•\00a0" 
+}
 
 .overlay {
     position: absolute;
