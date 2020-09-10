@@ -53,9 +53,21 @@ function preparu_kashu_sekciojn() {
 
     for (var el of d) {
 
+        // forigu titolon "administraj notoj", se la sekcio estas malplena
+        if (el.closest(".admin") && el.childElementCount == 0) {
+            el.closest(".admin").textContent= '';
+            continue;
+        }
+
         // provizore ne bezonata: el.addEventListener("kashu", function(event) { kashu_drv(event.currentTarget) });
-        el.addEventListener("malkashu", function(event) { malkashu_drv(event.currentTarget) });
-        el.addEventListener("komutu", function(event) { kashu_malkashu_drv(event.currentTarget) });           
+        el.addEventListener("malkashu", function(event) { 
+            malkashu_drv(event.currentTarget);
+            event.stopPropagation();
+        });
+        el.addEventListener("komutu", function(event) { 
+            kashu_malkashu_drv(event.currentTarget) 
+            event.stopPropagation();
+        });           
 
         var h2 = getPrevH2(el);
         if (h2) {
@@ -91,7 +103,10 @@ function preparu_kashu_sekciojn() {
 function preparu_malkashu_fontojn() {
     var d = document.getElementsByClassName("fontoj kasxita");
     for (var el of d) {
-        el.addEventListener("malkashu", function(event) { event.currentTarget.classList.remove("kasxita") });
+        el.addEventListener("malkashu", function(event) { 
+            event.currentTarget.classList.remove("kasxita") 
+            event.stopPropagation;
+        });
     }
 }
 
@@ -141,7 +156,7 @@ function malkashu_drv(el) {
 }
 
 function kashu_malkashu_drv(el) {
-    //event.stopPropagation();
+    
     //var div = section.getElementsByClassName("kasxebla")[0];
 
     var sec = el.closest("section"); //parentElement;    
@@ -157,13 +172,20 @@ function maletendu_trd(element) {
     //var nav_lng = navigator.languages || [navigator.language];
     var eo;
     var maletendita = false;
+
+    var serch_lng = '';
+    if (location.search.length > 1) {
+        var params = new URLSearchParams(location.search.slice(1));
+        serch_lng = params.get("lng");
+    }
+
     for (var id of element.children) {
         var id_lng = id.getAttribute("lang");
         // la tradukoj estas paroj de ea lingvo-nomo kaj nacilingvaj tradukoj
         if (id_lng) {
             if ( id_lng == "eo") {
                 eo = id;
-            } else if ( pref_lng.indexOf(id_lng) < 0 ) {
+            } else if ( id_lng != serch_lng && pref_lng.indexOf(id_lng) < 0 ) {
                 eo.classList.add("kasxita");
                 id.classList.add("kasxita");
                 maletendita = true;
