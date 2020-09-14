@@ -15,6 +15,9 @@ when_doc_ready(function() {
             load_page("nav","/revo/inx/_eo.html");   
         }
         
+        document.getElementById("nav_inx_btn")
+            .addEventListener("click",index_toggle);
+
         document.body 
         //document.getElementById("navigado")
             .addEventListener("click",navigate_link);
@@ -23,6 +26,13 @@ when_doc_ready(function() {
             .addEventListener('popstate', navigate_history);    
     }
 });
+
+
+function index_toggle(event) {
+    document.getElementById("navigado").classList.toggle("eble_kasxita");
+    //document.querySelector("main").classList.toggle("kasxita");
+}
+
 
 
 // se la artikolo ŝargiĝis aparte de la kadro ni aldonu la kadron
