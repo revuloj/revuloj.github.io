@@ -13,5 +13,6 @@ title: Manlibroj
 
 # Instrukcioj por uzado
 
+- [Alternativaj serĉmetodoj](temoj/sercho)
 - [Uzi Revon en diversaj sistemoj](temoj/operaciumoj)
 - [Elŝuti pakaĵojn](temoj/elshuto.html)
