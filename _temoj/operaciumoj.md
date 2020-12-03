@@ -73,6 +73,8 @@ Por uzado el komandlinio ekzistas ankaŭ programo `sdcv`.
 
 <a target="_new" href="http://goldendict.org">GoldenDict</a> estas pluevoluo de ne plu flegata StarDict kaj kapablas legi kaj ties formaton kaj dosierojn en la formato de DICT. Do estas plej oportune uzi la DICT-version de Revo kun ĝi.
 
+Krome ni de tempo al tempo eldonas <a href="https://github.com/revuloj/revo-fonto/releases/tag/v2020-08-31-dictd-xdxf">Revo-dosieron en formato XDXF</a>, kiun GoldenDict bone povas importi.
+Estonte ni cetere planos pli regule eldoni tian XDXF-dosieron.
 
 GoldenDict ankaŭ ofertas version por poŝkomputiloj kun Android-sistemo.
 Vidu detalajn infromojn de <a target="_new" href="https://github.com/muravjov/vkompililo#eo-kiel-instali-revo-en-telefonon-kun-android">Ilja Muravjov</a>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Alternantivaj serĉmetodoj
+title: Alternativaj serĉmetodoj
 ---
 
 Krom uzi la indeksojn kaj la precipan serĉon de Reta Vortaro oni povas utiligi ankaŭ ĝeneralajn serĉilojn kiel
