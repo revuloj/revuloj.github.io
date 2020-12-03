@@ -13,4 +13,5 @@ title: Referencoj
 - [Jorge Camacho: Vortoj en vortaroj](https://jorgecice.blogspot.com/2013/09/vortoj-en-vortaroj.html?m=1&fbclid=IwAR0Dgj5dfGs2X2oPLA4JO8Z_QSSPo3C60dudvT-Ptop__D6o3OEtnyUv1wU)
 - [La Bona Lingvo](http://bonalingvo.net/index.php/%C4%88efpa%C4%9Do)
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
+- [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
 - daŭrigenda...
