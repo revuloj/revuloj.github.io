@@ -5,6 +5,7 @@ title: Referencoj
 
 # retpaĝoj, verkoj, eseoj ktp prilingvaj
 
+- [Subtena materialo por redaktantoj (oficialaj aldonoj, transskribsistemoj, gramatiko ks)](https://groups.io/g/revuloj/files/)
 - [Akademio de Esperantoj](http://www.akademio-de-esperanto.org/)
 - [Plena Manlibro de Esperanta Gramatiko](https://bertilow.com/pmeg/)
 - [Elektronika Bibliografio de Esperanto-Artikoloj](http://www.esperantoland.org/ebea/)
