@@ -15,4 +15,5 @@ title: Referencoj
 - [La Bona Lingvo](http://bonalingvo.net/index.php/%C4%88efpa%C4%9Do)
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
 - [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
+- [Marcel Leereveld: Vortpluformado](http://bonalingvo.net/index.php/Vortpluformado)
 - daŭrigenda...
