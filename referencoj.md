@@ -8,6 +8,7 @@ title: Referencoj
 - [Subtena materialo por redaktantoj (oficialaj aldonoj, transskribsistemoj, gramatiko ks)](https://groups.io/g/revuloj/files/)
   - [8a OA ĉe AdE](https://www.akademio-de-esperanto.org/aktoj/aktoj2/8oa.html)
   - [9a OA ĉe AdE](https://www.akademio-de-esperanto.org/decidoj/9oa.html)
+  - [OA-kompilo de Bertilo en PIV-Redaktejo](https://vortaro.net/redaktejo/pivikio/_media/la_oficialaj_aldonoj_projekto_24_januaro_2021.pdf)
 - [Akademio de Esperantoj](http://www.akademio-de-esperanto.org/)
 - [Plena Manlibro de Esperanta Gramatiko](https://bertilow.com/pmeg/)
 - [Elektronika Bibliografio de Esperanto-Artikoloj](http://www.esperantoland.org/ebea/)
