@@ -107,4 +107,5 @@ La vortaro estas plurlingva ne nur por la uzantoj, sed ankaŭ por la programinto
 |2015 | Vortanalizilo: Prologo|
 |2016 | PoŝRevo por iOS: Swift, Ruby (Robin Hill)|
 |2017 | Nova redaktilo: Prologo + Javoskripto|
+|2020 | Reverkita fasado, kiu funkcias ankaŭ ĉe poŝtelefonoj |
 
