@@ -64,8 +64,8 @@ exclude:
    - vendor/gems/
    - vendor/ruby/
 
-include:
-  - revo/inx/_eo.html
-  - revo/inx/_lng.html
-  - revo/inx/_fak.html
-  - revo/inx/_ktp.html
+#include:
+#  - revo/inx/_eo.html
+#  - revo/inx/_lng.html
+#  - revo/inx/_fak.html
+#  - revo/inx/_ktp.html
