@@ -7,9 +7,9 @@ title: Alternativaj serĉmetodoj
 
 En Reta Vortaro vi povas serĉi je esperantaj vortoj same kiel je iliaj tradukoj. Por serĉi en tradukoj vi antaŭelektu la traserĉeblajn lingvojn per la listo, kiu aperas klakante sur la piedlinian eron "preferoj" en arbitra artikolo.
 
-Por serĉi en aliaj ol la preferataj lingvoj vi povas aŭ provizore sammaniere aldoni ilin aŭ trafolii la lingvo indeksojn.
+Por serĉi en aliaj ol la preferataj lingvoj vi povas aŭ provizore sammaniere aldoni ilin aŭ trafolii la lingvo-indeksojn.
 
-Atentu, ke la ordinara serĉo estas vortkomenca. Do tajpante "kor" vi trovas ĉiujn kapvortojn inkluzive derivaĵojn kaj frazaĵojn, kiuj komenciĝas je "kor...".
+Atentu, ke la ordinara serĉo estas vortkomenca. Do tajpante "kor" vi trovas ĉiujn kapvortojn inkluzive derivaĵojn kaj frazaĵojn, kiuj komenciĝas je "kor...". Por eviti tin vi povas uzi la ĵokeran aŭ regulespriman serĉon (vidu malsupre).
 
 Krom uzi la indeksojn kaj la precipan serĉon de Reta Vortaro vi povas utiligi ankaŭ ĝeneralajn serĉilojn kiel
 [Google](https://google.com?q=hipocikloido+site:reta-vortaro.de&hl=eo), 
@@ -25,7 +25,7 @@ Por faciligi al vi la uzon de tiaj ĝeneralaj serĉiloj ni aldonis kelkajn sur l
 
 ## Serĉi per ĵokersignoj
 
-Vi povas ankaŭ uzi ĵokersignojn en via serĉesprimo: Substreko `_` signifas iun ajn signon: "k_r_" trovas i.a. "kara", "kero", "koro" kaj "kuri". Procentosigno `%` signifas iujn ajn signovirojn inkluzive malplena. Do "k%" trovas ĉiujn vortojn komenciĝantajn per "k" kaj "%o" trovas ĉiujn ajn vortojn finiĝantajn per "o", kaj "k%o" kombinas ambaŭ serĉojn. ATentu, ke uzante ĵokersignon en via serĉesprimo la serĉo ne plu estas aŭtomate vortkomenca!
+Vi povas ankaŭ uzi ĵokersignojn en via serĉesprimo: Substreko `_` signifas iun ajn signon: `k_r_` trovas i.a. "kara", "kero", "koro" kaj "kuri". Procentosigno `%` anstataŭas iujn ajn signovicojn inkluzive la malplenan. Do `k%` trovas ĉiujn vortojn komenciĝantajn per "k" kaj `%o` trovas ĉiujn ajn vortojn finiĝantajn per "o", dum `k%o` kombinas ambaŭ serĉojn. Atentu, ke uzante ĵokersignon en via serĉesprimo la serĉo ne plu estas aŭtomate vortkomenca!
 
 <!-- https://dev.mysql.com/doc/refman/5.7/en/pattern-matching.html -->
 
@@ -36,19 +36,19 @@ Ankoraŭ pli specife vi povas serĉi uzante regulesprimojn. Jen [anglalingvaj kl
 Jen kelkaj eblecoj kiel uzi specialajn signojn por regulesprima serĉo
 
 | Signo | Signifo | Ekzemplo |
-| ^ | komenco | ^kor |
-| $ | fino | aŭ$ |
-| . | ĉiu signo | k.r. |
-| [] | iu el la enkrampigitaj literoj | ^pl[iu]$ |
-| [^] | neniu el la enkrampigitaj literoj | ^kor[^tv]o$ |
-| ? | nul aŭ unu da | ^ko[r]v?o$ |
-| * | nul aŭ pli da | ^k[ore]*o$ |
-| + | unu aŭ pli da | ^k[ore]+o$ |
-| `|` | alternativo | (pli|plu) |
-| [[:<:]] | vortkomenco - por serĉi en plurvortaĵoj | [[:<:]]kubo$ |
-| [[:>:]] | vortfino - por serĉi en plurvortaĵoj | [[:>:]]a k.+o$ |
+| `^` | komenco | `^kor` |
+| `$` | fino | `aŭ$` |
+| `.` | ĉiu signo | `k.r.` |
+| `[]` | iu el la enkrampigitaj literoj | `^pl[iu]$` |
+| `[^]` | neniu el la enkrampigitaj literoj | `^kor[^tv]o$` |
+| `?` | nul aŭ unu da | `^ko[r]v?o$` |
+| `*` | nul aŭ pli da | `^k[ore]*o$` |
+| `+` | unu aŭ pli da | `^k[ore]+o$` |
+| `|` | alternativo | `(pli|plu)` |
+| `[[:<:]]` | vortkomenco - por serĉi en plurvortaĵoj | `[[:<:]]kubo$` |
+| `[[:>:]]` | vortfino - por serĉi en plurvortaĵoj | `[[:>:]]a k.+o$` |
 
-Por pliaj eblecoj bv. konsulti la anglalingvan paĝon referencitan supre.
+Por pliaj ebloj bv. konsulti la anglalingvan paĝon referencitan supre.
 
 Ĉar la ordinara serĉo estas vortkomenca, la serĉo per regulesprimoj estas aparte konvena por limigi serĉon je ekzaktaj vortoj:
-`^kubo$` trovas nur tiun vorton `[[:<:]]kubo[[:>:]]` trovas nur unu- aŭ plurvortaĵojn kiuj enhavas la vorton kubo.
+`^kubo$` trovas nur tiun vorton, `[[:<:]]kubo[[:>:]]` trovas nur unu- aŭ plurvortaĵojn kiuj enhavas la vorton "kubo".
