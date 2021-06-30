@@ -80,47 +80,6 @@ GoldenDict ankaŭ ofertas version por poŝkomputiloj kun Android-sistemo.
 Vidu detalajn infromojn de <a target="_new" href="https://github.com/muravjov/vkompililo#eo-kiel-instali-revo-en-telefonon-kun-android">Ilja Muravjov</a>
 
 
-## Revo2go
-
-
-En Vindozo vi povas uzi la pakaĵon "Revo2go" de Wieland Pusch. Ĝi kunigas TTT-servon, datumbazon kaj la enhavon en unu pakaĵo kiun vi povas kopii ekz. sur lumdiskon aŭ memorkarton kaj ruligi aŭtonome en via komputilo.
-
-
-
-Vi povas preni ĝin de <a href="http://reta-vortaro.de/tgz/server2go_a2.zip">http://reta-vortaro.de/tgz/server2go_a2.zip</a>. 
-Bazita ĝi estas sur  <a target="_new" href="http://www.server2go-web.de/">http://www.server2go-web.de/</a>. Tie estas ankaŭ 
-<a target="_new" href="http://www.server2go-web.de/forum/">forumo</a>, kiu donas helpon en la germana kaj angla.
-
-
-Post kiam vi instalis la bazan pakaĵon sur taŭga datumingo, vi devas ankoraŭ preni aktualan datumbazon de la Revo-enhavo. La servo de Wieland Pusch regule anoncas la plej lastan version en la [revulo-forumo](https://groups.io/g/revuloj/) sub la temlinio "Revo Upload":
-ekz. vidu <a target="_new" href="https://groups.io/g/revuloj/topic/revo_upload/73341378">tiun mesaĝon</a>.
-
-
-Tiun vi instalas tiele:
-
-1. Por aktualigi vian Revo2go vi startu `revo2go`
-1. En `cmd.exe` iru al `<pado>\server2go\server\mysql\bin`
-1. Tie lanĉu: `mysql.exe --port=7188 --user=root usr_web277_1`
-1. Vi prenos de `http://www.reta-vortaro.de/alveno/revo-20200420.sql.gz` sur vian lokan diskon
-1. En mysql vi tajpu: `source <pado>\revodb-20200420.sql`
-1. kaj poste: `exit`
-
-
-
-La aŭtomate lanĉatan retumilon vi povas ekz. ŝanĝi en la agordo-dosiero
- `pms_config.ini`:
-
-```
-[Browser]
-;--- The browser that is started after server start (possible values: IEXPLORER,
-FIREFOX, MOZILLA, DEFAULT, EXTERNAL)
-BrowserType=EXTERNAL
-;--- Browser command options like -k (NOT IN USE AT THE MOMENT)
-BrowserCommandOptions=
-;--- Path to an external browser that is used instead the browser above
-BrowserPath=C:\Program Files\Mozilla Firefox\firefox.exe
-```
-
 
 ## loka DICT-servo
 
@@ -147,18 +106,10 @@ Jen <a target="_new" href="http://tech.groups.yahoo.com/group/revuloj/message/56
 pri la temo.
 
 
-## EPUB- kaj MOBI-formato
+## OPF-, EPUB- kaj MOBI-formato
 
-Mi iom eksperimentis pri EPUB kaj MOBI-formatoj. Oni povas ekstrakti parton de Revo, ekz. tradukojn de elektita(j) lingvo(j), kaj transformi al elektronika libro en EPUB-formato. Vidu la <a href="http://reta-vortaro.de/tgz/index.html">Vortaron de Rilatoj</a> sur la elŝutopaĝo. De EPUB-formato oni povas transformi al MOBI-formato per <a target="_new" href="http://calibre-ebook.com/">Calibre</a>.
-
-
-Por EPUB de Aŭgusto 2015 eblecoj marki vortojn por indeksoj estiĝis <a target="_new" href="http://www.idpf.org/epub/dict/">normrekomendo</a>, sed ĝis nun mi ne vidis, ke iu e-legilo jam subtenas tiujn strukturojn.
-
-
-En MOBI-formato, kiu legeblas de pluraj poŝkomputiloj kaj Kindle-legiloj oni povas krei vortarojn. Sed la kreiloj haveblas nur por Vindozo. Mi provis uzi la programon `kindlegen` en mia Linukssistemo kaj ĝi rifuzis kaj traduki verkon en la lingvo "eo" kaj akcepti XSL-transformregulojn, kiuj necesas por krei vortaron kun indeksoj.
-
-
-Mi povus provi uzi WINE, kiu estas Vindoz-simulilo por Linukso, aŭ krei la indeksojn plentekste kun ligoj al la unuopaj artikoletoj aŭ atendi progreson de EPUB-rimedoj.
+Oni povas uzi la [programon de Dušan Juretić](https://github.com/djuretic/revo-en-kindle/) por krei Revon en formato OPF, el kiu same kiel el EPUB per `kindlegen` eblas traduke pretigi MOBI-dosieron, kiun oni povas uzi ekz-e kiel vortaro en la legoaparato aŭ la lego-apo Kindlo kaj iuj poŝkomputiloj. Ĉe la stokejo de
+Dušan vi povas elŝuti pretan [MOBI-dosieron](https://github.com/djuretic/revo-en-kindle/releases).
 
 
 ## OPIE (Linux/QT embedded)
