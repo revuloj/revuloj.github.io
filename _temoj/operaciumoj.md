@@ -42,8 +42,10 @@ Estas pluraj eblecoj uzi Revon en Androido:
 ## iPhone, iPad, iPod touch
 
 Plej bone uzu la 
-<a target="_new" href="http://www.inthescales.com/resources/projects/poshrevo/screenshots/poshrevo_2.jpeg">aplikaĵeton</a> de 
+<a target="_new" href="https://itunes.apple.com/us/app/id1093321928">aplikaĵeton</a>
 <a target="_new" href="https://github.com/inthescales/PoshReVo">Robin Hill (ĉe Github)</a>.
+
+<img src="http://www.inthescales.com/resources/projects/poshrevo/screenshots/poshrevo_2.jpeg"/>
 
 Ĉar Kobo ankaŭ havas aplikaĵon por iOS eble vi povas ankaŭ [uzi
 la version por Kobo](#kobo). Mi ankoraŭe ne elprovis, ĉu funkcias.
