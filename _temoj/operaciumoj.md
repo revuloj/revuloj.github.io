@@ -42,16 +42,13 @@ Estas pluraj eblecoj uzi Revon en Androido:
 ## iPhone, iPad, iPod touch
 
 Plej bone uzu la 
-<a target="_new" href="https://itunes.apple.com/us/app/id1093321928">aplikaĵeton</a> de 
-<a target="_new" href="http://sinuousrill.com/projects/PoshReVo_eo.html">Robin Hill</a>.
-
-<img src="http://www.inthescales.com/resources/projects/poshrevo/screenshots/poshrevo_2.jpeg"/>
+<a target="_new" href="http://www.inthescales.com/resources/projects/poshrevo/screenshots/poshrevo_2.jpeg">aplikaĵeton</a> de 
+<a target="_new" href="https://github.com/inthescales/PoshReVo">Robin Hill (ĉe Github)</a>.
 
 Ĉar Kobo ankaŭ havas aplikaĵon por iOS eble vi povas ankaŭ [uzi
 la version por Kobo](#kobo). Mi ankoraŭe ne elprovis, ĉu funkcias.
 
-Vidu sub [EPUB/MOBI](#epub--kaj-mobi-formato) pri alia ebleco, kiu ĝis nun prezentis al mi tro ĝenajn obstaklojn, kvankam ekzistas legprogramoj por ambaŭ formatoj (iBooks App, Kindle App). La programo iBooks cetere estas iom malrapida, do tuta Revo verŝajne estus tro peza por ĝi, eltiraĵo certe eblas. 
-
+Vidu sub [OPF/EPUB/MOBI](#opf--epub--kaj-mobi-formato) pri alia ebleco uzante legprogramojn por OPF/MOBI (iBooks App, Kindle App). La programo iBooks cetere estas iom malrapida, do tuta Revo verŝajne estus tro peza por ĝi, eltiraĵo certe eblas. 
 
 
 ## Stardict
