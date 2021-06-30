@@ -42,7 +42,7 @@ Estas pluraj eblecoj uzi Revon en Androido:
 ## iPhone, iPad, iPod touch
 
 Plej bone uzu la 
-<a target="_new" href="https://itunes.apple.com/us/app/id1093321928">aplikaĵeton</a>
+<a target="_new" href="https://itunes.apple.com/us/app/id1093321928">aplikaĵeton PoŝRevo</a> de
 <a target="_new" href="https://github.com/inthescales/PoshReVo">Robin Hill (ĉe Github)</a>.
 
 <img src="../assets/img/poshrevo_2.jpeg"/>
