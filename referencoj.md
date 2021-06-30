@@ -11,6 +11,7 @@ title: Referencoj
   - [OA-kompilo de Bertilo en PIV-Redaktejo](https://vortaro.net/redaktejo/pivikio/_media/la_oficialaj_aldonoj_projekto_24_januaro_2021.pdf)
 - [Akademio de Esperantoj](http://www.akademio-de-esperanto.org/)
 - [Plena Manlibro de Esperanta Gramatiko](https://bertilow.com/pmeg/)
+- [STEB - Fakaj vortaroj, terminaroj](http://www.eventoj.esperanto.hu/steb/vortaroj/index-vortaro.htm)
 - [Elektronika Bibliografio de Esperanto-Artikoloj](http://www.esperantoland.org/ebea/)
 - [Vikipedio: Esperantologio (kaj esperantologoj)](https://eo.wikipedia.org/wiki/Esperantologio)
 - [Bernhard Pabst: Berlina Komentario pri FdE](https://edukado.net/upload/forumo/13023_1430834368.pdf)
