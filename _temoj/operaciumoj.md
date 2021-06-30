@@ -26,10 +26,7 @@ sed se estas bezono certe estas ebleco reaktivi tian servon:
 - dict.antono.info:2628 (Antono Vasiljev)
 - dict.dnp.fmph.uniba.sk:2628 (Radovan Garabik)
 
-
 Sed vi povas instali tian servon ankaŭ loke en via sistemo. Pluraj Linuksoj jam havas pretajn pakaĵojn.
-La datumarojn mem de Reta Vortaro en DICT-formato vi povas trovi sur la 
-<a href="http://reta-vortaro.de/tgz/index.html">elŝutopaĝo</a>.
 
 
 ## Androido
@@ -71,10 +68,9 @@ Por uzado el komandlinio ekzistas ankaŭ programo `sdcv`.
 
 ## GoldenDict
 
-<a target="_new" href="http://goldendict.org">GoldenDict</a> estas pluevoluo de ne plu flegata StarDict kaj kapablas legi kaj ties formaton kaj dosierojn en la formato de DICT. Do estas plej oportune uzi la DICT-version de Revo kun ĝi.
+<a target="_new" href="http://goldendict.org">GoldenDict</a> estas pluevoluo de ne plu flegata StarDict kaj kapablas legi kaj ties formaton kaj dosierojn en la formato de DICT. Pli oportune tamen ŝajnas la interŝanĝformato XDXF.
 
-Krome ni de tempo al tempo eldonas <a href="https://github.com/revuloj/revo-fonto/releases/tag/v2020-08-31-dictd-xdxf">Revo-dosieron en formato XDXF</a>, kiun GoldenDict bone povas importi.
-Estonte ni cetere planos pli regule eldoni tian XDXF-dosieron.
+Ni do nun regule eldonas <a href="https://github.com/revuloj/revo-fonto/releases/">Revo-dosieron en formato XDXF</a>, kiun GoldenDict bone povas importi.
 
 GoldenDict ankaŭ ofertas version por poŝkomputiloj kun Android-sistemo.
 Vidu detalajn infromojn de <a target="_new" href="https://github.com/muravjov/vkompililo#eo-kiel-instali-revo-en-telefonon-kun-android">Ilja Muravjov</a>
