@@ -73,14 +73,17 @@ Revo estu nur vortaro. Por terminaraj diskutoj uzu ekzemple
 ## Kiel Revo distingiĝas de PIV?
 
 Dum PIV provas doni senmankan ĝeneralan vortaron per enpreno de terminaroj kaj
-proponoj, Revo prefere registras la uzatan lingvon. Por certigi tion, ni
+proponoj, Revo prefere registras la *uzatan* lingvon. Por certigi tion, ni
 interkonsentis, ke por aldono de vortoj, redaktantoj provizu almenaŭ du
 fontojn, el kiu almenaŭ unu ne estu vortaro. Alivorte, dum PIV certagrade 
-celas preskribon de la lingvouzado, Revo pli orientiĝas al ĝia priskribo.
+celas *preskribon* de la lingvouzado, Revo pli orientiĝas al ĝia *priskribo*.
 
 Atentu, ke PIV ne estas nura vortaro, sed hibrido de vortaro, terminaro kaj
-leksikono. 
+leksikono.
 
+Plie, PIV kiel unulingva vortaro difinas ĉiun vorton pli malpli izolite, dum Revo celas interplekti
+la vortojn per abundaj referencoj kaj tradukoj, tiel ke la *reta strukturo* de la lingvo
+videbliĝu kaj oni pli bone trovu pli trafan aŭ pli fundamentan esprimon ktp.
 
 ## Kiel difini signifon de iu vorto?
 
