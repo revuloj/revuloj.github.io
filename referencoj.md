@@ -20,4 +20,5 @@ title: Referencoj
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
 - [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
 - [Marcel Leereveld: Vortpluformado](http://bonalingvo.net/index.php/Vortpluformado)
+- [OPUS - korpuso mult- kaj paralellingva](https://opus.nlpl.eu/)
 - daŭrigenda...
