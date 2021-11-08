@@ -12,7 +12,7 @@ Oni povas traserĉi ĝin per regulesprimoj.
 Serĉi verbon:
 
 ```
-\bviv(as|is?|os|us?|[aio]ntaj?n?)\b
+\bviv([ao]s|[ui]s?|[aio]n?taj?n?)\b
 ```
 
 La komenca `\b` certigas vortkomencon de eksludas kunmetojn kiel _travivi_.

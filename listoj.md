@@ -19,7 +19,7 @@ title: Listoj
 *  [Ŝanĝitaj artikoloj](http://www.reta-vortaro.de/revo/inx/shanghoj.html)  
 *  [Strukturaj eraroj](http://www.reta-vortaro.de/revo/inx/eraroj.html)  
 *  [Neregulaĵoj trovitaj per RelaxNG](http://www.reta-vortaro.de/revo/inx/relax_eraroj.html)  
-*  [Vortokontrolo](http://h1838790.stratoserver.net/revokontrolo/)  
+*  [Vortokontrolo](http://revaj.steloj.de/revokontrolo/)  
 *  [Kelkaj mankantaj tradukoj](http://www.reta-vortaro.de/revo/inx/mankantaj.html)  
 *  [Ĉiuj mankantaj tradukoj](http://www.reta-vortaro.de/cgi-bin/mx_trd.pl)  
 
