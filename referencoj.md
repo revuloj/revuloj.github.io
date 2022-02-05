@@ -9,7 +9,7 @@ title: Referencoj
   - [8a OA ĉe AdE](https://www.akademio-de-esperanto.org/aktoj/aktoj2/8oa.html)
   - [9a OA ĉe AdE](https://www.akademio-de-esperanto.org/decidoj/9oa.html)
   - [OA-kompilo de Bertilo en PIV-Redaktejo](https://vortaro.net/redaktejo/pivikio/_media/la_oficialaj_aldonoj_projekto_24_januaro_2021.pdf)
-- [Akademio de Esperantoj](http://www.akademio-de-esperanto.org/)
+- [Akademio de Esperanto](http://www.akademio-de-esperanto.org/)
 - [Plena Manlibro de Esperanta Gramatiko](https://bertilow.com/pmeg/)
 - [Vikipedio: Esperantologio (kaj esperantologoj)](https://eo.wikipedia.org/wiki/Esperantologio)
 - [Bernhard Pabst: Berlina Komentario pri FdE](https://edukado.net/upload/forumo/13023_1430834368.pdf)
@@ -18,6 +18,7 @@ title: Referencoj
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
 - [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
 - [Marcel Leereveld: Vortpluformado](http://bonalingvo.net/index.php/Vortpluformado)
+- [Eseoj de S. Pokrovskij](http://kovro.heliohost.org/)
 
 ## korpusoj
 - [OPUS - korpuso mult- kaj paralellingva](https://opus.nlpl.eu/)
