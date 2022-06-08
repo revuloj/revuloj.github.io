@@ -12,7 +12,7 @@ title: Dokumentstrukturo (RelaxNG)
 [► Strukturoj de detalaj elementoj](#strukturoj-de-detalaj-elementoj)
 
 **Strukturelementoj (rekte uzeblaj en XML):**  
-[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
+[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mis](#mis-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
 
 **Helpdifinoj (uzataj por difini la aranĝon de elementoj):**  
 [indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| 
@@ -277,7 +277,7 @@ sekva-parto =
 
 La unuo [tekst-stiloj](#tekst-stiloj-) 
 listigas ĉiujn strukturilojn, kiuj donas stilon al tekstoparto,
-ekz. [em](#em-)fazita, citilita ([ctl](#ctl-)), altigita ([sup](#sup-))
+ekz. [em](#em-)fazita, citilita ([ctl](#ctl-)), [mis](#mis-)a, altigita ([sup](#sup-))
 aŭ malaltigita ([sub](#sub-)) teksto kaj formulo ([frm](#frm-)).
 Aliaj elementoj klarigo ([klr](#klr-)), tildo ([tld](#tld-)), 
 sencreferenco ([sncref](#sncref-)), [nom](#nom-)o aŭ [nac](#nac-)ilingva esprimo
@@ -285,7 +285,7 @@ same povas esti multloke, do ankaŭ ili estas listigitaj tie ĉi.
 
 
 ```
-tekst-stiloj = tld | sncref | klr | em | sup | sub | ctl | frm | nom | nac
+tekst-stiloj = tld | sncref | klr | em | sup | sub | ctl | mis| frm | nom | nac
 ```
 
 ### art <a href="#enhavo">▲</a>
@@ -1064,8 +1064,19 @@ Citilita teksto, ekz. memindika uzo de vorto
 
 
 ```
-ctl = element ctl { attlist-ctl, (text | tld | em | frm)* }
+ctl = element ctl { attlist-ctl, (text | tld | em | frm | nom | nac | esc)* }
 attlist-ctl &= empty
+```
+
+### mis <a href="#enhavo">▲</a>
+
+
+Misstila teksto, ekz. malĝusta, arĥaika kc
+
+
+```
+mis = element mis { attlist-mis, (text | tld | em | frm | nom | nac | esc)* }
+attlist-mis &= empty
 ```
 
 ### nom <a href="#enhavo">▲</a>
