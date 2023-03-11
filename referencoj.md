@@ -14,9 +14,6 @@ title: Referencoj
 - [Vikipedio: Esperantologio (kaj esperantologoj)](https://eo.wikipedia.org/wiki/Esperantologio)
 - [Bernhard Pabst: Berlina Komentario pri FdE](https://edukado.net/upload/forumo/13023_1430834368.pdf)
 - [Jorge Camacho: Vortoj en vortaroj](https://jorgecice.blogspot.com/2013/09/vortoj-en-vortaroj.html?m=1&fbclid=IwAR0Dgj5dfGs2X2oPLA4JO8Z_QSSPo3C60dudvT-Ptop__D6o3OEtnyUv1wU)
-- [La Bona Lingvo](http://bonalingvo.net/index.php/%C4%88efpa%C4%9Do)
-- [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
-- [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
 - [Marcel Leereveld: Vortpluformado](http://bonalingvo.net/index.php/Vortpluformado)
 - [Eseoj de S. Pokrovskij](http://kovro.heliohost.org/)
 
@@ -27,3 +24,11 @@ title: Referencoj
 - [STEB - Fakaj vortaroj, terminaroj](http://www.eventoj.esperanto.hu/steb/vortaroj/index-vortaro.htm)
 - [Elektronika Bibliografio de Esperanto-Artikoloj](http://www.esperantoland.org/ebea/)
 
+## vortaroj
+- [PIV - vortaro.net](https://vortaro.net/)
+- [PIV - redaktejo](https://redaktejo.vortaro.net)
+- [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
+- [La Bona Lingvo](http://bonalingvo.net/index.php/%C4%88efpa%C4%9Do)
+- [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
+- [Vikipedio: Esperantaj vortaroj en la reto](https://eo.wikipedia.org/wiki/Esperantaj_vortaroj_en_la_reto)
+- [eo-uk](https://sites.google.com/site/ukrainavortaro)

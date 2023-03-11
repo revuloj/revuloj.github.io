@@ -81,8 +81,8 @@ Jen kelkaj aferoj, kiujn vi povus fari:
   kaj <a href="http://www.reta-vortaro.de/revo/inx/shanghoj.html">ŝanĝitajn</a> artikolojn kaj
   komenti pri eraroj.
 - Forigi tajperarojn el la artikoloj. La
-  <a href="http://h1838790.stratoserver.net/revokontrolo/">vortokontrolo</a> helpas trovi tiujn.
-  (vidu ankaŭ la <a href="http://h1838790.stratoserver.net/revokontrolo/klarigoj.html">klarigojn</a>)
+  <a href="https://revaj.steloj.de/revokontrolo/">vortokontrolo</a> helpas trovi tiujn.
+  (vidu ankaŭ la <a href="https://revaj.steloj.de/revokontrolo/klarigoj.html">klarigojn</a>)
 - Aldoni tradukojn en via gepatra lingvo. Jen
   <a href="http://www.reta-vortaro.de/revo/inx/mankantaj.html">kelkaj mankantaj tradukoj</a>
 - ~~Aldoni indikojn pri oficialeco de vortoj 
