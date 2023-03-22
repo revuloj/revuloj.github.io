@@ -267,8 +267,8 @@ krom la citita aŭ ekzempla teksto klarigojn kaj
 ```
 <ekz>
   ili sin <tld/>is je kvar okuloj
-  <klr>(intervidi&amp;gcirc;is kaj parolis duope, sen atestantoj)</klr>
-  <fnt><bib>Ne&amp;gcirc;aBlovado</bib></fnt>
+  <klr>(intervidiĝis kaj parolis duope, sen atestantoj)</klr>
+  <fnt><bib>NeĝaBlovado</bib></fnt>
 </ekz>
 ```
 
@@ -279,7 +279,7 @@ Ellason ene de citaĵo oni povas montri per klariga tripunkto:
 ```
 <ekz>
   iun matenon <klr>[...]</klr> mi observis en la aero <tld/>forman objekton
-  <fnt><bib>M&amp;uuml;nchhausen</bib>, <lok>&amp;ccirc;apitro 9a</lok></fnt>
+  <fnt><bib>Münchhausen</bib>, <lok>ĉapitro 9a</lok></fnt>
 </ekz>
 ```
 
@@ -295,7 +295,7 @@ referenco al la bibliografio.
 ```
 <ekz>
   ili <tld/>igas mian vivon en kavo
-  <fnt><bib>MT</bib>, <lok>&amp;Jer; 3:53</lok></fnt>
+  <fnt><bib>MT</bib>, <lok>&Jer; 3:53</lok></fnt>
 </ekz>
 ```
 
@@ -305,7 +305,7 @@ referenco al la bibliografio.
 <ekz>
   la fama <tld/>o de Hammurabi
   <fnt>
-  <aut>Andrzej Grz&amp;eogonek;bowski</aut>,
+  <aut>Andrzej Grz&eogonek;bowski</aut>,
   <vrk>Irano: la 131a lando de MT</vrk>,
   <bib>LOdE</bib>,
   <lok>2001-07, numero 81a</lok>
@@ -344,7 +344,7 @@ fontindikon similan al la sekva:
 
 ```
   <fnt>
-  <aut>Pavel Stan&amp;ccirc;ev, trad. Vedi</aut>,
+  <aut>Pavel Stanĉev, trad. Vedi</aut>,
   <vrk>
     <url ref="http://donh.best.vwh.net/.../kolora_knabino.html">La
     kolora knabino</url>
@@ -375,7 +375,7 @@ aŭ simila per indiko de la ISO-kodo de la lingvo kaj la
 traduka vorto.
  
 ```
-<trd lng="de">am&amp;uuml;sieren</trd>
+<trd lng="de">amüsieren</trd>
 ```
  
 La diversaj tradukoj aperu en la artikolo ordigitaj laŭ
@@ -387,7 +387,7 @@ marki la vorton, sub kiu la traduko aperu en la indekso de la koncerna
 lingvo.
  
 ```
-<trd lng="de">sich <ind>am&amp;uuml;sieren</ind></trd>
+<trd lng="de">sich <ind>amüsieren</ind></trd>
 ```
  
 Se estas pluraj eblaj tradukoj oni grupigu ilin. Klarigojn,
@@ -396,7 +396,7 @@ kiuj helpas trovi la ĝustan tradukon oni ankaŭ  povas aldoni.
 ```
 <trdgrp lng="de">
   <trd>Maulesel <klr>(de azenino)</klr></trd>,
-  <trd>Maultier <klr>(de &amp;ccirc;evalino)</klr></trd>
+  <trd>Maultier <klr>(de ĉevalino)</klr></trd>
 </trdgrp>
 ```
  
