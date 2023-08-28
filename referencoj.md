@@ -23,6 +23,7 @@ title: Referencoj
 - [Corpuseye](https://corp.hum.sdu.dk/cqp.eo.html)
 - [STEB - Fakaj vortaroj, terminaroj](http://www.eventoj.esperanto.hu/steb/vortaroj/index-vortaro.htm)
 - [Elektronika Bibliografio de Esperanto-Artikoloj](http://www.esperantoland.org/ebea/)
+- [Katolika universitato Lublino, kun pluraj revuoj](https://dlibra.kul.pl/dlibra)
 
 ## vortaroj
 - [PIV - vortaro.net](https://vortaro.net/)
