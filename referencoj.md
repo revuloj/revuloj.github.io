@@ -33,3 +33,7 @@ title: Referencoj
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
 - [Vikipedio: Esperantaj vortaroj en la reto](https://eo.wikipedia.org/wiki/Esperantaj_vortaroj_en_la_reto)
 - [eo-uk](https://sites.google.com/site/ukrainavortaro)
+- [Praktika Esperanto-Japana Vortareto - PEJV](https://www.vastalto.com/pejv/)
+- [Mikage - PEJV](https://www.mikage.to/esperanto/)
+- [ja-en](https://www.edrdg.org/cgi-bin/wwwjdic/wwwjdic)
+- [de-zh](http://www.handedict.de/chinesisch_deutsch.php)
