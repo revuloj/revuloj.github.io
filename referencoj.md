@@ -6,10 +6,11 @@ title: Referencoj
 # retpaĝoj, verkoj, eseoj ktp prilingvaj
 
 - [Subtena materialo por redaktantoj (oficialaj aldonoj, transskribsistemoj, gramatiko ks)](https://groups.io/g/revuloj/files/)
+- [Akademio de Esperanto](http://www.akademio-de-esperanto.org/)
+- [Fundamento de Esperanto](http://steloj.de/esperanto/fundamento/)
+- [Oficialaj Aldonoj](http://steloj.de/esperanto/ofcaldonoj/)
   - [8a OA ĉe AdE](https://www.akademio-de-esperanto.org/aktoj/aktoj2/8oa.html)
   - [9a OA ĉe AdE](https://www.akademio-de-esperanto.org/decidoj/9oa.html)
-  - [OA-kompilo de Bertilo en PIV-Redaktejo](https://vortaro.net/redaktejo/pivikio/_media/la_oficialaj_aldonoj_projekto_24_januaro_2021.pdf)
-- [Akademio de Esperanto](http://www.akademio-de-esperanto.org/)
 - [Plena Manlibro de Esperanta Gramatiko](https://bertilow.com/pmeg/)
 - [Vikipedio: Esperantologio (kaj esperantologoj)](https://eo.wikipedia.org/wiki/Esperantologio)
 - [Bernhard Pabst: Berlina Komentario pri FdE](https://edukado.net/upload/forumo/13023_1430834368.pdf)
@@ -37,3 +38,4 @@ title: Referencoj
 - [Mikage - PEJV](https://www.mikage.to/esperanto/)
 - [ja-en](https://www.edrdg.org/cgi-bin/wwwjdic/wwwjdic)
 - [de-zh](http://www.handedict.de/chinesisch_deutsch.php)
+- [Ĉeĥa-esperanta teĥnika vortaro (provizora labor-versio)](http://literatura.bucek.name/tekniko/tekniko.html)

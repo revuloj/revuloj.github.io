@@ -4,6 +4,8 @@ title: Dokumentstrukturo (RelaxNG)
 ---
 # RelaxNG-difino de strukturo de Voko-vortaro uzata en Reta Vortaro
 
+<!-- kreita je 2023-10-05 el voko-grundo/dtd/vokoxml.rnc per voko-grundo/perl/rnc2md.pl -->
+
 ![ulmobranĉo](../assets/img/ulmo.jpg){: style="float: right; margin-left: 2em; max-width: 20%; border: solid gray 1px"}
 
 # Enhavo
@@ -12,7 +14,7 @@ title: Dokumentstrukturo (RelaxNG)
 [► Strukturoj de detalaj elementoj](#strukturoj-de-detalaj-elementoj)
 
 **Strukturelementoj (rekte uzeblaj en XML):**  
-[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
+[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mis](#mis-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [pr](#pr-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [ts](#ts-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
 
 **Helpdifinoj (uzataj por difini la aranĝon de elementoj):**  
 [indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| 
@@ -277,7 +279,7 @@ sekva-parto =
 
 La unuo [tekst-stiloj](#tekst-stiloj-) 
 listigas ĉiujn strukturilojn, kiuj donas stilon al tekstoparto,
-ekz. [em](#em-)fazita, citilita ([ctl](#ctl-)), altigita ([sup](#sup-))
+ekz. [em](#em-)fazita, citilita ([ctl](#ctl-)), [mis](#mis-)a, altigita ([sup](#sup-))
 aŭ malaltigita ([sub](#sub-)) teksto kaj formulo ([frm](#frm-)).
 Aliaj elementoj klarigo ([klr](#klr-)), tildo ([tld](#tld-)), 
 sencreferenco ([sncref](#sncref-)), [nom](#nom-)o aŭ [nac](#nac-)ilingva esprimo
@@ -285,7 +287,7 @@ same povas esti multloke, do ankaŭ ili estas listigitaj tie ĉi.
 
 
 ```
-tekst-stiloj = tld | sncref | klr | em | sup | sub | ctl | frm | nom | nac
+tekst-stiloj = tld | sncref | klr | em | ts | sup | sub | ctl | mis| frm | nom | nac
 ```
 
 ### art <a href="#enhavo">▲</a>
@@ -826,7 +828,7 @@ kaj klarigoj, poste povos sekvi aliaj elementoj.
 
 
 ```
-trd = element trd { attlist-trd, (text | klr | ind | mll | ofc | baz)* }
+trd = element trd { attlist-trd, (text | klr | ind | pr | mll | ofc | baz)* }
 attlist-trd &=
   attribute lng { text }?,
   attribute fnt { text }?
@@ -846,6 +848,21 @@ ind = element ind { attlist-ind, (text | tld | klr | mll)* }
 attlist-ind &= empty
 ```
 
+### pr <a href="#enhavo">▲</a>
+
+
+Prononco/transskribo, kiel oni uzas por japanaj lingvoj (pinjino, bopomofo, hiragano ks)
+aŭ fonetikaj indikoj de nomoj.
+Se traduko havas transskribon, ni uzos tiun por la indeksado/enordigo en literĉaptiron de la indekso.
+Pro la limigita nombro de literoj/literumaj signoj, tio ebligas ĉapitrigi la lingvoindeksojn de
+silabaj lingvoj. Ankaŭ ni ebligas serĉadon laŭ transskribo aldone al la ideografia skribmaniero.
+
+
+```
+pr = element pr { attlist-pr, text* }
+attlist-pr &= empty
+```
+
 ### mll <a href="#enhavo">▲</a>
 
 
@@ -862,6 +879,7 @@ attlist-mll &= attribute tip { "kom" | "mez" | "fin" }?
 
 
 Baza formo de traduko, sub kiu la vorto subordiĝos en la indekso.
+Tion ni uzas ekzemple en la indonezia indekso, kie sub "ajar" aperas "belajar", "mengajar" ktp. 
 
 
 ```
@@ -931,6 +949,11 @@ attlist-tld &=
 
 
 Klarigo pri vorto, difino, ekzemplo ktp.
+Klarigoj en tradukoj povas esti provizitaj per atributo <em>tip</em>
+Ĉe tip='ind' la klarigo aperas en la indekso, sed ne en la artikolo.
+Ĉe tip='amb' ĝi ankaŭ aperas en la artikolo.
+Sen la atributo, aktuale ĝi aperas en la serĉrezultoj kaj artikolo, sed
+ne en la lingvo-indekso (eble ni ŝanĝos tion estonte)
 
 
 ```
@@ -1035,6 +1058,17 @@ em = element em { attlist-em, (text | tld)* }
 attlist-em &= empty
 ```
 
+### ts <a href="#enhavo">▲</a>
+
+
+Trastrekita teksto, ekz-e por montri korekton en misskribita citaĵo.
+
+
+```
+ts = element ts { attlist-ts, (text | tld)* }
+attlist-ts &= empty
+```
+
 ### sup <a href="#enhavo">▲</a>
 
 
@@ -1064,8 +1098,19 @@ Citilita teksto, ekz. memindika uzo de vorto
 
 
 ```
-ctl = element ctl { attlist-ctl, (text | tld | em | frm)* }
+ctl = element ctl { attlist-ctl, (text | tld | em | ts | frm | nom | nac | esc)* }
 attlist-ctl &= empty
+```
+
+### mis <a href="#enhavo">▲</a>
+
+
+Misstila teksto, ekz. malĝusta, arĥaika kc
+
+
+```
+mis = element mis { attlist-mis, (text | tld | em | ts | frm | nom | nac | esc)* }
+attlist-mis &= empty
 ```
 
 ### nom <a href="#enhavo">▲</a>
