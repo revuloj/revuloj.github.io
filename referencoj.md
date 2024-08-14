@@ -30,6 +30,7 @@ title: Referencoj
 - [PIV - vortaro.net](https://vortaro.net/)
 - [PIV - redaktejo](https://redaktejo.vortaro.net)
 - [Superfluaj vortoj](https://uea.org/vikio/Superfluaj_Vortoj)
+- [G. Neves, B.d Pabst: "Historia Vortaro de Esperanto, BK vol. 12](https://www.eventoj.hu/steb/vortaroj/Historia-Vortaro-2018.pdf)
 - [La Bona Lingvo](http://bonalingvo.net/index.php/%C4%88efpa%C4%9Do)
 - [Ana Löwenstein: Sinonimaro](http://bonalingvo.net/index.php/Sinonimaro_-_Listo)
 - [Vikipedio: Esperantaj vortaroj en la reto](https://eo.wikipedia.org/wiki/Esperantaj_vortaroj_en_la_reto)
@@ -39,3 +40,4 @@ title: Referencoj
 - [ja-en](https://www.edrdg.org/cgi-bin/wwwjdic/wwwjdic)
 - [de-zh](http://www.handedict.de/chinesisch_deutsch.php)
 - [Ĉeĥa-esperanta teĥnika vortaro (provizora labor-versio)](http://literatura.bucek.name/tekniko/tekniko.html)
+- [TLFi: vortaro franca de 19a kaj 20a jarcentoj](http://atilf.atilf.fr/)
