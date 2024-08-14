@@ -4,7 +4,7 @@ title: Dokumentstrukturo (RelaxNG)
 ---
 # RelaxNG-difino de strukturo de Voko-vortaro uzata en Reta Vortaro
 
-<!-- kreita je 2023-10-05 el voko-grundo/dtd/vokoxml.rnc per voko-grundo/perl/rnc2md.pl -->
+<!-- kreita je 2024-08-14 el voko-grundo/dtd/vokoxml.rnc per voko-grundo/perl/rnc2md.pl -->
 
 ![ulmobranĉo](../assets/img/ulmo.jpg){: style="float: right; margin-left: 2em; max-width: 20%; border: solid gray 1px"}
 
@@ -14,10 +14,10 @@ title: Dokumentstrukturo (RelaxNG)
 [► Strukturoj de detalaj elementoj](#strukturoj-de-detalaj-elementoj)
 
 **Strukturelementoj (rekte uzeblaj en XML):**  
-[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mis](#mis-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [pr](#pr-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [ts](#ts-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
+[adm](#adm-)&nbsp;| [alineo](#alineo-)&nbsp;| [art](#art-)&nbsp;| [aut](#aut-)&nbsp;| [autoro](#autoro-)&nbsp;| [baz](#baz-)&nbsp;| [bib](#bib-)&nbsp;| [bld](#bld-)&nbsp;| [ctl](#ctl-)&nbsp;| [dif](#dif-)&nbsp;| [drv](#drv-)&nbsp;| [ekz](#ekz-)&nbsp;| [em](#em-)&nbsp;| [epilogo](#epilogo-)&nbsp;| [esc](#esc-)&nbsp;| [fnt](#fnt-)&nbsp;| [frm](#frm-)&nbsp;| [g](#g-)&nbsp;| [gra](#gra-)&nbsp;| [ind](#ind-)&nbsp;| [k](#k-)&nbsp;| [kap](#kap-)&nbsp;| [ke](#ke-)&nbsp;| [klr](#klr-)&nbsp;| [lok](#lok-)&nbsp;| [lstref](#lstref-)&nbsp;| [mis](#mis-)&nbsp;| [mlg](#mlg-)&nbsp;| [mll](#mll-)&nbsp;| [mrk](#mrk-)&nbsp;| [nac](#nac-)&nbsp;| [nom](#nom-)&nbsp;| [ofc](#ofc-)&nbsp;| [parto](#parto-)&nbsp;| [pr](#pr-)&nbsp;| [precipa-parto](#precipa-parto-)&nbsp;| [prologo](#prologo-)&nbsp;| [rad](#rad-)&nbsp;| [ref](#ref-)&nbsp;| [refgrp](#refgrp-)&nbsp;| [rim](#rim-)&nbsp;| [sekcio](#sekcio-)&nbsp;| [snc](#snc-)&nbsp;| [sncref](#sncref-)&nbsp;| [sub](#sub-)&nbsp;| [subart](#subart-)&nbsp;| [subdrv](#subdrv-)&nbsp;| [subsnc](#subsnc-)&nbsp;| [sup](#sup-)&nbsp;| [tezrad](#tezrad-)&nbsp;| [titolo](#titolo-)&nbsp;| [tld](#tld-)&nbsp;| [trd](#trd-)&nbsp;| [trdgrp](#trdgrp-)&nbsp;| [ts](#ts-)&nbsp;| [url](#url-)&nbsp;| [uzo](#uzo-)&nbsp;| [var](#var-)&nbsp;| [vortaro](#vortaro-)&nbsp;| [vrk](#vrk-)&nbsp;| [vspec](#vspec-)&nbsp;| 
 
 **Helpdifinoj (uzataj por difini la aranĝon de elementoj):**  
-[indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| 
+[indikiloj](#indikiloj-)&nbsp;| [dif-ref-parto](#dif-ref-parto-)&nbsp;| [dif-ref](#dif-ref-)&nbsp;| [difiniloj-supl](#difiniloj-supl-)&nbsp;| [referenciloj](#referenciloj-)&nbsp;| [tradukiloj](#tradukiloj-)&nbsp;| [unua-parto](#unua-parto-)&nbsp;| [sekva-parto](#sekva-parto-)&nbsp;| [tekst-stiloj](#tekst-stiloj-)&nbsp;| [fako](#fako-)&nbsp;| [art-marko](#art-marko-)&nbsp;| [drv-marko](#drv-marko-)&nbsp;| [snc-marko](#snc-marko-)&nbsp;| [marko](#marko-)&nbsp;| [prononco](#prononco-)&nbsp;| 
 
 La [teĥnika manlibro](manlibro) montras al vi kiel en artikoloj kombini tiujn strukturelementojn pri la plej oftaj okazoj.
 
@@ -550,6 +550,17 @@ kiun oni povas referenci de alia loko en la vortaro per la sama marko.
 marko = xsd:ID { pattern = "([a-z0-9_]+)\.[A-Za-z0-9\._]+" }
 ```
 
+### _prononco_ <a href="#enhavo">▲</a>
+
+
+La pronco povas esti donita aŭ per latinaj literoj (kun supersignoj)
+per hiragano, katakano aŭ bopomofo kaj kelkaj apartaj signoj
+
+
+```
+prononco = xsd:string { pattern = "[\p{IsBasicLatin}\p{IsLatin-1Supplement}\p{IsLatinExtended-A}\p{IsLatinExtended-B}]+|\p{IsBopomofo}+|[\s\p{IsHiragana}\p{IsKatakana}\p{IsCJKSymbolsandPunctuation}\p{IsHalfwidthandFullwidthForms}]+" }
+```
+
 ### kap <a href="#enhavo">▲</a>
 
 
@@ -584,14 +595,16 @@ attlist-rad &= attribute var { text }?
 
 
 Oficialeco de la kapvorto/derivaĵo, 
-povas esti *, 1, ..., 9 kiel en PV, PIV
+povas esti *, 1, ..., 9, 10, 11 
+aŭ por kelkaj esceptoj jarnombro kiel 1953 (analoga, -end, mis-)
+en iuj okazoj oficialeco povas esti en krampoj (analogio, koncentra)
 
 
 ```
 ofc = 
   element ofc { 
     attlist-ofc, 
-    xsd:string { pattern="\*|\(?[1-9]\)?|19[0-9]{2}" } 
+    xsd:string { pattern="\*|\(?[1-9]\)?|1[0-1]|19[0-9]{2}" } 
   }
 attlist-ofc &= empty
 ```
@@ -672,7 +685,7 @@ mem. La lingvon indikas la atributo <em>lng</em>.
 dif =
   element dif {
     attlist-dif,
-    (text | trd | trdgrp | ref | refgrp | dif-ref | ekz | snc | tekst-stiloj)*
+    (text | trd | trdgrp | ref | refgrp | ke | dif-ref | ekz | snc | tekst-stiloj)*
   }
 attlist-dif &= attribute lng { text }?
 ```
@@ -713,7 +726,7 @@ senco, krome referencojn, ekzemplojn, emfazitajn partojn.
 ```
 rim =
   element rim {
-    attlist-rim, (text | ref | refgrp | ekz | aut | fnt | esc | tekst-stiloj)*
+    attlist-rim, (text | ref | refgrp | ke | ekz | aut | fnt | esc | tekst-stiloj)*
   }
 attlist-rim &=
   attribute num { text }?,
@@ -730,7 +743,7 @@ Tiukaze ne uzu la atributon <em>tip</em> en la subelementoj
 
 
 ```
-refgrp = element refgrp { attlist-refgrp, (text? & ref+) }
+refgrp = element refgrp { attlist-refgrp, (text? & ke* & ref+) }
 attlist-refgrp &=
   [ a:defaultValue = "vid" ]
   attribute tip {
@@ -751,7 +764,7 @@ attlist-refgrp &=
 
 
 Referenco montras al alia, simil- aŭ alisignifa vorto,
-oni povas distingi diversajn rilattipon al la
+oni povas distingi diversajn rilattipojn al la
 referencita vorto. La enhavo de la referenco estas tio, kio
 aperas en la legebla teksto. La referencitan vorton mem
 oni difinas per la atributo <em>cel</em>. La celon oni plej
@@ -825,13 +838,18 @@ attlist-trdgrp &= attribute lng { text }
 
 Traduko kosistas el traduka vorto aŭ frazo
 kaj klarigoj, poste povos sekvi aliaj elementoj.
+Per la atributo <em>fnt</em> oni povas indiki kie
+oni trovis la tradukon.
+La atributo <em>kod</em> estas uzebla por aldoni
+komputile interpreteblan kodon - ni uzas tion por gestolingvo.
 
 
 ```
 trd = element trd { attlist-trd, (text | klr | ind | pr | mll | ofc | baz)* }
 attlist-trd &=
   attribute lng { text }?,
-  attribute fnt { text }?
+  attribute fnt { text }?,
+  attribute kod { text }?
 ```
 
 ### ind <a href="#enhavo">▲</a>
@@ -859,7 +877,7 @@ silabaj lingvoj. Ankaŭ ni ebligas serĉadon laŭ transskribo aldone al la ideog
 
 
 ```
-pr = element pr { attlist-pr, text* }
+pr = element pr { attlist-pr, prononco }
 attlist-pr &= empty
 ```
 
@@ -887,6 +905,20 @@ baz = element baz { attlist-baz, text* }
 attlist-baz &= empty
 ```
 
+### ke <a href="#enhavo">▲</a>
+
+
+Komunlingva esprimo, per kiu oni povas anstataŭigi la (fakan, tre specialan) kapvorton en
+pli simpla komuna lingvo.
+Tiu esprimo povas konsisti el teksto kaj eventuale enhavi <em>ref</em>erencon. Ĝi
+povas aperi ene de <em>dif</em>ino, <em>rim</em>marko kaj referencgrupo ([refgrp](#refgrp-)).
+
+
+```
+ke = element ke { attlist-ke, (text | ref | dif-ref)* }
+attlist-ke &= empty
+```
+
 ### bld <a href="#enhavo">▲</a>
 
 
@@ -903,7 +935,7 @@ laŭ kiu la bildo rajtas esti uzata (vd ĉe Wikimedia Commons).
 ```
 bld =
   element bld {
-    attlist-bld, (text | tld | klr | fnt | ind | trd | trdgrp)*
+    attlist-bld, (text | tld | klr | fnt | mrk | ind | trd | trdgrp)*
   }
 attlist-bld &=
   attribute lok { xsd:anyURI },
@@ -914,12 +946,32 @@ attlist-bld &=
   attribute prm { text }?
 ```
 
+### mrk <a href="#enhavo">▲</a>
+
+
+Per la elemento <em>mrk</em> oni povas marki lokon en bildo per ia
+kadro, kies pozicio kaj aspekto estas priskribita en la atributo <em>stl</em>
+per la rimedoj de CSS. Per la atributo [cel](#cel-) oni povas aldoni 
+referencon al iu kapvorto de Revo.
+Cetere bildo-marko povas enhavi tekston kaj/aŭ referencojn.
+
+
+```
+mrk =
+  element mrk {
+    attlist-mrk, (text | ref)*
+  }
+attlist-mrk &= 
+  attribute stl { text },
+  attribute cel { text }?  
+```
+
 ### adm <a href="#enhavo">▲</a>
 
 
-Administraj informoj estu por redaktado. Ili povus
-enhavi informojn pri kreodato, ŝanĝdato, aŭtoro, eraroj kaj
-plibonigproponoj pri artikolo. Ĝia strukturo ankoraŭ estas
+Administraj informoj estu por redaktado. Ili enhavas tekston kaj eventuale aŭtoron.
+Cetere ili povus enhavi informojn pri kreodato, ŝanĝdato, eraroj kaj
+plibonigproponoj pri artikolo. Ĝia strukturo do ankoraŭ estas
 diskutatebla.
 
 
