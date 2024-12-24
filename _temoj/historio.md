@@ -45,9 +45,9 @@ Post pretigo de *pruvo de la koncepto*, fine de 1998 ĉio sendiĝis lumdiske al 
 
 ### MCMXCIX
 
-La volo pri komputile konsultebla vortaro persistis, kaj do kiel komenco de ĉirkaŭvojo ĝis somero 1999 estiĝis Reta Vortaro surbaze de la ellaboritaj teĥnikaj rimedoj kaj la enhavo de publike haveblaj vortaroj kiel Plena Vortaro kaj traduklistoj. Intertempe okazis ankaŭ transiro de SGML al la lastatempe normigita XML, nelaste pro bezonata Unikodo...
+La volo pri komputile konsultebla vortaro persistis, kaj do kiel komenco de ĉirkaŭvojo ĝis somero 1999 estiĝis Reta Vortaro surbaze de la ellaboritaj teĥnikaj rimedoj kaj la enhavo de publike haveblaj vortaroj kiel Plena Vortaro (tekstrekonita per programo Recognita) kaj traduklistoj. Intertempe okazis ankaŭ transiro de SGML al la lastatempe normigita XML, nelaste pro bezonata Unikodo...
 
-Prototipa versio publikiĝis en Septembro 1999. La 
+Prototipa eldono publikiĝis en Septembro 1999. La 
 [anonco kun la sekva diskuto en soc.culture.esperanto](https://groups.google.com/forum/m/#!topic/soc.culture.esperanto/biE92u2Tu3I)
 ankoraŭ estas legebla en la reto.
 
