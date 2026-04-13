@@ -329,7 +329,7 @@ kiel fontindiko. Ordinare tio aperas ĉe la fontindikoj de kapvortoj:
 
  
 Se iom grava verko mankas en la bibliografio, vi povas peti, 
-ke la administranto aldonu ĝin (vd. en [https://github.com/revuloj/revo-fonto/blob/master/cfg/bibliogr.xml](Github)).
+ke la administranto aldonu ĝin (vd. en [Github revo-fonto](https://github.com/revuloj/revo-fonto/blob/master/cfg/bibliogr.xml)).
  
 
  
