@@ -71,7 +71,7 @@ artikolon.
 
 Artikolo enhavas la informojn pri unu kapvorto. Ĝi
 konsistas do el la [kapvorto](#kapvorto) kaj la priskribo. La priskribo 
-estas normale dividita en plurajn [derivaĵoj](#derivaĵoj). Krome 
+estas normale dividita en plurajn [derivaĵoj](#derivaĵoj)n. Krome 
 la artikolo ricevas markon, kiu permesas referenci al la
 artikolo de aliaj lokoj. La marko principe egalas al la dosiernomo.
 
@@ -91,15 +91,12 @@ artikolo de aliaj lokoj. La marko principe egalas al la dosiernomo.
 </art>
 ```
 
-
-
- 
-Se la artikoloj estas administrataj per la arĥivosistemo
-CVS, la marko estas aŭtomate donita de tiu sistemo en loko
-markita per `$Id$` kaj tiukaze enhavas krome indikojn pri
+El la tempo, kiam la artikoloj estis administrataj per la arĥivosistemo
+CVS, ni konservis la markon `$Id$` kiu enhavas indikojn pri
 versio kaj ŝanĝtempo de la artikolo. Tiujn informojn uzas
 ankaŭ la retpoŝta redaktoservo por certigi, ke ne du
 redaktantoj redaktas samtempe la saman artikolon.
+
 Ampleksaj artikoloj cetere povas esti dividitaj en
 subartikoloj. 
  
@@ -206,7 +203,7 @@ uzo, difino, [ekzemplo](#ekzemploj), [referenco](#referencoj),
 ```
 
  
-Sencon, kiu ampleksas plurajn subtilajn subsencojn oni
+Sencon, kiu ampleksas plurajn subtilajn subsencojn, oni
 povas dividi per `subsnc`.
   
 Se vi volas referenci al iu senco, vi enmetu markon,
@@ -332,7 +329,7 @@ kiel fontindiko. Ordinare tio aperas ĉe la fontindikoj de kapvortoj:
 
  
 Se iom grava verko mankas en la bibliografio, vi povas peti, 
-ke la administranto aldonu ĝin.
+ke la administranto aldonu ĝin (vd. en [https://github.com/revuloj/revo-fonto/blob/master/cfg/bibliogr.xml](Github)).
  
 
  
@@ -370,7 +367,7 @@ fontindikon similan al la sekva:
 ## tradukoj
 
  
-Simplajn tradukojn vi donas ene de strukturo senco, derivaĵo
+Simplajn tradukojn vi donas ene de strukturo [senco](#sencoj), [derivaĵo](#derivaĵoj)
 aŭ simila per indiko de la ISO-kodo de la lingvo kaj la
 traduka vorto.
  
@@ -538,7 +535,7 @@ tipon `vid` kaj do antaŭ la referencoj aperos sageto.
   
 *Noto*: Ene de difinoj la tipoj de referencoj ne estas indikitaj
 per signo, ĉar tio ĝenas la fluan legadon. Tamen vi indiku la
-tipon, ĉar ĝi povas esti uzata de programoj, kiuj analizas la
+tipon, ĉar ĝi estas uzata de la tezaŭro, por montri la
 rilatojn inter vortoj.
  
 
