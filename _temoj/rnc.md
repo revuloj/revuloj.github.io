@@ -4,7 +4,7 @@ title: Dokumentstrukturo (RelaxNG)
 ---
 # RelaxNG-difino de strukturo de Voko-vortaro uzata en Reta Vortaro
 
-<!-- kreita je 2024-08-14 el voko-grundo/dtd/vokoxml.rnc per voko-grundo/perl/rnc2md.pl -->
+<!-- kreita je 2026-05-10 el voko-grundo/dtd/vokoxml.rnc per voko-grundo/perl/rnc2md.pl -->
 
 ![ulmobranĉo](../assets/img/ulmo.jpg){: style="float: right; margin-left: 2em; max-width: 20%; border: solid gray 1px"}
 
@@ -685,7 +685,7 @@ mem. La lingvon indikas la atributo <em>lng</em>.
 dif =
   element dif {
     attlist-dif,
-    (text | trd | trdgrp | ref | refgrp | ke | dif-ref | ekz | snc | tekst-stiloj)*
+    (text | trd | trdgrp | ref | refgrp | ke | dif-ref | ekz | tekst-stiloj)*
   }
 attlist-dif &= attribute lng { text }?
 ```
