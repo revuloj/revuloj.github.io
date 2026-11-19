@@ -52,6 +52,10 @@ la version por Kobo](#kobo). Mi ankoraŭe ne elprovis, ĉu funkcias.
 
 Vidu sub [OPF/EPUB/MOBI](#opf--epub--kaj-mobi-formato) pri alia ebleco uzante legprogramojn por OPF/MOBI (iBooks App, Kindle App). La programo iBooks cetere estas iom malrapida, do tuta Revo verŝajne estus tro peza por ĝi, eltiraĵo certe eblas. 
 
+## per DICT-kapabla programo
+
+Iom malofte ni kreas Revo-dosieron en formato DICT. La lasta tia [eldono](https://github.com/revuloj/revo-fonto/releases) estas de 2020.
+Malsupre sub [Kobo](#kobo) estas priskribita kiel vi mem povas krei DICT-dosieron el la ĉiutaga XDXF-dosiero.
 
 ## Stardict
 
@@ -106,6 +110,24 @@ pri la temo.
 Oni povas uzi la [programon de Dušan Juretić](https://github.com/djuretic/revo-en-kindle/) por krei Revon en formato OPF, el kiu same kiel el EPUB per `kindlegen` eblas traduke pretigi MOBI-dosieron, kiun oni povas uzi ekz-e kiel vortaro en la legoaparato aŭ la lego-apo Kindlo kaj iuj poŝkomputiloj. Ĉe la stokejo de
 Dušan vi povas elŝuti pretan [MOBI-dosieron](https://github.com/djuretic/revo-en-kindle/releases).
 
+Aliaj vojo por krei EPUB-dosieron el la ĉiutaga XDXF-dosiero utiligante la programlingvon Pitono kaj `PyGlossary`
+estas priskribita de Matthew Schmith:
+
+```shell
+python3 -m venv ~/pyglossary-env
+source ~/pyglossary-env/bin/activate
+pip install pyglossary
+pip install marisa-trie
+pip install lxml
+
+# elŝutu revo-<dato>.xdxf el https://github.com/revuloj/revo-fonto/releases
+# kaj konvertu ĝin:
+pyglossary revo*.xdxf revo.epub
+
+```
+
+Por plibonigi la enhavtabelon, li krome konsilas uzi `Sigil`, elektante: *Tools, Table of Contents, Generate Table of Contents*.
+
 
 ## OPIE (Linux/QT embedded)
 
@@ -122,13 +144,34 @@ Por Palm Pre ekzistas bele aranĝita
 
 ## Kobo
 
+<!--
+
+malaperita: 
+
 Por la elektronika librolegilo Kobo ekzistas antaŭpreparita 
 <a target="_new" href="https://bitbucket.org/marko31/konvertado-de-revo/wiki/Home">versio de
 Marco Aurélio</a>.
 
 
 <img src="https://bitbucket.org/marko31/konvertado-de-revo/wiki/Bildoj/kobo-02.jpg"/>
+-->
 
+En Kobo vi povas uzi DICT-formaton. Jen priskribo de Matthew Smith kiel ricevi aktualan DICT-dosieron el la ĉiutaga XDXF-dosiero:
+
+```shell
+python3 -m venv ~/pyglossary-env
+source ~/pyglossary-env/bin/activate
+pip install pyglossary
+pip install marisa-trie
+pip install lxml
+
+# elŝutu revo-<dato>.xdxf el https://github.com/revuloj/revo-fonto/releases
+# kaj konvertu ĝin:
+pyglossary revo*.xdxf revo.kobo 
+cd revo.kobo 
+zip -r ../dicthtml-eo-eo.zip . 
+cd .. 
+```
 
   Kobo disponigas ankaŭ lego-aplikaĵojn por
    BlackBerry OS, Apple iOS kaj Androido.
