@@ -34,6 +34,7 @@ Sed vi povas instali tian servon ankaŭ loke en via sistemo. Pluraj Linuksoj jam
 Estas pluraj eblecoj uzi Revon en Androido:
 
 - <a target="_new" href="https://play.google.com/store/apps/details?id=uk.co.busydoingnothing.prevo">PRevo ĉe Google play</a> de Neil Roberts.
+- <a target="_new" href="https://f-droid.org/en/packages/io.github.kotchwane.bonavortaro/">Bona vortaro</a> de Vilĉjo.
 - <a target="_new" href="https://play.google.com/store/apps/details?id=com.esperantajvortaroj.app">Praktika Vortaro</a> de Dušan Juretić.
 - <a target="_new" href="http://dodoburgers.com/eo/">Versio kompilita</a> de Cillian de Róiste por <a target="_new" href="http://aarddict.org/">aarddict</a>, uzebla kun FBReader.
 - La vortaro-programo <a target="_new" href="http://goldendict.org">GoldenDict</a> aŭ <a target="_new" href="https://play.google.com/store/apps/details?id=com.socialnmobile.colordict&amp;hl=en">ColorDict</a> por poŝkomputiloj kun Android-sistemo uzante la <a href="https://github.com/muravjov/vkompililo#eo-kiel-instali-revo-en-telefonon-kun-android">(Star-)DICT-formaton</a>. 
